@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { 
   GraduationCap, 
   RotateCcw, 
@@ -15,14 +15,17 @@ import {
   Search
 } from 'lucide-react';
 
-export default function FilterSidebar({ onSearch }) {
-  // Состояние выбранных фильтров
-  const [studyForm, setStudyForm] = useState('full-time'); // 'full-time' (очная) | 'part-time' (заочная)
-  const [lang, setLang] = useState('ru'); // 'ru' | 'by' | 'en'
-  const [military, setMilitary] = useState('any'); // 'yes' | 'no' | 'any'
+export default function FilterSidebar({ filters, onChange, onReset, onSearch }) {
+  const handleDegreeToggle = (deg) => {
+    const current = filters.degrees || [];
+    const updated = current.includes(deg)
+      ? current.filter(d => d !== deg)
+      : [...current, deg];
+    onChange('degrees', updated);
+  };
 
   return (
-    <aside className="w-72 sm:w-80 bg-white border-r border-slate-100 p-5 flex flex-col h-screen sticky top-0 overflow-y-auto">
+    <aside className="w-72 sm:w-80 bg-white border-r border-slate-100 p-5 flex flex-col h-screen sticky top-0 overflow-y-auto flex-shrink-0 z-20">
       {/* Логотип */}
       <div className="flex items-center gap-3 mb-6">
         <div className="w-10 h-10 rounded-xl bg-[#025a94] flex items-center justify-center text-white shadow-sm">
@@ -36,12 +39,11 @@ export default function FilterSidebar({ onSearch }) {
 
       {/* Заголовок фильтров */}
       <div className="flex items-center justify-between mb-4 pb-2 border-b border-slate-100">
-        <h2 className="font-bold text-slate-800 text-lg flex items-center gap-2">
-          Фильтры
-        </h2>
+        <h2 className="font-bold text-slate-800 text-lg">Фильтры</h2>
         <button 
           type="button" 
-          className="text-xs text-slate-400 hover:text-[#025a94] transition flex items-center gap-1 font-medium"
+          onClick={onReset}
+          className="text-xs text-slate-400 hover:text-[#025a94] transition flex items-center gap-1 font-medium cursor-pointer"
         >
           <RotateCcw size={12} />
           Сбросить
@@ -57,7 +59,9 @@ export default function FilterSidebar({ onSearch }) {
           </div>
           <input
             type="text"
-            placeholder="Выбор ВУЗа/ов"
+            placeholder="Название ВУЗа (напр. БГУИР)"
+            value={filters.university}
+            onChange={(e) => onChange('university', e.target.value)}
             className="w-full bg-[#f1f5f9] border border-transparent rounded-xl px-3 py-2 text-xs focus:bg-white focus:border-[#025a94] outline-none transition"
           />
         </div>
@@ -65,12 +69,14 @@ export default function FilterSidebar({ onSearch }) {
         {/* 2. Баллы */}
         <div>
           <div className="flex items-center justify-between mb-1 text-slate-700 font-semibold">
-            <span>2. Баллы</span>
+            <span>2. Баллы (минимальный порог)</span>
             <BarChart2 size={14} className="text-slate-400" />
           </div>
           <input
-            type="text"
-            placeholder="Минимальный балл"
+            type="number"
+            placeholder="Например: 350"
+            value={filters.minScore}
+            onChange={(e) => onChange('minScore', e.target.value)}
             className="w-full bg-[#f1f5f9] border border-transparent rounded-xl px-3 py-2 text-xs focus:bg-white focus:border-[#025a94] outline-none transition"
           />
         </div>
@@ -83,7 +89,9 @@ export default function FilterSidebar({ onSearch }) {
           </div>
           <input
             type="text"
-            placeholder="Выбор города/ов"
+            placeholder="Витебск, Минск, Брест..."
+            value={filters.city}
+            onChange={(e) => onChange('city', e.target.value)}
             className="w-full bg-[#f1f5f9] border border-transparent rounded-xl px-3 py-2 text-xs focus:bg-white focus:border-[#025a94] outline-none transition"
           />
         </div>
@@ -94,29 +102,25 @@ export default function FilterSidebar({ onSearch }) {
             <span>4. Форма обучения</span>
             <Monitor size={14} className="text-slate-400" />
           </div>
-          <div className="grid grid-cols-2 gap-2 bg-[#f1f5f9] p-1 rounded-xl">
-            <button
-              type="button"
-              onClick={() => setStudyForm('full-time')}
-              className={`py-1.5 rounded-lg text-center font-medium transition ${
-                studyForm === 'full-time'
-                  ? 'bg-[#bce0fd] text-[#025a94] shadow-sm'
-                  : 'text-slate-500 hover:text-slate-800'
-              }`}
-            >
-              Очная
-            </button>
-            <button
-              type="button"
-              onClick={() => setStudyForm('part-time')}
-              className={`py-1.5 rounded-lg text-center font-medium transition ${
-                studyForm === 'part-time'
-                  ? 'bg-[#bce0fd] text-[#025a94] shadow-sm'
-                  : 'text-slate-500 hover:text-slate-800'
-              }`}
-            >
-              Заочная
-            </button>
+          <div className="grid grid-cols-3 gap-1.5 bg-[#f1f5f9] p-1 rounded-xl text-[11px]">
+            {[
+              { id: 'all', label: 'Все' },
+              { id: 'Очная', label: 'Очная' },
+              { id: 'Заочная', label: 'Заочная' }
+            ].map(item => (
+              <button
+                key={item.id}
+                type="button"
+                onClick={() => onChange('studyForm', item.id)}
+                className={`py-1.5 rounded-lg text-center font-medium transition cursor-pointer ${
+                  filters.studyForm === item.id
+                    ? 'bg-[#bce0fd] text-[#025a94] shadow-sm font-bold'
+                    : 'text-slate-500 hover:text-slate-800'
+                }`}
+              >
+                {item.label}
+              </button>
+            ))}
           </div>
         </div>
 
@@ -128,11 +132,21 @@ export default function FilterSidebar({ onSearch }) {
           </div>
           <div className="flex gap-4">
             <label className="flex items-center gap-1.5 cursor-pointer">
-              <input type="checkbox" defaultChecked className="rounded accent-[#025a94]" />
+              <input
+                type="checkbox"
+                checked={filters.budget}
+                onChange={(e) => onChange('budget', e.target.checked)}
+                className="rounded accent-[#025a94]"
+              />
               <span>Бюджет</span>
             </label>
             <label className="flex items-center gap-1.5 cursor-pointer">
-              <input type="checkbox" className="rounded accent-[#025a94]" />
+              <input
+                type="checkbox"
+                checked={filters.paid}
+                onChange={(e) => onChange('paid', e.target.checked)}
+                className="rounded accent-[#025a94]"
+              />
               <span>Платная</span>
             </label>
           </div>
@@ -146,7 +160,9 @@ export default function FilterSidebar({ onSearch }) {
           </div>
           <input
             type="text"
-            placeholder="Выбор вступительных испытаний"
+            placeholder="Физика, Математика..."
+            value={filters.exams}
+            onChange={(e) => onChange('exams', e.target.value)}
             className="w-full bg-[#f1f5f9] border border-transparent rounded-xl px-3 py-2 text-xs focus:bg-white focus:border-[#025a94] outline-none transition"
           />
         </div>
@@ -159,7 +175,9 @@ export default function FilterSidebar({ onSearch }) {
           </div>
           <input
             type="text"
-            placeholder="Выбор специальности/ей"
+            placeholder="Программная инженерия, ИИ..."
+            value={filters.specialty}
+            onChange={(e) => onChange('specialty', e.target.value)}
             className="w-full bg-[#f1f5f9] border border-transparent rounded-xl px-3 py-2 text-xs focus:bg-white focus:border-[#025a94] outline-none transition"
           />
         </div>
@@ -172,16 +190,17 @@ export default function FilterSidebar({ onSearch }) {
           </div>
           <div className="flex gap-1.5 bg-[#f1f5f9] p-1 rounded-xl">
             {[
-              { id: 'ru', label: 'Русский' },
-              { id: 'by', label: 'Белорусский' },
-              { id: 'en', label: 'Английский' },
+              { id: 'all', label: 'Любой' },
+              { id: 'Русский', label: 'Русский' },
+              { id: 'Белорусский', label: 'Белор.' },
+              { id: 'Английский', label: 'Англ.' },
             ].map(item => (
               <button
                 key={item.id}
                 type="button"
-                onClick={() => setLang(item.id)}
-                className={`flex-1 py-1 rounded-lg text-center font-medium transition text-[11px] ${
-                  lang === item.id
+                onClick={() => onChange('language', item.id)}
+                className={`flex-1 py-1 rounded-lg text-center font-medium transition text-[10px] cursor-pointer ${
+                  filters.language === item.id
                     ? 'bg-[#025a94] text-white shadow-sm'
                     : 'text-slate-500 hover:text-slate-800'
                 }`}
@@ -200,7 +219,9 @@ export default function FilterSidebar({ onSearch }) {
           </div>
           <input
             type="text"
-            placeholder="Выбор длительности"
+            placeholder="4 года, 5 лет..."
+            value={filters.duration}
+            onChange={(e) => onChange('duration', e.target.value)}
             className="w-full bg-[#f1f5f9] border border-transparent rounded-xl px-3 py-2 text-xs focus:bg-white focus:border-[#025a94] outline-none transition"
           />
         </div>
@@ -213,16 +234,16 @@ export default function FilterSidebar({ onSearch }) {
           </div>
           <div className="flex gap-3">
             {[
-              { id: 'yes', label: 'Да' },
-              { id: 'no', label: 'Нет' },
+              { id: 'Есть', label: 'Да' },
+              { id: 'Нет', label: 'Нет' },
               { id: 'any', label: 'Неважно' },
             ].map(item => (
               <label key={item.id} className="flex items-center gap-1 cursor-pointer">
                 <input
                   type="radio"
                   name="military"
-                  checked={military === item.id}
-                  onChange={() => setMilitary(item.id)}
+                  checked={filters.military === item.id}
+                  onChange={() => onChange('military', item.id)}
                   className="accent-[#025a94]"
                 />
                 <span>{item.label}</span>
@@ -238,18 +259,17 @@ export default function FilterSidebar({ onSearch }) {
             <Award size={14} className="text-slate-400" />
           </div>
           <div className="space-y-1.5">
-            <label className="flex items-center gap-1.5 cursor-pointer">
-              <input type="checkbox" defaultChecked className="rounded accent-[#025a94]" />
-              <span>Бакалавриат</span>
-            </label>
-            <label className="flex items-center gap-1.5 cursor-pointer">
-              <input type="checkbox" className="rounded accent-[#025a94]" />
-              <span>Магистратура</span>
-            </label>
-            <label className="flex items-center gap-1.5 cursor-pointer">
-              <input type="checkbox" className="rounded accent-[#025a94]" />
-              <span>Специальное</span>
-            </label>
+            {['Бакалавриат', 'Магистратура', 'Специальное'].map(deg => (
+              <label key={deg} className="flex items-center gap-1.5 cursor-pointer">
+                <input
+                  type="checkbox"
+                  checked={(filters.degrees || []).includes(deg)}
+                  onChange={() => handleDegreeToggle(deg)}
+                  className="rounded accent-[#025a94]"
+                />
+                <span>{deg}</span>
+              </label>
+            ))}
           </div>
         </div>
       </div>
@@ -258,7 +278,7 @@ export default function FilterSidebar({ onSearch }) {
       <div className="mt-6 pt-4 border-t border-slate-100">
         <button
           onClick={onSearch}
-          className="w-full bg-[#025a94] hover:bg-[#024a7b] text-white py-3 rounded-2xl font-semibold flex items-center justify-center gap-2 shadow-sm transition active:scale-[0.98]"
+          className="w-full bg-[#025a94] hover:bg-[#024a7b] text-white py-3 rounded-2xl font-semibold flex items-center justify-center gap-2 shadow-sm transition active:scale-[0.98] cursor-pointer"
         >
           <Search size={16} />
           Поиск

@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
-import { Send, Bot, Menu, ChevronRight } from 'lucide-react';
+import { Send, Bot, Menu } from 'lucide-react';
 
 export default function ChatSidebar({ isOpen, onToggle }) {
+  // Ширина окна: по умолчанию 340px, ограничена от 280px до 420px
+  const [width, setWidth] = useState(340);
+
   const [messages, setMessages] = useState([
     {
       id: 1,
@@ -16,10 +19,48 @@ export default function ChatSidebar({ isOpen, onToggle }) {
     {
       id: 3,
       sender: 'bot',
-      text: 'Найдено 24 специализации в области компьютерных наук с финансированием. Фильтр 5. Чтобы просмотреть их, воспользуйтесь опцией «Формы оплаты» на панели слева!'
+      text: 'Найдено множество специальностей! Воспользуйтесь фильтром формы оплаты «Бюджет» слева, чтобы увидеть все доступные варианты.'
     }
   ]);
   const [input, setInput] = useState('');
+
+  // Интерактивное перетаскивание за сам синий ползунок
+  const handleHandleMouseDown = (e) => {
+    e.preventDefault();
+    const startX = e.clientX;
+    const startWidth = isOpen ? width : 0;
+    let hasMoved = false;
+
+    const onMouseMove = (moveEvent) => {
+      const delta = startX - moveEvent.clientX;
+      if (Math.abs(delta) > 3) {
+        hasMoved = true;
+      }
+      if (hasMoved) {
+        // Ограничиваем ширину максимум до 420px, чтобы не сжимать вузы
+        const newWidth = Math.min(Math.max(startWidth + delta, 280), 420);
+        setWidth(newWidth);
+        if (!isOpen) onToggle(); // если был закрыт — открываем при потягивании
+      }
+    };
+
+    const onMouseUp = () => {
+      window.removeEventListener('mousemove', onMouseMove);
+      window.removeEventListener('mouseup', onMouseUp);
+      document.body.style.userSelect = '';
+      document.body.style.cursor = '';
+
+      // Если мы просто кликнули по ползунку без сдвига — переключаем открыть/закрыть
+      if (!hasMoved) {
+        onToggle();
+      }
+    };
+
+    document.body.style.userSelect = 'none';
+    document.body.style.cursor = 'ew-resize';
+    window.addEventListener('mousemove', onMouseMove);
+    window.addEventListener('mouseup', onMouseUp);
+  };
 
   const handleSend = (e) => {
     e.preventDefault();
@@ -29,37 +70,43 @@ export default function ChatSidebar({ isOpen, onToggle }) {
     const userText = input;
     setInput('');
 
-    // Имитация ответа ИИ через 800мс
     setTimeout(() => {
       setMessages(prev => [...prev, {
         id: Date.now() + 1,
         sender: 'bot',
-        text: `По запросу "${userText}": вы можете отфильтровать программы в левой панели или посмотреть детальную информацию о выбранном вузе!`
+        text: `По запросу "${userText}": подходящие университеты отображаются в каталоге слева!`
       }]);
-    }, 800);
+    }, 700);
   };
 
   return (
-    <div className="relative flex">
-      {/* Кнопка-язычок для открытия/закрытия панели */}
-      <button
-        onClick={onToggle}
-        className="absolute -left-6 top-1/2 -translate-y-1/2 bg-[#025a94] text-white p-1 rounded-l-md shadow-md hover:bg-[#024a7b] z-20 transition"
-        title={isOpen ? "Свернуть ассистент" : "Открыть ассистент"}
+    <aside
+      style={{ width: isOpen ? `${width}px` : '0px' }}
+      className="relative bg-white border-l border-slate-200 flex flex-col h-screen sticky top-0 shadow-sm flex-shrink-0 z-40 transition-[width] duration-75"
+    >
+      {/* 
+        САМ СИНИЙ ПОЛЗУНОК
+        Он прикреплен к левому краю сайдбара и физически не может оторваться!
+        Клик — свернуть/развернуть, потянуть влево/вправо — изменить ширину.
+      */}
+      <div
+        onMouseDown={handleHandleMouseDown}
+        className="absolute left-0 -translate-x-full top-1/2 -translate-y-1/2 z-50 bg-[#025a94] text-white p-2 rounded-l-xl shadow-md hover:bg-[#024a7b] flex items-center justify-center cursor-ew-resize select-none active:scale-95 transition-transform"
+        title="Потяните для изменения ширины или нажмите для открытия/закрытия"
       >
-        <Menu size={16} />
-      </button>
+        <Menu size={18} />
+      </div>
 
-      {/* Сама панель */}
+      {/* Содержимое чата отображается только когда окно открыто */}
       {isOpen && (
-        <aside className="w-80 md:w-96 bg-white border-l border-slate-200 flex flex-col h-screen sticky top-0 shadow-sm transition-all">
+        <div className="flex flex-col h-full w-full overflow-hidden">
           {/* Шапка чата */}
-          <div className="p-4 border-b border-slate-100 flex items-center justify-between">
+          <div className="p-4 border-b border-slate-100 flex items-center justify-between select-none">
             <div className="flex items-center gap-2">
               <div className="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center text-[#025a94]">
                 <Bot size={20} />
               </div>
-              <span className="font-semibold text-slate-800">VseVuzy ИИ</span>
+              <span className="font-semibold text-slate-800 text-sm">VseVuzy ИИ</span>
             </div>
             <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 ring-4 ring-emerald-100"></span>
           </div>
@@ -77,7 +124,7 @@ export default function ChatSidebar({ isOpen, onToggle }) {
                   </div>
                 )}
                 <div
-                  className={`max-w-[82%] p-3.5 rounded-2xl text-xs sm:text-sm leading-relaxed shadow-sm ${
+                  className={`max-w-[85%] p-3.5 rounded-2xl text-xs sm:text-sm leading-relaxed shadow-sm ${
                     msg.sender === 'user'
                       ? 'bg-[#025a94] text-white rounded-tr-none'
                       : 'bg-slate-50 text-slate-700 border border-slate-100 rounded-tl-none'
@@ -101,14 +148,14 @@ export default function ChatSidebar({ isOpen, onToggle }) {
               />
               <button
                 type="submit"
-                className="absolute right-1.5 p-1.5 bg-[#025a94] text-white rounded-lg hover:bg-[#024a7b] transition"
+                className="absolute right-1.5 p-1.5 bg-[#025a94] text-white rounded-lg hover:bg-[#024a7b] transition cursor-pointer"
               >
                 <Send size={15} />
               </button>
             </div>
           </form>
-        </aside>
+        </div>
       )}
-    </div>
+    </aside>
   );
 }
