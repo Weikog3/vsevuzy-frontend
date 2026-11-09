@@ -1,28 +1,28 @@
-import React, { useState } from 'react';
-import { Send, Bot, Menu } from 'lucide-react';
+import React, { useState } from "react";
+import { Send, Bot, Menu } from "lucide-react";
 
 export default function ChatSidebar({ isOpen, onToggle }) {
-  // Ширина окна: по умолчанию 340px, ограничена от 280px до 420px
+  // Ширина окна: по умолчанию 340px, ограничена от 280px до 600px
   const [width, setWidth] = useState(340);
 
   const [messages, setMessages] = useState([
     {
       id: 1,
-      sender: 'bot',
-      text: 'Здравствуйте! Спрашивайте меня о чем угодно, касающемся поступления в университет: о сроках подачи документов, средних проходных баллах или стоимости обучения.'
+      sender: "bot",
+      text: "Здравствуйте! Спрашивайте меня о чем угодно, касающемся поступления в университет: о сроках подачи документов, средних проходных баллах или стоимости обучения.",
     },
     {
       id: 2,
-      sender: 'user',
-      text: 'Какие программы в области компьютерных наук полностью финансируются государством?'
+      sender: "user",
+      text: "Какие программы в области компьютерных наук полностью финансируются государством?",
     },
     {
       id: 3,
-      sender: 'bot',
-      text: 'Найдено множество специальностей! Воспользуйтесь фильтром формы оплаты «Бюджет» слева, чтобы увидеть все доступные варианты.'
-    }
+      sender: "bot",
+      text: "Найдено множество специальностей! Воспользуйтесь фильтром формы оплаты «Бюджет» слева, чтобы увидеть все доступные варианты.",
+    },
   ]);
-  const [input, setInput] = useState('');
+  const [input, setInput] = useState("");
 
   // Интерактивное перетаскивание за сам синий ползунок
   const handleHandleMouseDown = (e) => {
@@ -37,18 +37,18 @@ export default function ChatSidebar({ isOpen, onToggle }) {
         hasMoved = true;
       }
       if (hasMoved) {
-        // Ограничиваем ширину максимум до 420px, чтобы не сжимать вузы
-        const newWidth = Math.min(Math.max(startWidth + delta, 280), 420);
+        // Ограничиваем ширину максимум до 600px, чтобы не сжимать вузы
+        const newWidth = Math.min(Math.max(startWidth + delta, 280), 600);
         setWidth(newWidth);
         if (!isOpen) onToggle(); // если был закрыт — открываем при потягивании
       }
     };
 
     const onMouseUp = () => {
-      window.removeEventListener('mousemove', onMouseMove);
-      window.removeEventListener('mouseup', onMouseUp);
-      document.body.style.userSelect = '';
-      document.body.style.cursor = '';
+      window.removeEventListener("mousemove", onMouseMove);
+      window.removeEventListener("mouseup", onMouseUp);
+      document.body.style.userSelect = "";
+      document.body.style.cursor = "";
 
       // Если мы просто кликнули по ползунку без сдвига — переключаем открыть/закрыть
       if (!hasMoved) {
@@ -56,32 +56,38 @@ export default function ChatSidebar({ isOpen, onToggle }) {
       }
     };
 
-    document.body.style.userSelect = 'none';
-    document.body.style.cursor = 'ew-resize';
-    window.addEventListener('mousemove', onMouseMove);
-    window.addEventListener('mouseup', onMouseUp);
+    document.body.style.userSelect = "none";
+    document.body.style.cursor = "ew-resize";
+    window.addEventListener("mousemove", onMouseMove);
+    window.addEventListener("mouseup", onMouseUp);
   };
 
   const handleSend = (e) => {
     e.preventDefault();
     if (!input.trim()) return;
 
-    setMessages(prev => [...prev, { id: Date.now(), sender: 'user', text: input }]);
+    setMessages((prev) => [
+      ...prev,
+      { id: Date.now(), sender: "user", text: input },
+    ]);
     const userText = input;
-    setInput('');
+    setInput("");
 
     setTimeout(() => {
-      setMessages(prev => [...prev, {
-        id: Date.now() + 1,
-        sender: 'bot',
-        text: `По запросу "${userText}": подходящие университеты отображаются в каталоге слева!`
-      }]);
+      setMessages((prev) => [
+        ...prev,
+        {
+          id: Date.now() + 1,
+          sender: "bot",
+          text: `По запросу "${userText}": подходящие университеты отображаются в каталоге слева!`,
+        },
+      ]);
     }, 700);
   };
 
   return (
     <aside
-      style={{ width: isOpen ? `${width}px` : '0px' }}
+      style={{ width: isOpen ? `${width}px` : "0px" }}
       className="relative bg-white border-l border-slate-200 flex flex-col h-screen sticky top-0 shadow-sm flex-shrink-0 z-40 transition-[width] duration-75"
     >
       {/* 
@@ -106,7 +112,9 @@ export default function ChatSidebar({ isOpen, onToggle }) {
               <div className="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center text-[#025a94]">
                 <Bot size={20} />
               </div>
-              <span className="font-semibold text-slate-800 text-sm">VseVuzy ИИ</span>
+              <span className="font-semibold text-slate-800 text-sm">
+                VseVuzy ИИ
+              </span>
             </div>
             <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 ring-4 ring-emerald-100"></span>
           </div>
@@ -116,18 +124,18 @@ export default function ChatSidebar({ isOpen, onToggle }) {
             {messages.map((msg) => (
               <div
                 key={msg.id}
-                className={`flex gap-2.5 ${msg.sender === 'user' ? 'justify-end' : 'justify-start'}`}
+                className={`flex gap-2.5 ${msg.sender === "user" ? "justify-end" : "justify-start"}`}
               >
-                {msg.sender === 'bot' && (
+                {msg.sender === "bot" && (
                   <div className="w-7 h-7 rounded-full bg-blue-50 text-[#025a94] flex items-center justify-center flex-shrink-0 mt-1">
                     <Bot size={15} />
                   </div>
                 )}
                 <div
                   className={`max-w-[85%] p-3.5 rounded-2xl text-xs sm:text-sm leading-relaxed shadow-sm ${
-                    msg.sender === 'user'
-                      ? 'bg-[#025a94] text-white rounded-tr-none'
-                      : 'bg-slate-50 text-slate-700 border border-slate-100 rounded-tl-none'
+                    msg.sender === "user"
+                      ? "bg-[#025a94] text-white rounded-tr-none"
+                      : "bg-slate-50 text-slate-700 border border-slate-100 rounded-tl-none"
                   }`}
                 >
                   {msg.text}
@@ -137,7 +145,10 @@ export default function ChatSidebar({ isOpen, onToggle }) {
           </div>
 
           {/* Поле ввода */}
-          <form onSubmit={handleSend} className="p-3 border-t border-slate-100 bg-white">
+          <form
+            onSubmit={handleSend}
+            className="p-3 border-t border-slate-100 bg-white"
+          >
             <div className="relative flex items-center">
               <input
                 type="text"
