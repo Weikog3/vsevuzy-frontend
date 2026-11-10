@@ -120,7 +120,12 @@ export default function App() {
       {/* Правая панель ИИ-ассистента с настраиваемой шириной и фиксированной ручкой */}
       <ChatSidebar 
         isOpen={isChatOpen} 
-        onToggle={() => setIsChatOpen(!isChatOpen)} 
+        onToggle={() => setIsChatOpen(!isChatOpen)}
+        onSetFilters={(updates) => setFilters((prev) => ({ ...prev, ...updates }))}
+        onOpenProgram={(program) => setSelectedProgram(program)}
+        onGoBack={() => setSelectedProgram(null)}
+        onResetFilters={handleResetFilters}
+        programs={mockPrograms}
       />
     </div>
   );
