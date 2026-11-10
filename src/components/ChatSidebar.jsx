@@ -32,6 +32,7 @@ export default function ChatSidebar({
   const [streaming, setStreaming] = useState(false);
 
   const messagesEndRef = useRef(null);
+  const messagesContainerRef = useRef(null);
 
   const validateKey = async (key) => {
     setIsValidating(true);
@@ -84,6 +85,10 @@ export default function ChatSidebar({
       return () => clearTimeout(t);
     }
   }, [apiKey]);
+
+  useEffect(() => {
+    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+  }, [messages, streaming]);
 
   const handleContinue = () => {
     if (apiKey.trim()) validateKey(apiKey.trim());
@@ -400,7 +405,10 @@ ${JSON.stringify(
             </div>
           </div>
 
-          <div className="flex-1 overflow-y-auto p-4 space-y-4 relative">
+          <div
+            ref={messagesContainerRef}
+            className="flex-1 overflow-y-auto p-4 space-y-4 relative"
+          >
             {messages.map((msg) => (
               <div
                 key={msg.id}
