@@ -1,4 +1,3 @@
-import React from 'react';
 import { MapPin, ChevronLeft, ChevronRight, SearchX } from 'lucide-react';
 
 export default function Catalog({ programs, onSelectProgram, onResetFilters }) {

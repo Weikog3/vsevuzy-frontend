@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { 
   ArrowLeft, 
   ExternalLink, 
@@ -15,7 +15,7 @@ import {
 
 export default function ProgramDetail({ program, onBack }) {
   const [scoreType, setScoreType] = useState('budget'); // 'budget' | 'paid'
-  const [hoveredPoint, setHoveredPoint] = useState(null);
+  const [, setHoveredPoint] = useState(null);
 
   // Данные для графика
   const chartData = [

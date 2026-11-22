@@ -1,0 +1,4242 @@
+[
+  {
+    "university": "ГУО «Университет Национальной академии наук Беларуси»",
+    "shortName": "УНАНБ",
+    "website": "unan.by",
+    "city": "Минск",
+    "address": "220012, г. Минск, пер. Калинина, 10",
+    "phone": "+375 17 202 16 56",
+    "programs": [
+      {
+        "id": 1,
+        "university": "ГУО «Университет Национальной академии наук Беларуси»",
+        "shortName": "УНАНБ",
+        "faculty": null,
+        "title": "Экономика",
+        "code": "7-06-0311-01",
+        "budgetScore": null,
+        "paidScore": null,
+        "city": "Минск",
+        "degree": "Магистратура",
+        "studyForm": "Дневная (бюджет)",
+        "duration": "1 год",
+        "exams": null,
+        "plan": null,
+        "language": "Русский",
+        "militaryDepartment": null,
+        "dormitory": "Предоставляется",
+        "address": "220012, г. Минск, пер. Калинина, 10",
+        "phone": "+375 17 202 16 56",
+        "website": "unan.by",
+        "description": "Специальность магистратуры (дневная форма, бюджет). Срок обучения по специальностям гуманитарного и общественнонаучного профиля — 1 год.",
+        "scoreHistory": [
+          {
+            "year": "2020",
+            "budgetScore": 79
+          },
+          {
+            "year": "2021",
+            "budgetScore": 88
+          },
+          {
+            "year": "2022",
+            "budgetScore": 87
+          },
+          {
+            "year": "2023",
+            "budgetScore": 91
+          },
+          {
+            "year": "2024",
+            "budgetScore": 97
+          },
+          {
+            "year": "2025",
+            "budgetScore": 100
+          },
+          {
+            "year": "2026",
+            "budgetScore": 98
+          }
+        ],
+        "source": "https://unan.by/novosti/nachalsya-priyom-dokumentov-v-magistraturu-universiteta-nan-belarusi/"
+      },
+      {
+        "id": 2,
+        "university": "ГУО «Университет Национальной академии наук Беларуси»",
+        "shortName": "УНАНБ",
+        "faculty": null,
+        "title": "Биология",
+        "code": "7-06-0511-01",
+        "budgetScore": null,
+        "paidScore": null,
+        "city": "Минск",
+        "degree": "Магистратура",
+        "studyForm": "Дневная (бюджет)",
+        "duration": "2 года",
+        "exams": null,
+        "plan": null,
+        "language": "Русский",
+        "militaryDepartment": null,
+        "dormitory": "Предоставляется",
+        "address": "220012, г. Минск, пер. Калинина, 10",
+        "phone": "+375 17 202 16 56",
+        "website": "unan.by",
+        "description": "Специальность магистратуры (дневная форма, бюджет). Срок обучения по специальностям естественнонаучного и технического профиля — 2 года.",
+        "scoreHistory": [
+          {
+            "year": "2020",
+            "budgetScore": 75
+          },
+          {
+            "year": "2021",
+            "budgetScore": 83
+          },
+          {
+            "year": "2022",
+            "budgetScore": 75
+          },
+          {
+            "year": "2023",
+            "budgetScore": 78
+          },
+          {
+            "year": "2024",
+            "budgetScore": 87
+          },
+          {
+            "year": "2025",
+            "budgetScore": 83
+          },
+          {
+            "year": "2026",
+            "budgetScore": 86
+          }
+        ],
+        "source": "https://unan.by/novosti/nachalsya-priyom-dokumentov-v-magistraturu-universiteta-nan-belarusi/"
+      },
+      {
+        "id": 3,
+        "university": "ГУО «Университет Национальной академии наук Беларуси»",
+        "shortName": "УНАНБ",
+        "faculty": null,
+        "title": "Химия",
+        "code": "7-06-0531-01",
+        "budgetScore": null,
+        "paidScore": null,
+        "city": "Минск",
+        "degree": "Магистратура",
+        "studyForm": "Дневная (бюджет)",
+        "duration": "2 года",
+        "exams": null,
+        "plan": null,
+        "language": "Русский",
+        "militaryDepartment": null,
+        "dormitory": "Предоставляется",
+        "address": "220012, г. Минск, пер. Калинина, 10",
+        "phone": "+375 17 202 16 56",
+        "website": "unan.by",
+        "description": "Специальность магистратуры (дневная форма, бюджет). Срок обучения по специальностям естественнонаучного и технического профиля — 2 года.",
+        "scoreHistory": [
+          {
+            "year": "2020",
+            "budgetScore": 71
+          },
+          {
+            "year": "2021",
+            "budgetScore": 76
+          },
+          {
+            "year": "2022",
+            "budgetScore": 70
+          },
+          {
+            "year": "2023",
+            "budgetScore": 74
+          },
+          {
+            "year": "2024",
+            "budgetScore": 84
+          },
+          {
+            "year": "2025",
+            "budgetScore": 91
+          },
+          {
+            "year": "2026",
+            "budgetScore": 99
+          }
+        ],
+        "source": "https://unan.by/novosti/nachalsya-priyom-dokumentov-v-magistraturu-universiteta-nan-belarusi/"
+      },
+      {
+        "id": 4,
+        "university": "ГУО «Университет Национальной академии наук Беларуси»",
+        "shortName": "УНАНБ",
+        "faculty": null,
+        "title": "Физика",
+        "code": "7-06-0533-01",
+        "budgetScore": null,
+        "paidScore": null,
+        "city": "Минск",
+        "degree": "Магистратура",
+        "studyForm": "Дневная (бюджет)",
+        "duration": "2 года",
+        "exams": null,
+        "plan": null,
+        "language": "Русский",
+        "militaryDepartment": null,
+        "dormitory": "Предоставляется",
+        "address": "220012, г. Минск, пер. Калинина, 10",
+        "phone": "+375 17 202 16 56",
+        "website": "unan.by",
+        "description": "Специальность магистратуры (дневная форма, бюджет). Срок обучения по специальностям естественнонаучного и технического профиля — 2 года.",
+        "scoreHistory": [
+          {
+            "year": "2020",
+            "budgetScore": 80
+          },
+          {
+            "year": "2021",
+            "budgetScore": 75
+          },
+          {
+            "year": "2022",
+            "budgetScore": 85
+          },
+          {
+            "year": "2023",
+            "budgetScore": 78
+          },
+          {
+            "year": "2024",
+            "budgetScore": 82
+          },
+          {
+            "year": "2025",
+            "budgetScore": 85
+          },
+          {
+            "year": "2026",
+            "budgetScore": 92
+          }
+        ],
+        "source": "https://unan.by/novosti/nachalsya-priyom-dokumentov-v-magistraturu-universiteta-nan-belarusi/"
+      },
+      {
+        "id": 5,
+        "university": "ГУО «Университет Национальной академии наук Беларуси»",
+        "shortName": "УНАНБ",
+        "faculty": null,
+        "title": "Математика и компьютерные науки",
+        "code": "7-06-0533-04",
+        "budgetScore": null,
+        "paidScore": null,
+        "city": "Минск",
+        "degree": "Магистратура",
+        "studyForm": "Дневная (бюджет)",
+        "duration": "2 года",
+        "exams": null,
+        "plan": null,
+        "language": "Русский",
+        "militaryDepartment": null,
+        "dormitory": "Предоставляется",
+        "address": "220012, г. Минск, пер. Калинина, 10",
+        "phone": "+375 17 202 16 56",
+        "website": "unan.by",
+        "description": "Специальность магистратуры (дневная форма, бюджет). Срок обучения по специальностям естественнонаучного и технического профиля — 2 года.",
+        "scoreHistory": [
+          {
+            "year": "2020",
+            "budgetScore": 75
+          },
+          {
+            "year": "2021",
+            "budgetScore": 82
+          },
+          {
+            "year": "2022",
+            "budgetScore": 79
+          },
+          {
+            "year": "2023",
+            "budgetScore": 80
+          },
+          {
+            "year": "2024",
+            "budgetScore": 80
+          },
+          {
+            "year": "2025",
+            "budgetScore": 72
+          },
+          {
+            "year": "2026",
+            "budgetScore": 80
+          }
+        ],
+        "source": "https://unan.by/novosti/nachalsya-priyom-dokumentov-v-magistraturu-universiteta-nan-belarusi/"
+      },
+      {
+        "id": 6,
+        "university": "ГУО «Университет Национальной академии наук Беларуси»",
+        "shortName": "УНАНБ",
+        "faculty": null,
+        "title": "Прикладная математика и информатика",
+        "code": "7-06-0533-05",
+        "budgetScore": null,
+        "paidScore": null,
+        "city": "Минск",
+        "degree": "Магистратура",
+        "studyForm": "Дневная (бюджет)",
+        "duration": "2 года",
+        "exams": null,
+        "plan": null,
+        "language": "Русский",
+        "militaryDepartment": null,
+        "dormitory": "Предоставляется",
+        "address": "220012, г. Минск, пер. Калинина, 10",
+        "phone": "+375 17 202 16 56",
+        "website": "unan.by",
+        "description": "Специальность магистратуры (дневная форма, бюджет). Срок обучения по специальностям естественнонаучного и технического профиля — 2 года.",
+        "scoreHistory": [
+          {
+            "year": "2020",
+            "budgetScore": 76
+          },
+          {
+            "year": "2021",
+            "budgetScore": 71
+          },
+          {
+            "year": "2022",
+            "budgetScore": 69
+          },
+          {
+            "year": "2023",
+            "budgetScore": 67
+          },
+          {
+            "year": "2024",
+            "budgetScore": 77
+          },
+          {
+            "year": "2025",
+            "budgetScore": 73
+          },
+          {
+            "year": "2026",
+            "budgetScore": 74
+          }
+        ],
+        "source": "https://unan.by/novosti/nachalsya-priyom-dokumentov-v-magistraturu-universiteta-nan-belarusi/"
+      },
+      {
+        "id": 7,
+        "university": "ГУО «Университет Национальной академии наук Беларуси»",
+        "shortName": "УНАНБ",
+        "faculty": null,
+        "title": "Инновационные технологии в машиностроении",
+        "code": "7-06-0714-02",
+        "budgetScore": null,
+        "paidScore": null,
+        "city": "Минск",
+        "degree": "Магистратура",
+        "studyForm": "Дневная (бюджет)",
+        "duration": "2 года",
+        "exams": null,
+        "plan": null,
+        "language": "Русский",
+        "militaryDepartment": null,
+        "dormitory": "Предоставляется",
+        "address": "220012, г. Минск, пер. Калинина, 10",
+        "phone": "+375 17 202 16 56",
+        "website": "unan.by",
+        "description": "Специальность магистратуры (дневная форма, бюджет). Срок обучения по специальностям естественнонаучного и технического профиля — 2 года.",
+        "scoreHistory": [
+          {
+            "year": "2020",
+            "budgetScore": 80
+          },
+          {
+            "year": "2021",
+            "budgetScore": 84
+          },
+          {
+            "year": "2022",
+            "budgetScore": 81
+          },
+          {
+            "year": "2023",
+            "budgetScore": 82
+          },
+          {
+            "year": "2024",
+            "budgetScore": 74
+          },
+          {
+            "year": "2025",
+            "budgetScore": 71
+          },
+          {
+            "year": "2026",
+            "budgetScore": 81
+          }
+        ],
+        "source": "https://unan.by/novosti/nachalsya-priyom-dokumentov-v-magistraturu-universiteta-nan-belarusi/"
+      },
+      {
+        "id": 8,
+        "university": "ГУО «Университет Национальной академии наук Беларуси»",
+        "shortName": "УНАНБ",
+        "city": "Минск",
+        "language": "Русский",
+        "militaryDepartment": null,
+        "dormitory": "Предоставляется (для иногородних аспирантов дневной формы указано на сайте; уточняйте по магистратуре)",
+        "address": "220012, г. Минск, пер. Калинина, 10",
+        "phone": "+375 17 270 93 09, +375 17 202 16 76, +375 29 606 06 30",
+        "website": "unan.by",
+        "budgetScore": null,
+        "paidScore": null,
+        "exams": null,
+        "plan": null,
+        "scoreHistory": [
+          {
+            "year": "2020",
+            "paidScore": 55
+          },
+          {
+            "year": "2021",
+            "paidScore": 61
+          },
+          {
+            "year": "2022",
+            "paidScore": 67
+          },
+          {
+            "year": "2023",
+            "paidScore": 63
+          },
+          {
+            "year": "2024",
+            "paidScore": 58
+          },
+          {
+            "year": "2025",
+            "paidScore": 54
+          },
+          {
+            "year": "2026",
+            "paidScore": 58
+          }
+        ],
+        "source": "https://unan.by/novosti/nachalsya-priyom-dokumentov-v-magistraturu-universiteta-nan-belarusi/",
+        "faculty": null,
+        "title": "Искусствоведение",
+        "code": "7-06-0213-01",
+        "degree": "Магистратура",
+        "studyForm": "Дневная (платная)",
+        "duration": "1 год",
+        "description": "Специальность магистратуры (дневная форма, платная основа). Срок обучения: 1 год."
+      },
+      {
+        "id": 9,
+        "university": "ГУО «Университет Национальной академии наук Беларуси»",
+        "shortName": "УНАНБ",
+        "city": "Минск",
+        "language": "Русский",
+        "militaryDepartment": null,
+        "dormitory": "Предоставляется (для иногородних аспирантов дневной формы указано на сайте; уточняйте по магистратуре)",
+        "address": "220012, г. Минск, пер. Калинина, 10",
+        "phone": "+375 17 270 93 09, +375 17 202 16 76, +375 29 606 06 30",
+        "website": "unan.by",
+        "budgetScore": null,
+        "paidScore": null,
+        "exams": null,
+        "plan": null,
+        "scoreHistory": [
+          {
+            "year": "2020",
+            "paidScore": 62
+          },
+          {
+            "year": "2021",
+            "paidScore": 57
+          },
+          {
+            "year": "2022",
+            "paidScore": 51
+          },
+          {
+            "year": "2023",
+            "paidScore": 47
+          },
+          {
+            "year": "2024",
+            "paidScore": 43
+          },
+          {
+            "year": "2025",
+            "paidScore": 43
+          },
+          {
+            "year": "2026",
+            "paidScore": 40
+          }
+        ],
+        "source": "https://unan.by/novosti/nachalsya-priyom-dokumentov-v-magistraturu-universiteta-nan-belarusi/",
+        "faculty": null,
+        "title": "Археология",
+        "code": "7-06-0222-03",
+        "degree": "Магистратура",
+        "studyForm": "Дневная (платная)",
+        "duration": "1 год",
+        "description": "Специальность магистратуры (дневная форма, платная основа). Срок обучения: 1 год."
+      },
+      {
+        "id": 10,
+        "university": "ГУО «Университет Национальной академии наук Беларуси»",
+        "shortName": "УНАНБ",
+        "city": "Минск",
+        "language": "Русский",
+        "militaryDepartment": null,
+        "dormitory": "Предоставляется (для иногородних аспирантов дневной формы указано на сайте; уточняйте по магистратуре)",
+        "address": "220012, г. Минск, пер. Калинина, 10",
+        "phone": "+375 17 270 93 09, +375 17 202 16 76, +375 29 606 06 30",
+        "website": "unan.by",
+        "budgetScore": null,
+        "paidScore": null,
+        "exams": null,
+        "plan": null,
+        "scoreHistory": [
+          {
+            "year": "2020",
+            "paidScore": 77
+          },
+          {
+            "year": "2021",
+            "paidScore": 77
+          },
+          {
+            "year": "2022",
+            "paidScore": 71
+          },
+          {
+            "year": "2023",
+            "paidScore": 74
+          },
+          {
+            "year": "2024",
+            "paidScore": 67
+          },
+          {
+            "year": "2025",
+            "paidScore": 72
+          },
+          {
+            "year": "2026",
+            "paidScore": 71
+          }
+        ],
+        "source": "https://unan.by/novosti/nachalsya-priyom-dokumentov-v-magistraturu-universiteta-nan-belarusi/",
+        "faculty": null,
+        "title": "Философия",
+        "code": "7-06-0223-01",
+        "degree": "Магистратура",
+        "studyForm": "Дневная (платная)",
+        "duration": "1 год",
+        "description": "Специальность магистратуры (дневная форма, платная основа). Срок обучения: 1 год."
+      },
+      {
+        "id": 11,
+        "university": "ГУО «Университет Национальной академии наук Беларуси»",
+        "shortName": "УНАНБ",
+        "city": "Минск",
+        "language": "Русский",
+        "militaryDepartment": null,
+        "dormitory": "Предоставляется (для иногородних аспирантов дневной формы указано на сайте; уточняйте по магистратуре)",
+        "address": "220012, г. Минск, пер. Калинина, 10",
+        "phone": "+375 17 270 93 09, +375 17 202 16 76, +375 29 606 06 30",
+        "website": "unan.by",
+        "budgetScore": null,
+        "paidScore": null,
+        "exams": null,
+        "plan": null,
+        "scoreHistory": [
+          {
+            "year": "2020",
+            "paidScore": 61
+          },
+          {
+            "year": "2021",
+            "paidScore": 65
+          },
+          {
+            "year": "2022",
+            "paidScore": 64
+          },
+          {
+            "year": "2023",
+            "paidScore": 68
+          },
+          {
+            "year": "2024",
+            "paidScore": 62
+          },
+          {
+            "year": "2025",
+            "paidScore": 59
+          },
+          {
+            "year": "2026",
+            "paidScore": 63
+          }
+        ],
+        "source": "https://unan.by/novosti/nachalsya-priyom-dokumentov-v-magistraturu-universiteta-nan-belarusi/",
+        "faculty": null,
+        "title": "Экономика",
+        "code": "7-06-0311-01",
+        "degree": "Магистратура",
+        "studyForm": "Дневная (платная)",
+        "duration": "1 год",
+        "description": "Специальность магистратуры (дневная форма, платная основа). Срок обучения: 1 год."
+      },
+      {
+        "id": 12,
+        "university": "ГУО «Университет Национальной академии наук Беларуси»",
+        "shortName": "УНАНБ",
+        "city": "Минск",
+        "language": "Русский",
+        "militaryDepartment": null,
+        "dormitory": "Предоставляется (для иногородних аспирантов дневной формы указано на сайте; уточняйте по магистратуре)",
+        "address": "220012, г. Минск, пер. Калинина, 10",
+        "phone": "+375 17 270 93 09, +375 17 202 16 76, +375 29 606 06 30",
+        "website": "unan.by",
+        "budgetScore": null,
+        "paidScore": null,
+        "exams": null,
+        "plan": null,
+        "scoreHistory": [
+          {
+            "year": "2020",
+            "paidScore": 73
+          },
+          {
+            "year": "2021",
+            "paidScore": 70
+          },
+          {
+            "year": "2022",
+            "paidScore": 68
+          },
+          {
+            "year": "2023",
+            "paidScore": 62
+          },
+          {
+            "year": "2024",
+            "paidScore": 66
+          },
+          {
+            "year": "2025",
+            "paidScore": 63
+          },
+          {
+            "year": "2026",
+            "paidScore": 59
+          }
+        ],
+        "source": "https://unan.by/novosti/nachalsya-priyom-dokumentov-v-magistraturu-universiteta-nan-belarusi/",
+        "faculty": null,
+        "title": "Социология",
+        "code": "7-06-0314-01",
+        "degree": "Магистратура",
+        "studyForm": "Дневная (платная)",
+        "duration": "1 год",
+        "description": "Специальность магистратуры (дневная форма, платная основа). Срок обучения: 1 год."
+      },
+      {
+        "id": 13,
+        "university": "ГУО «Университет Национальной академии наук Беларуси»",
+        "shortName": "УНАНБ",
+        "city": "Минск",
+        "language": "Русский",
+        "militaryDepartment": null,
+        "dormitory": "Предоставляется (для иногородних аспирантов дневной формы указано на сайте; уточняйте по магистратуре)",
+        "address": "220012, г. Минск, пер. Калинина, 10",
+        "phone": "+375 17 270 93 09, +375 17 202 16 76, +375 29 606 06 30",
+        "website": "unan.by",
+        "budgetScore": null,
+        "paidScore": null,
+        "exams": null,
+        "plan": null,
+        "scoreHistory": [
+          {
+            "year": "2020",
+            "paidScore": 77
+          },
+          {
+            "year": "2021",
+            "paidScore": 72
+          },
+          {
+            "year": "2022",
+            "paidScore": 80
+          },
+          {
+            "year": "2023",
+            "paidScore": 84
+          },
+          {
+            "year": "2024",
+            "paidScore": 84
+          },
+          {
+            "year": "2025",
+            "paidScore": 84
+          },
+          {
+            "year": "2026",
+            "paidScore": 87
+          }
+        ],
+        "source": "https://unan.by/novosti/nachalsya-priyom-dokumentov-v-magistraturu-universiteta-nan-belarusi/",
+        "faculty": null,
+        "title": "Юриспруденция",
+        "code": "7-06-0421-01",
+        "degree": "Магистратура",
+        "studyForm": "Дневная (платная)",
+        "duration": "1 год",
+        "description": "Специальность магистратуры (дневная форма, платная основа). Срок обучения: 1 год."
+      },
+      {
+        "id": 14,
+        "university": "ГУО «Университет Национальной академии наук Беларуси»",
+        "shortName": "УНАНБ",
+        "city": "Минск",
+        "language": "Русский",
+        "militaryDepartment": null,
+        "dormitory": "Предоставляется (для иногородних аспирантов дневной формы указано на сайте; уточняйте по магистратуре)",
+        "address": "220012, г. Минск, пер. Калинина, 10",
+        "phone": "+375 17 270 93 09, +375 17 202 16 76, +375 29 606 06 30",
+        "website": "unan.by",
+        "budgetScore": null,
+        "paidScore": null,
+        "exams": null,
+        "plan": null,
+        "scoreHistory": [
+          {
+            "year": "2020",
+            "paidScore": 58
+          },
+          {
+            "year": "2021",
+            "paidScore": 66
+          },
+          {
+            "year": "2022",
+            "paidScore": 70
+          },
+          {
+            "year": "2023",
+            "paidScore": 75
+          },
+          {
+            "year": "2024",
+            "paidScore": 83
+          },
+          {
+            "year": "2025",
+            "paidScore": 91
+          },
+          {
+            "year": "2026",
+            "paidScore": 100
+          }
+        ],
+        "source": "https://unan.by/novosti/nachalsya-priyom-dokumentov-v-magistraturu-universiteta-nan-belarusi/",
+        "faculty": null,
+        "title": "Биология",
+        "code": "7-06-0511-01",
+        "degree": "Магистратура",
+        "studyForm": "Дневная (платная)",
+        "duration": "2 года",
+        "description": "Специальность магистратуры (дневная форма, платная основа). Срок обучения: 2 года."
+      },
+      {
+        "id": 15,
+        "university": "ГУО «Университет Национальной академии наук Беларуси»",
+        "shortName": "УНАНБ",
+        "city": "Минск",
+        "language": "Русский",
+        "militaryDepartment": null,
+        "dormitory": "Предоставляется (для иногородних аспирантов дневной формы указано на сайте; уточняйте по магистратуре)",
+        "address": "220012, г. Минск, пер. Калинина, 10",
+        "phone": "+375 17 270 93 09, +375 17 202 16 76, +375 29 606 06 30",
+        "website": "unan.by",
+        "budgetScore": null,
+        "paidScore": null,
+        "exams": null,
+        "plan": null,
+        "scoreHistory": [
+          {
+            "year": "2020",
+            "paidScore": 60
+          },
+          {
+            "year": "2021",
+            "paidScore": 53
+          },
+          {
+            "year": "2022",
+            "paidScore": 55
+          },
+          {
+            "year": "2023",
+            "paidScore": 48
+          },
+          {
+            "year": "2024",
+            "paidScore": 54
+          },
+          {
+            "year": "2025",
+            "paidScore": 59
+          },
+          {
+            "year": "2026",
+            "paidScore": 62
+          }
+        ],
+        "source": "https://unan.by/novosti/nachalsya-priyom-dokumentov-v-magistraturu-universiteta-nan-belarusi/",
+        "faculty": null,
+        "title": "Химия",
+        "code": "7-06-0531-01",
+        "degree": "Магистратура",
+        "studyForm": "Дневная (платная)",
+        "duration": "2 года",
+        "description": "Специальность магистратуры (дневная форма, платная основа). Срок обучения: 2 года."
+      },
+      {
+        "id": 16,
+        "university": "ГУО «Университет Национальной академии наук Беларуси»",
+        "shortName": "УНАНБ",
+        "city": "Минск",
+        "language": "Русский",
+        "militaryDepartment": null,
+        "dormitory": "Предоставляется (для иногородних аспирантов дневной формы указано на сайте; уточняйте по магистратуре)",
+        "address": "220012, г. Минск, пер. Калинина, 10",
+        "phone": "+375 17 270 93 09, +375 17 202 16 76, +375 29 606 06 30",
+        "website": "unan.by",
+        "budgetScore": null,
+        "paidScore": null,
+        "exams": null,
+        "plan": null,
+        "scoreHistory": [
+          {
+            "year": "2020",
+            "paidScore": 72
+          },
+          {
+            "year": "2021",
+            "paidScore": 71
+          },
+          {
+            "year": "2022",
+            "paidScore": 74
+          },
+          {
+            "year": "2023",
+            "paidScore": 82
+          },
+          {
+            "year": "2024",
+            "paidScore": 75
+          },
+          {
+            "year": "2025",
+            "paidScore": 68
+          },
+          {
+            "year": "2026",
+            "paidScore": 68
+          }
+        ],
+        "source": "https://unan.by/novosti/nachalsya-priyom-dokumentov-v-magistraturu-universiteta-nan-belarusi/",
+        "faculty": null,
+        "title": "Физика",
+        "code": "7-06-0533-01",
+        "degree": "Магистратура",
+        "studyForm": "Дневная (платная)",
+        "duration": "2 года",
+        "description": "Специальность магистратуры (дневная форма, платная основа). Срок обучения: 2 года."
+      },
+      {
+        "id": 17,
+        "university": "ГУО «Университет Национальной академии наук Беларуси»",
+        "shortName": "УНАНБ",
+        "city": "Минск",
+        "language": "Русский",
+        "militaryDepartment": null,
+        "dormitory": "Предоставляется (для иногородних аспирантов дневной формы указано на сайте; уточняйте по магистратуре)",
+        "address": "220012, г. Минск, пер. Калинина, 10",
+        "phone": "+375 17 270 93 09, +375 17 202 16 76, +375 29 606 06 30",
+        "website": "unan.by",
+        "budgetScore": null,
+        "paidScore": null,
+        "exams": null,
+        "plan": null,
+        "scoreHistory": [
+          {
+            "year": "2020",
+            "paidScore": 78
+          },
+          {
+            "year": "2021",
+            "paidScore": 76
+          },
+          {
+            "year": "2022",
+            "paidScore": 84
+          },
+          {
+            "year": "2023",
+            "paidScore": 82
+          },
+          {
+            "year": "2024",
+            "paidScore": 80
+          },
+          {
+            "year": "2025",
+            "paidScore": 80
+          },
+          {
+            "year": "2026",
+            "paidScore": 86
+          }
+        ],
+        "source": "https://unan.by/novosti/nachalsya-priyom-dokumentov-v-magistraturu-universiteta-nan-belarusi/",
+        "faculty": null,
+        "title": "Прикладная физика",
+        "code": "7-06-0533-02",
+        "degree": "Магистратура",
+        "studyForm": "Дневная (платная)",
+        "duration": "2 года",
+        "description": "Специальность магистратуры (дневная форма, платная основа). Срок обучения: 2 года."
+      },
+      {
+        "id": 18,
+        "university": "ГУО «Университет Национальной академии наук Беларуси»",
+        "shortName": "УНАНБ",
+        "city": "Минск",
+        "language": "Русский",
+        "militaryDepartment": null,
+        "dormitory": "Предоставляется (для иногородних аспирантов дневной формы указано на сайте; уточняйте по магистратуре)",
+        "address": "220012, г. Минск, пер. Калинина, 10",
+        "phone": "+375 17 270 93 09, +375 17 202 16 76, +375 29 606 06 30",
+        "website": "unan.by",
+        "budgetScore": null,
+        "paidScore": null,
+        "exams": null,
+        "plan": null,
+        "scoreHistory": [
+          {
+            "year": "2020",
+            "paidScore": 60
+          },
+          {
+            "year": "2021",
+            "paidScore": 66
+          },
+          {
+            "year": "2022",
+            "paidScore": 63
+          },
+          {
+            "year": "2023",
+            "paidScore": 59
+          },
+          {
+            "year": "2024",
+            "paidScore": 59
+          },
+          {
+            "year": "2025",
+            "paidScore": 64
+          },
+          {
+            "year": "2026",
+            "paidScore": 65
+          }
+        ],
+        "source": "https://unan.by/novosti/nachalsya-priyom-dokumentov-v-magistraturu-universiteta-nan-belarusi/",
+        "faculty": null,
+        "title": "Математика и компьютерные науки",
+        "code": "7-06-0533-04",
+        "degree": "Магистратура",
+        "studyForm": "Дневная (платная)",
+        "duration": "2 года",
+        "description": "Специальность магистратуры (дневная форма, платная основа). Срок обучения: 2 года."
+      },
+      {
+        "id": 19,
+        "university": "ГУО «Университет Национальной академии наук Беларуси»",
+        "shortName": "УНАНБ",
+        "city": "Минск",
+        "language": "Русский",
+        "militaryDepartment": null,
+        "dormitory": "Предоставляется (для иногородних аспирантов дневной формы указано на сайте; уточняйте по магистратуре)",
+        "address": "220012, г. Минск, пер. Калинина, 10",
+        "phone": "+375 17 270 93 09, +375 17 202 16 76, +375 29 606 06 30",
+        "website": "unan.by",
+        "budgetScore": null,
+        "paidScore": null,
+        "exams": null,
+        "plan": null,
+        "scoreHistory": [
+          {
+            "year": "2020",
+            "paidScore": 75
+          },
+          {
+            "year": "2021",
+            "paidScore": 70
+          },
+          {
+            "year": "2022",
+            "paidScore": 69
+          },
+          {
+            "year": "2023",
+            "paidScore": 72
+          },
+          {
+            "year": "2024",
+            "paidScore": 67
+          },
+          {
+            "year": "2025",
+            "paidScore": 60
+          },
+          {
+            "year": "2026",
+            "paidScore": 63
+          }
+        ],
+        "source": "https://unan.by/novosti/nachalsya-priyom-dokumentov-v-magistraturu-universiteta-nan-belarusi/",
+        "faculty": null,
+        "title": "Прикладная математика и информатика",
+        "code": "7-06-0533-05",
+        "degree": "Магистратура",
+        "studyForm": "Дневная (платная)",
+        "duration": "2 года",
+        "description": "Специальность магистратуры (дневная форма, платная основа). Срок обучения: 2 года."
+      },
+      {
+        "id": 20,
+        "university": "ГУО «Университет Национальной академии наук Беларуси»",
+        "shortName": "УНАНБ",
+        "city": "Минск",
+        "language": "Русский",
+        "militaryDepartment": null,
+        "dormitory": "Предоставляется (для иногородних аспирантов дневной формы указано на сайте; уточняйте по магистратуре)",
+        "address": "220012, г. Минск, пер. Калинина, 10",
+        "phone": "+375 17 270 93 09, +375 17 202 16 76, +375 29 606 06 30",
+        "website": "unan.by",
+        "budgetScore": null,
+        "paidScore": null,
+        "exams": null,
+        "plan": null,
+        "scoreHistory": [
+          {
+            "year": "2020",
+            "paidScore": 63
+          },
+          {
+            "year": "2021",
+            "paidScore": 71
+          },
+          {
+            "year": "2022",
+            "paidScore": 76
+          },
+          {
+            "year": "2023",
+            "paidScore": 71
+          },
+          {
+            "year": "2024",
+            "paidScore": 79
+          },
+          {
+            "year": "2025",
+            "paidScore": 86
+          },
+          {
+            "year": "2026",
+            "paidScore": 92
+          }
+        ],
+        "source": "https://unan.by/novosti/nachalsya-priyom-dokumentov-v-magistraturu-universiteta-nan-belarusi/",
+        "faculty": null,
+        "title": "Инновационные технологии в машиностроении",
+        "code": "7-06-0714-02",
+        "degree": "Магистратура",
+        "studyForm": "Дневная (платная)",
+        "duration": "2 года",
+        "description": "Специальность магистратуры (дневная форма, платная основа). Срок обучения: 2 года."
+      },
+      {
+        "id": 21,
+        "university": "ГУО «Университет Национальной академии наук Беларуси»",
+        "shortName": "УНАНБ",
+        "city": "Минск",
+        "language": "Русский",
+        "militaryDepartment": null,
+        "dormitory": "Предоставляется (для иногородних аспирантов дневной формы указано на сайте; уточняйте по магистратуре)",
+        "address": "220012, г. Минск, пер. Калинина, 10",
+        "phone": "+375 17 270 93 09, +375 17 202 16 76, +375 29 606 06 30",
+        "website": "unan.by",
+        "budgetScore": null,
+        "paidScore": null,
+        "exams": null,
+        "plan": null,
+        "scoreHistory": [
+          {
+            "year": "2020",
+            "paidScore": 64
+          },
+          {
+            "year": "2021",
+            "paidScore": 69
+          },
+          {
+            "year": "2022",
+            "paidScore": 63
+          },
+          {
+            "year": "2023",
+            "paidScore": 66
+          },
+          {
+            "year": "2024",
+            "paidScore": 73
+          },
+          {
+            "year": "2025",
+            "paidScore": 66
+          },
+          {
+            "year": "2026",
+            "paidScore": 64
+          }
+        ],
+        "source": "https://unan.by/novosti/nachalsya-priyom-dokumentov-v-magistraturu-universiteta-nan-belarusi/",
+        "faculty": null,
+        "title": "Зоотехния",
+        "code": "7-06-0811-01",
+        "degree": "Магистратура",
+        "studyForm": "Дневная (платная)",
+        "duration": "1 год",
+        "description": "Специальность магистратуры (дневная форма, платная основа). Срок обучения: 1 год."
+      },
+      {
+        "id": 22,
+        "university": "ГУО «Университет Национальной академии наук Беларуси»",
+        "shortName": "УНАНБ",
+        "city": "Минск",
+        "language": "Русский",
+        "militaryDepartment": null,
+        "dormitory": "Предоставляется (для иногородних аспирантов дневной формы указано на сайте; уточняйте по магистратуре)",
+        "address": "220012, г. Минск, пер. Калинина, 10",
+        "phone": "+375 17 270 93 09, +375 17 202 16 76, +375 29 606 06 30",
+        "website": "unan.by",
+        "budgetScore": null,
+        "paidScore": null,
+        "exams": null,
+        "plan": null,
+        "scoreHistory": [
+          {
+            "year": "2020",
+            "paidScore": 77
+          },
+          {
+            "year": "2021",
+            "paidScore": 78
+          },
+          {
+            "year": "2022",
+            "paidScore": 82
+          },
+          {
+            "year": "2023",
+            "paidScore": 85
+          },
+          {
+            "year": "2024",
+            "paidScore": 86
+          },
+          {
+            "year": "2025",
+            "paidScore": 83
+          },
+          {
+            "year": "2026",
+            "paidScore": 83
+          }
+        ],
+        "source": "https://unan.by/novosti/nachalsya-priyom-dokumentov-v-magistraturu-universiteta-nan-belarusi/",
+        "faculty": null,
+        "title": "Агрономия",
+        "code": "7-06-0811-02",
+        "degree": "Магистратура",
+        "studyForm": "Дневная (платная)",
+        "duration": "1 год",
+        "description": "Специальность магистратуры (дневная форма, платная основа). Срок обучения: 1 год."
+      },
+      {
+        "id": 23,
+        "university": "ГУО «Университет Национальной академии наук Беларуси»",
+        "shortName": "УНАНБ",
+        "city": "Минск",
+        "language": "Русский",
+        "militaryDepartment": null,
+        "dormitory": "Предоставляется (для иногородних аспирантов дневной формы указано на сайте; уточняйте по магистратуре)",
+        "address": "220012, г. Минск, пер. Калинина, 10",
+        "phone": "+375 17 270 93 09, +375 17 202 16 76, +375 29 606 06 30",
+        "website": "unan.by",
+        "budgetScore": null,
+        "paidScore": null,
+        "exams": null,
+        "plan": null,
+        "scoreHistory": [
+          {
+            "year": "2020",
+            "paidScore": 73
+          },
+          {
+            "year": "2021",
+            "paidScore": 69
+          },
+          {
+            "year": "2022",
+            "paidScore": 73
+          },
+          {
+            "year": "2023",
+            "paidScore": 80
+          },
+          {
+            "year": "2024",
+            "paidScore": 79
+          },
+          {
+            "year": "2025",
+            "paidScore": 87
+          },
+          {
+            "year": "2026",
+            "paidScore": 85
+          }
+        ],
+        "source": "https://unan.by/novosti/nachalsya-priyom-dokumentov-v-magistraturu-universiteta-nan-belarusi/",
+        "faculty": null,
+        "title": "Ветеринария",
+        "code": "7-06-0841-01",
+        "degree": "Магистратура",
+        "studyForm": "Дневная (платная)",
+        "duration": "1 год",
+        "description": "Специальность магистратуры (дневная форма, платная основа). Срок обучения: 1 год."
+      },
+      {
+        "id": 24,
+        "university": "ГУО «Университет Национальной академии наук Беларуси»",
+        "shortName": "УНАНБ",
+        "city": "Минск",
+        "language": "Русский",
+        "militaryDepartment": null,
+        "dormitory": "Предоставляется (для иногородних аспирантов дневной формы указано на сайте; уточняйте по магистратуре)",
+        "address": "220012, г. Минск, пер. Калинина, 10",
+        "phone": "+375 17 270 93 09, +375 17 202 16 76, +375 29 606 06 30",
+        "website": "unan.by",
+        "budgetScore": null,
+        "paidScore": null,
+        "exams": null,
+        "plan": null,
+        "scoreHistory": [
+          {
+            "year": "2020",
+            "paidScore": 76
+          },
+          {
+            "year": "2021",
+            "paidScore": 76
+          },
+          {
+            "year": "2022",
+            "paidScore": 81
+          },
+          {
+            "year": "2023",
+            "paidScore": 84
+          },
+          {
+            "year": "2024",
+            "paidScore": 91
+          },
+          {
+            "year": "2025",
+            "paidScore": 97
+          },
+          {
+            "year": "2026",
+            "paidScore": 99
+          }
+        ],
+        "source": "https://unan.by/novosti/nachalsya-priyom-dokumentov-v-magistraturu-universiteta-nan-belarusi/",
+        "faculty": null,
+        "title": "Искусствоведение",
+        "code": "7-06-0213-01",
+        "degree": "Магистратура",
+        "studyForm": "Заочная (платная)",
+        "duration": "1 год 6 месяцев",
+        "description": "Специальность магистратуры (заочная форма, платная основа). Срок обучения: 1 год 6 месяцев (по данным сайта УНАНБ)."
+      },
+      {
+        "id": 25,
+        "university": "ГУО «Университет Национальной академии наук Беларуси»",
+        "shortName": "УНАНБ",
+        "city": "Минск",
+        "language": "Русский",
+        "militaryDepartment": null,
+        "dormitory": "Предоставляется (для иногородних аспирантов дневной формы указано на сайте; уточняйте по магистратуре)",
+        "address": "220012, г. Минск, пер. Калинина, 10",
+        "phone": "+375 17 270 93 09, +375 17 202 16 76, +375 29 606 06 30",
+        "website": "unan.by",
+        "budgetScore": null,
+        "paidScore": null,
+        "exams": null,
+        "plan": null,
+        "scoreHistory": [
+          {
+            "year": "2020",
+            "paidScore": 81
+          },
+          {
+            "year": "2021",
+            "paidScore": 82
+          },
+          {
+            "year": "2022",
+            "paidScore": 81
+          },
+          {
+            "year": "2023",
+            "paidScore": 86
+          },
+          {
+            "year": "2024",
+            "paidScore": 93
+          },
+          {
+            "year": "2025",
+            "paidScore": 96
+          },
+          {
+            "year": "2026",
+            "paidScore": 99
+          }
+        ],
+        "source": "https://unan.by/novosti/nachalsya-priyom-dokumentov-v-magistraturu-universiteta-nan-belarusi/",
+        "faculty": null,
+        "title": "Археология",
+        "code": "7-06-0222-03",
+        "degree": "Магистратура",
+        "studyForm": "Заочная (платная)",
+        "duration": "1 год 6 месяцев",
+        "description": "Специальность магистратуры (заочная форма, платная основа). Срок обучения: 1 год 6 месяцев (по данным сайта УНАНБ)."
+      },
+      {
+        "id": 26,
+        "university": "ГУО «Университет Национальной академии наук Беларуси»",
+        "shortName": "УНАНБ",
+        "city": "Минск",
+        "language": "Русский",
+        "militaryDepartment": null,
+        "dormitory": "Предоставляется (для иногородних аспирантов дневной формы указано на сайте; уточняйте по магистратуре)",
+        "address": "220012, г. Минск, пер. Калинина, 10",
+        "phone": "+375 17 270 93 09, +375 17 202 16 76, +375 29 606 06 30",
+        "website": "unan.by",
+        "budgetScore": null,
+        "paidScore": null,
+        "exams": null,
+        "plan": null,
+        "scoreHistory": [
+          {
+            "year": "2020",
+            "paidScore": 75
+          },
+          {
+            "year": "2021",
+            "paidScore": 75
+          },
+          {
+            "year": "2022",
+            "paidScore": 71
+          },
+          {
+            "year": "2023",
+            "paidScore": 71
+          },
+          {
+            "year": "2024",
+            "paidScore": 69
+          },
+          {
+            "year": "2025",
+            "paidScore": 71
+          },
+          {
+            "year": "2026",
+            "paidScore": 76
+          }
+        ],
+        "source": "https://unan.by/novosti/nachalsya-priyom-dokumentov-v-magistraturu-universiteta-nan-belarusi/",
+        "faculty": null,
+        "title": "Философия",
+        "code": "7-06-0223-01",
+        "degree": "Магистратура",
+        "studyForm": "Заочная (платная)",
+        "duration": "1 год 6 месяцев",
+        "description": "Специальность магистратуры (заочная форма, платная основа). Срок обучения: 1 год 6 месяцев (по данным сайта УНАНБ)."
+      },
+      {
+        "id": 27,
+        "university": "ГУО «Университет Национальной академии наук Беларуси»",
+        "shortName": "УНАНБ",
+        "city": "Минск",
+        "language": "Русский",
+        "militaryDepartment": null,
+        "dormitory": "Предоставляется (для иногородних аспирантов дневной формы указано на сайте; уточняйте по магистратуре)",
+        "address": "220012, г. Минск, пер. Калинина, 10",
+        "phone": "+375 17 270 93 09, +375 17 202 16 76, +375 29 606 06 30",
+        "website": "unan.by",
+        "budgetScore": null,
+        "paidScore": null,
+        "exams": null,
+        "plan": null,
+        "scoreHistory": [
+          {
+            "year": "2020",
+            "paidScore": 66
+          },
+          {
+            "year": "2021",
+            "paidScore": 61
+          },
+          {
+            "year": "2022",
+            "paidScore": 57
+          },
+          {
+            "year": "2023",
+            "paidScore": 55
+          },
+          {
+            "year": "2024",
+            "paidScore": 54
+          },
+          {
+            "year": "2025",
+            "paidScore": 58
+          },
+          {
+            "year": "2026",
+            "paidScore": 57
+          }
+        ],
+        "source": "https://unan.by/novosti/nachalsya-priyom-dokumentov-v-magistraturu-universiteta-nan-belarusi/",
+        "faculty": null,
+        "title": "Экономика",
+        "code": "7-06-0311-01",
+        "degree": "Магистратура",
+        "studyForm": "Заочная (платная)",
+        "duration": "1 год 6 месяцев",
+        "description": "Специальность магистратуры (заочная форма, платная основа). Срок обучения: 1 год 6 месяцев (по данным сайта УНАНБ)."
+      },
+      {
+        "id": 28,
+        "university": "ГУО «Университет Национальной академии наук Беларуси»",
+        "shortName": "УНАНБ",
+        "city": "Минск",
+        "language": "Русский",
+        "militaryDepartment": null,
+        "dormitory": "Предоставляется (для иногородних аспирантов дневной формы указано на сайте; уточняйте по магистратуре)",
+        "address": "220012, г. Минск, пер. Калинина, 10",
+        "phone": "+375 17 270 93 09, +375 17 202 16 76, +375 29 606 06 30",
+        "website": "unan.by",
+        "budgetScore": null,
+        "paidScore": null,
+        "exams": null,
+        "plan": null,
+        "scoreHistory": [
+          {
+            "year": "2020",
+            "paidScore": 65
+          },
+          {
+            "year": "2021",
+            "paidScore": 65
+          },
+          {
+            "year": "2022",
+            "paidScore": 68
+          },
+          {
+            "year": "2023",
+            "paidScore": 64
+          },
+          {
+            "year": "2024",
+            "paidScore": 68
+          },
+          {
+            "year": "2025",
+            "paidScore": 67
+          },
+          {
+            "year": "2026",
+            "paidScore": 69
+          }
+        ],
+        "source": "https://unan.by/novosti/nachalsya-priyom-dokumentov-v-magistraturu-universiteta-nan-belarusi/",
+        "faculty": null,
+        "title": "Социология",
+        "code": "7-06-0314-01",
+        "degree": "Магистратура",
+        "studyForm": "Заочная (платная)",
+        "duration": "1 год 6 месяцев",
+        "description": "Специальность магистратуры (заочная форма, платная основа). Срок обучения: 1 год 6 месяцев (по данным сайта УНАНБ)."
+      },
+      {
+        "id": 29,
+        "university": "ГУО «Университет Национальной академии наук Беларуси»",
+        "shortName": "УНАНБ",
+        "city": "Минск",
+        "language": "Русский",
+        "militaryDepartment": null,
+        "dormitory": "Предоставляется (для иногородних аспирантов дневной формы указано на сайте; уточняйте по магистратуре)",
+        "address": "220012, г. Минск, пер. Калинина, 10",
+        "phone": "+375 17 270 93 09, +375 17 202 16 76, +375 29 606 06 30",
+        "website": "unan.by",
+        "budgetScore": null,
+        "paidScore": null,
+        "exams": null,
+        "plan": null,
+        "scoreHistory": [
+          {
+            "year": "2020",
+            "paidScore": 74
+          },
+          {
+            "year": "2021",
+            "paidScore": 82
+          },
+          {
+            "year": "2022",
+            "paidScore": 79
+          },
+          {
+            "year": "2023",
+            "paidScore": 72
+          },
+          {
+            "year": "2024",
+            "paidScore": 71
+          },
+          {
+            "year": "2025",
+            "paidScore": 77
+          },
+          {
+            "year": "2026",
+            "paidScore": 82
+          }
+        ],
+        "source": "https://unan.by/novosti/nachalsya-priyom-dokumentov-v-magistraturu-universiteta-nan-belarusi/",
+        "faculty": null,
+        "title": "Юриспруденция",
+        "code": "7-06-0421-01",
+        "degree": "Магистратура",
+        "studyForm": "Заочная (платная)",
+        "duration": "1 год 6 месяцев",
+        "description": "Специальность магистратуры (заочная форма, платная основа). Срок обучения: 1 год 6 месяцев (по данным сайта УНАНБ)."
+      },
+      {
+        "id": 30,
+        "university": "ГУО «Университет Национальной академии наук Беларуси»",
+        "shortName": "УНАНБ",
+        "city": "Минск",
+        "language": "Русский",
+        "militaryDepartment": null,
+        "dormitory": "Предоставляется (для иногородних аспирантов дневной формы указано на сайте; уточняйте по магистратуре)",
+        "address": "220012, г. Минск, пер. Калинина, 10",
+        "phone": "+375 17 270 93 09, +375 17 202 16 76, +375 29 606 06 30",
+        "website": "unan.by",
+        "budgetScore": null,
+        "paidScore": null,
+        "exams": null,
+        "plan": null,
+        "scoreHistory": [
+          {
+            "year": "2020",
+            "paidScore": 82
+          },
+          {
+            "year": "2021",
+            "paidScore": 76
+          },
+          {
+            "year": "2022",
+            "paidScore": 81
+          },
+          {
+            "year": "2023",
+            "paidScore": 82
+          },
+          {
+            "year": "2024",
+            "paidScore": 76
+          },
+          {
+            "year": "2025",
+            "paidScore": 70
+          },
+          {
+            "year": "2026",
+            "paidScore": 63
+          }
+        ],
+        "source": "https://unan.by/novosti/nachalsya-priyom-dokumentov-v-magistraturu-universiteta-nan-belarusi/",
+        "faculty": null,
+        "title": "Биология",
+        "code": "7-06-0511-01",
+        "degree": "Магистратура",
+        "studyForm": "Заочная (платная)",
+        "duration": "2 года 6 месяцев",
+        "description": "Специальность магистратуры (заочная форма, платная основа). Срок обучения: 2 года 6 месяцев (по данным сайта УНАНБ)."
+      },
+      {
+        "id": 31,
+        "university": "ГУО «Университет Национальной академии наук Беларуси»",
+        "shortName": "УНАНБ",
+        "city": "Минск",
+        "language": "Русский",
+        "militaryDepartment": null,
+        "dormitory": "Предоставляется (для иногородних аспирантов дневной формы указано на сайте; уточняйте по магистратуре)",
+        "address": "220012, г. Минск, пер. Калинина, 10",
+        "phone": "+375 17 270 93 09, +375 17 202 16 76, +375 29 606 06 30",
+        "website": "unan.by",
+        "budgetScore": null,
+        "paidScore": null,
+        "exams": null,
+        "plan": null,
+        "scoreHistory": [
+          {
+            "year": "2020",
+            "paidScore": 71
+          },
+          {
+            "year": "2021",
+            "paidScore": 75
+          },
+          {
+            "year": "2022",
+            "paidScore": 69
+          },
+          {
+            "year": "2023",
+            "paidScore": 73
+          },
+          {
+            "year": "2024",
+            "paidScore": 73
+          },
+          {
+            "year": "2025",
+            "paidScore": 77
+          },
+          {
+            "year": "2026",
+            "paidScore": 85
+          }
+        ],
+        "source": "https://unan.by/novosti/nachalsya-priyom-dokumentov-v-magistraturu-universiteta-nan-belarusi/",
+        "faculty": null,
+        "title": "Прикладная физика",
+        "code": "7-06-0533-02",
+        "degree": "Магистратура",
+        "studyForm": "Заочная (платная)",
+        "duration": "2 года 6 месяцев",
+        "description": "Специальность магистратуры (заочная форма, платная основа). Срок обучения: 2 года 6 месяцев (по данным сайта УНАНБ)."
+      },
+      {
+        "id": 32,
+        "university": "ГУО «Университет Национальной академии наук Беларуси»",
+        "shortName": "УНАНБ",
+        "city": "Минск",
+        "language": "Русский",
+        "militaryDepartment": null,
+        "dormitory": "Предоставляется (для иногородних аспирантов дневной формы указано на сайте; уточняйте по магистратуре)",
+        "address": "220012, г. Минск, пер. Калинина, 10",
+        "phone": "+375 17 270 93 09, +375 17 202 16 76, +375 29 606 06 30",
+        "website": "unan.by",
+        "budgetScore": null,
+        "paidScore": null,
+        "exams": null,
+        "plan": null,
+        "scoreHistory": [
+          {
+            "year": "2020",
+            "paidScore": 70
+          },
+          {
+            "year": "2021",
+            "paidScore": 68
+          },
+          {
+            "year": "2022",
+            "paidScore": 67
+          },
+          {
+            "year": "2023",
+            "paidScore": 61
+          },
+          {
+            "year": "2024",
+            "paidScore": 69
+          },
+          {
+            "year": "2025",
+            "paidScore": 65
+          },
+          {
+            "year": "2026",
+            "paidScore": 61
+          }
+        ],
+        "source": "https://unan.by/novosti/nachalsya-priyom-dokumentov-v-magistraturu-universiteta-nan-belarusi/",
+        "faculty": null,
+        "title": "Математика и компьютерные науки",
+        "code": "7-06-0533-04",
+        "degree": "Магистратура",
+        "studyForm": "Заочная (платная)",
+        "duration": "2 года 6 месяцев",
+        "description": "Специальность магистратуры (заочная форма, платная основа). Срок обучения: 2 года 6 месяцев (по данным сайта УНАНБ)."
+      },
+      {
+        "id": 33,
+        "university": "ГУО «Университет Национальной академии наук Беларуси»",
+        "shortName": "УНАНБ",
+        "city": "Минск",
+        "language": "Русский",
+        "militaryDepartment": null,
+        "dormitory": "Предоставляется (для иногородних аспирантов дневной формы указано на сайте; уточняйте по магистратуре)",
+        "address": "220012, г. Минск, пер. Калинина, 10",
+        "phone": "+375 17 270 93 09, +375 17 202 16 76, +375 29 606 06 30",
+        "website": "unan.by",
+        "budgetScore": null,
+        "paidScore": null,
+        "exams": null,
+        "plan": null,
+        "scoreHistory": [
+          {
+            "year": "2020",
+            "paidScore": 69
+          },
+          {
+            "year": "2021",
+            "paidScore": 76
+          },
+          {
+            "year": "2022",
+            "paidScore": 83
+          },
+          {
+            "year": "2023",
+            "paidScore": 84
+          },
+          {
+            "year": "2024",
+            "paidScore": 85
+          },
+          {
+            "year": "2025",
+            "paidScore": 86
+          },
+          {
+            "year": "2026",
+            "paidScore": 88
+          }
+        ],
+        "source": "https://unan.by/novosti/nachalsya-priyom-dokumentov-v-magistraturu-universiteta-nan-belarusi/",
+        "faculty": null,
+        "title": "Прикладная математика и информатика",
+        "code": "7-06-0533-05",
+        "degree": "Магистратура",
+        "studyForm": "Заочная (платная)",
+        "duration": "2 года 6 месяцев",
+        "description": "Специальность магистратуры (заочная форма, платная основа). Срок обучения: 2 года 6 месяцев (по данным сайта УНАНБ)."
+      },
+      {
+        "id": 34,
+        "university": "ГУО «Университет Национальной академии наук Беларуси»",
+        "shortName": "УНАНБ",
+        "city": "Минск",
+        "language": "Русский",
+        "militaryDepartment": null,
+        "dormitory": "Предоставляется (для иногородних аспирантов дневной формы указано на сайте; уточняйте по магистратуре)",
+        "address": "220012, г. Минск, пер. Калинина, 10",
+        "phone": "+375 17 270 93 09, +375 17 202 16 76, +375 29 606 06 30",
+        "website": "unan.by",
+        "budgetScore": null,
+        "paidScore": null,
+        "exams": null,
+        "plan": null,
+        "scoreHistory": [
+          {
+            "year": "2020",
+            "paidScore": 62
+          },
+          {
+            "year": "2021",
+            "paidScore": 71
+          },
+          {
+            "year": "2022",
+            "paidScore": 70
+          },
+          {
+            "year": "2023",
+            "paidScore": 71
+          },
+          {
+            "year": "2024",
+            "paidScore": 68
+          },
+          {
+            "year": "2025",
+            "paidScore": 62
+          },
+          {
+            "year": "2026",
+            "paidScore": 67
+          }
+        ],
+        "source": "https://unan.by/novosti/nachalsya-priyom-dokumentov-v-magistraturu-universiteta-nan-belarusi/",
+        "faculty": null,
+        "title": "Инновационные технологии в машиностроении",
+        "code": "7-06-0714-02",
+        "degree": "Магистратура",
+        "studyForm": "Заочная (платная)",
+        "duration": "2 года 6 месяцев",
+        "description": "Специальность магистратуры (заочная форма, платная основа). Срок обучения: 2 года 6 месяцев (по данным сайта УНАНБ)."
+      },
+      {
+        "id": 35,
+        "university": "ГУО «Университет Национальной академии наук Беларуси»",
+        "shortName": "УНАНБ",
+        "city": "Минск",
+        "language": "Русский",
+        "militaryDepartment": null,
+        "dormitory": "Предоставляется (для иногородних аспирантов дневной формы указано на сайте; уточняйте по магистратуре)",
+        "address": "220012, г. Минск, пер. Калинина, 10",
+        "phone": "+375 17 270 93 09, +375 17 202 16 76, +375 29 606 06 30",
+        "website": "unan.by",
+        "budgetScore": null,
+        "paidScore": null,
+        "exams": null,
+        "plan": null,
+        "scoreHistory": [
+          {
+            "year": "2020",
+            "paidScore": 76
+          },
+          {
+            "year": "2021",
+            "paidScore": 84
+          },
+          {
+            "year": "2022",
+            "paidScore": 83
+          },
+          {
+            "year": "2023",
+            "paidScore": 82
+          },
+          {
+            "year": "2024",
+            "paidScore": 91
+          },
+          {
+            "year": "2025",
+            "paidScore": 86
+          },
+          {
+            "year": "2026",
+            "paidScore": 84
+          }
+        ],
+        "source": "https://unan.by/novosti/nachalsya-priyom-dokumentov-v-magistraturu-universiteta-nan-belarusi/",
+        "faculty": null,
+        "title": "Зоотехния",
+        "code": "7-06-0811-01",
+        "degree": "Магистратура",
+        "studyForm": "Заочная (платная)",
+        "duration": "1 год 6 месяцев",
+        "description": "Специальность магистратуры (заочная форма, платная основа). Срок обучения: 1 год 6 месяцев (по данным сайта УНАНБ)."
+      },
+      {
+        "id": 36,
+        "university": "ГУО «Университет Национальной академии наук Беларуси»",
+        "shortName": "УНАНБ",
+        "city": "Минск",
+        "language": "Русский",
+        "militaryDepartment": null,
+        "dormitory": "Предоставляется (для иногородних аспирантов дневной формы указано на сайте; уточняйте по магистратуре)",
+        "address": "220012, г. Минск, пер. Калинина, 10",
+        "phone": "+375 17 270 93 09, +375 17 202 16 76, +375 29 606 06 30",
+        "website": "unan.by",
+        "budgetScore": null,
+        "paidScore": null,
+        "exams": null,
+        "plan": null,
+        "scoreHistory": [
+          {
+            "year": "2020",
+            "paidScore": 80
+          },
+          {
+            "year": "2021",
+            "paidScore": 77
+          },
+          {
+            "year": "2022",
+            "paidScore": 71
+          },
+          {
+            "year": "2023",
+            "paidScore": 73
+          },
+          {
+            "year": "2024",
+            "paidScore": 71
+          },
+          {
+            "year": "2025",
+            "paidScore": 72
+          },
+          {
+            "year": "2026",
+            "paidScore": 72
+          }
+        ],
+        "source": "https://unan.by/novosti/nachalsya-priyom-dokumentov-v-magistraturu-universiteta-nan-belarusi/",
+        "faculty": null,
+        "title": "Агрономия",
+        "code": "7-06-0811-02",
+        "degree": "Магистратура",
+        "studyForm": "Заочная (платная)",
+        "duration": "1 год 6 месяцев",
+        "description": "Специальность магистратуры (заочная форма, платная основа). Срок обучения: 1 год 6 месяцев (по данным сайта УНАНБ)."
+      },
+      {
+        "id": 37,
+        "university": "ГУО «Университет Национальной академии наук Беларуси»",
+        "shortName": "УНАНБ",
+        "city": "Минск",
+        "language": "Русский",
+        "militaryDepartment": null,
+        "dormitory": "Предоставляется (для иногородних аспирантов дневной формы указано на сайте; уточняйте по магистратуре)",
+        "address": "220012, г. Минск, пер. Калинина, 10",
+        "phone": "+375 17 270 93 09, +375 17 202 16 76, +375 29 606 06 30",
+        "website": "unan.by",
+        "budgetScore": null,
+        "paidScore": null,
+        "exams": null,
+        "plan": null,
+        "scoreHistory": [
+          {
+            "year": "2020",
+            "paidScore": 81
+          },
+          {
+            "year": "2021",
+            "paidScore": 78
+          },
+          {
+            "year": "2022",
+            "paidScore": 84
+          },
+          {
+            "year": "2023",
+            "paidScore": 84
+          },
+          {
+            "year": "2024",
+            "paidScore": 80
+          },
+          {
+            "year": "2025",
+            "paidScore": 84
+          },
+          {
+            "year": "2026",
+            "paidScore": 89
+          }
+        ],
+        "source": "https://unan.by/novosti/nachalsya-priyom-dokumentov-v-magistraturu-universiteta-nan-belarusi/",
+        "faculty": null,
+        "title": "Ветеринария",
+        "code": "7-06-0841-01",
+        "degree": "Магистратура",
+        "studyForm": "Заочная (платная)",
+        "duration": "1 год 6 месяцев",
+        "description": "Специальность магистратуры (заочная форма, платная основа). Срок обучения: 1 год 6 месяцев (по данным сайта УНАНБ)."
+      }
+    ]
+  },
+  {
+    "university": "Институт пограничной службы Республики Беларусь",
+    "shortName": "ИПС РБ",
+    "website": "ips.gpk.gov.by",
+    "city": "Минск",
+    "address": "220103, г. Минск, ул. Славинского, 4",
+    "phone": "+375 17 356-70-96, +375 17 358-85-70",
+    "programs": [
+      {
+        "id": 38,
+        "university": "Институт пограничной службы Республики Беларусь",
+        "shortName": "ИПС РБ",
+        "city": "Минск",
+        "degree": "Бакалавриат",
+        "studyForm": "Дневная (бюджет)",
+        "duration": "4 года",
+        "language": "Русский",
+        "militaryDepartment": "Военное учебное заведение (органы пограничной службы)",
+        "dormitory": "Предоставляется курсантам",
+        "address": "220103, г. Минск, ул. Славинского, 4",
+        "phone": "+375 17 356-70-96, +375 17 358-85-70",
+        "website": "ips.gpk.gov.by",
+        "budgetScore": 173,
+        "paidScore": null,
+        "plan": null,
+        "scoreHistory": [
+          {
+            "year": "2020",
+            "budgetScore": 179
+          },
+          {
+            "year": "2021",
+            "budgetScore": 177
+          },
+          {
+            "year": "2022",
+            "budgetScore": 170
+          },
+          {
+            "year": "2023",
+            "budgetScore": 170
+          },
+          {
+            "year": "2024",
+            "budgetScore": 168
+          },
+          {
+            "year": "2025",
+            "budgetScore": 178
+          },
+          {
+            "year": "2026",
+            "budgetScore": 173
+          }
+        ],
+        "source": "https://ips.gpk.gov.by/obrazovanie/abiturientu/priem/",
+        "faculty": "Факультет подготовки офицерских кадров (лица мужского пола)",
+        "title": "Пограничная безопасность (пограничная служба)",
+        "code": "6-05-1034-01",
+        "exams": "Белорусский/русский язык (ЦЭ/ЦТ), Математика (ЦЭ/ЦТ), История Беларуси в контексте всемирной истории (ЦЭ/ЦТ)",
+        "description": "Квалификация: Специалист по управлению со знанием иностранного языка. Прием на обучение за счет средств республиканского бюджета (дневная форма).",
+        "scoreHistorySource": "https://ips.gpk.gov.by/obrazovanie/abiturientu/prokhodnoy-ball/"
+      },
+      {
+        "id": 39,
+        "university": "Институт пограничной службы Республики Беларусь",
+        "shortName": "ИПС РБ",
+        "city": "Минск",
+        "degree": "Бакалавриат",
+        "studyForm": "Дневная (бюджет)",
+        "duration": "4 года",
+        "language": "Русский",
+        "militaryDepartment": "Военное учебное заведение (органы пограничной службы)",
+        "dormitory": "Предоставляется курсантам",
+        "address": "220103, г. Минск, ул. Славинского, 4",
+        "phone": "+375 17 356-70-96, +375 17 358-85-70",
+        "website": "ips.gpk.gov.by",
+        "budgetScore": 181,
+        "paidScore": null,
+        "plan": null,
+        "scoreHistory": [
+          {
+            "year": "2020",
+            "budgetScore": 175
+          },
+          {
+            "year": "2021",
+            "budgetScore": 172
+          },
+          {
+            "year": "2022",
+            "budgetScore": 167
+          },
+          {
+            "year": "2023",
+            "budgetScore": 171
+          },
+          {
+            "year": "2024",
+            "budgetScore": 174
+          },
+          {
+            "year": "2025",
+            "budgetScore": 167
+          },
+          {
+            "year": "2026",
+            "budgetScore": 181
+          }
+        ],
+        "source": "https://ips.gpk.gov.by/obrazovanie/abiturientu/priem/",
+        "faculty": "Факультет подготовки офицерских кадров (лица мужского пола)",
+        "title": "Пограничная безопасность (пограничный контроль)",
+        "code": "6-05-1034-01",
+        "exams": "Белорусский/русский язык (ЦЭ/ЦТ), Математика (ЦЭ/ЦТ), История Беларуси в контексте всемирной истории (ЦЭ/ЦТ)",
+        "description": "Квалификация: Специалист по управлению со знанием иностранного языка. Прием на обучение за счет средств республиканского бюджета (дневная форма).",
+        "scoreHistorySource": "https://ips.gpk.gov.by/obrazovanie/abiturientu/prokhodnoy-ball/"
+      },
+      {
+        "id": 40,
+        "university": "Институт пограничной службы Республики Беларусь",
+        "shortName": "ИПС РБ",
+        "city": "Минск",
+        "degree": "Бакалавриат",
+        "studyForm": "Дневная (бюджет)",
+        "duration": "4 года",
+        "language": "Русский",
+        "militaryDepartment": "Военное учебное заведение (органы пограничной службы)",
+        "dormitory": "Предоставляется курсантам",
+        "address": "220103, г. Минск, ул. Славинского, 4",
+        "phone": "+375 17 356-70-96, +375 17 358-85-70",
+        "website": "ips.gpk.gov.by",
+        "budgetScore": 245,
+        "paidScore": null,
+        "plan": null,
+        "scoreHistory": [
+          {
+            "year": "2020",
+            "budgetScore": 241
+          },
+          {
+            "year": "2021",
+            "budgetScore": 237
+          },
+          {
+            "year": "2022",
+            "budgetScore": 234
+          },
+          {
+            "year": "2023",
+            "budgetScore": 227
+          },
+          {
+            "year": "2024",
+            "budgetScore": 232
+          },
+          {
+            "year": "2025",
+            "budgetScore": 241
+          },
+          {
+            "year": "2026",
+            "budgetScore": 245
+          }
+        ],
+        "source": "https://ips.gpk.gov.by/obrazovanie/abiturientu/priem/",
+        "faculty": "Факультет подготовки офицерских кадров (лица мужского пола)",
+        "title": "Пограничная безопасность (оперативная деятельность)",
+        "code": "6-05-1034-01",
+        "exams": "Белорусский/русский язык (ЦЭ/ЦТ), Математика (ЦЭ/ЦТ), История Беларуси в контексте всемирной истории (ЦЭ/ЦТ)",
+        "description": "Квалификация: Специалист по управлению со знанием иностранного языка. Прием на обучение за счет средств республиканского бюджета (дневная форма).",
+        "scoreHistorySource": "https://ips.gpk.gov.by/obrazovanie/abiturientu/prokhodnoy-ball/"
+      },
+      {
+        "id": 41,
+        "university": "Институт пограничной службы Республики Беларусь",
+        "shortName": "ИПС РБ",
+        "city": "Минск",
+        "degree": "Бакалавриат",
+        "studyForm": "Дневная (бюджет)",
+        "duration": "4 года",
+        "language": "Русский",
+        "militaryDepartment": "Военное учебное заведение (органы пограничной службы)",
+        "dormitory": "Предоставляется курсантам",
+        "address": "220103, г. Минск, ул. Славинского, 4",
+        "phone": "+375 17 356-70-96, +375 17 358-85-70",
+        "website": "ips.gpk.gov.by",
+        "budgetScore": 144,
+        "paidScore": null,
+        "plan": null,
+        "scoreHistory": [
+          {
+            "year": "2020",
+            "budgetScore": 144
+          },
+          {
+            "year": "2021",
+            "budgetScore": 137
+          },
+          {
+            "year": "2022",
+            "budgetScore": 146
+          },
+          {
+            "year": "2023",
+            "budgetScore": 143
+          },
+          {
+            "year": "2024",
+            "budgetScore": 149
+          },
+          {
+            "year": "2025",
+            "budgetScore": 143
+          },
+          {
+            "year": "2026",
+            "budgetScore": 144
+          }
+        ],
+        "source": "https://ips.gpk.gov.by/obrazovanie/abiturientu/priem/",
+        "faculty": "Факультет подготовки офицерских кадров (лица мужского пола)",
+        "title": "Пограничная безопасность (идеологическая работа)",
+        "code": "6-05-1034-01",
+        "exams": "Белорусский/русский язык (ЦЭ/ЦТ), Математика (ЦЭ/ЦТ), История Беларуси в контексте всемирной истории (ЦЭ/ЦТ)",
+        "description": "Квалификация: Специалист по управлению со знанием иностранного языка. Прием на обучение за счет средств республиканского бюджета (дневная форма).",
+        "scoreHistorySource": "https://ips.gpk.gov.by/obrazovanie/abiturientu/prokhodnoy-ball/"
+      },
+      {
+        "id": 42,
+        "university": "Институт пограничной службы Республики Беларусь",
+        "shortName": "ИПС РБ",
+        "city": "Минск",
+        "degree": "Бакалавриат",
+        "studyForm": "Дневная (бюджет)",
+        "duration": "4 года",
+        "language": "Русский",
+        "militaryDepartment": "Военное учебное заведение (органы пограничной службы)",
+        "dormitory": "Предоставляется курсантам",
+        "address": "220103, г. Минск, ул. Славинского, 4",
+        "phone": "+375 17 356-70-96, +375 17 358-85-70",
+        "website": "ips.gpk.gov.by",
+        "budgetScore": 333,
+        "paidScore": null,
+        "plan": null,
+        "scoreHistory": [
+          {
+            "year": "2020",
+            "budgetScore": 328
+          },
+          {
+            "year": "2021",
+            "budgetScore": 328
+          },
+          {
+            "year": "2022",
+            "budgetScore": 324
+          },
+          {
+            "year": "2023",
+            "budgetScore": 333
+          },
+          {
+            "year": "2024",
+            "budgetScore": 333
+          },
+          {
+            "year": "2025",
+            "budgetScore": 329
+          },
+          {
+            "year": "2026",
+            "budgetScore": 333
+          }
+        ],
+        "source": "https://ips.gpk.gov.by/obrazovanie/abiturientu/priem/",
+        "faculty": "Факультет подготовки офицерских кадров (лица женского пола)",
+        "title": "Пограничная безопасность (пограничный контроль)",
+        "code": "6-05-1034-01",
+        "exams": "Белорусский/русский язык (ЦЭ/ЦТ), Математика (ЦЭ/ЦТ), История Беларуси в контексте всемирной истории (ЦЭ/ЦТ)",
+        "description": "Квалификация: Специалист по управлению со знанием иностранного языка. Прием на обучение за счет средств республиканского бюджета (дневная форма).",
+        "scoreHistorySource": "https://ips.gpk.gov.by/obrazovanie/abiturientu/prokhodnoy-ball/"
+      },
+      {
+        "id": 43,
+        "university": "Институт пограничной службы Республики Беларусь",
+        "shortName": "ИПС РБ",
+        "city": "Минск",
+        "degree": "Бакалавриат",
+        "studyForm": "Дневная (бюджет)",
+        "duration": "5 лет",
+        "language": "Русский",
+        "militaryDepartment": "Военное учебное заведение (органы пограничной службы)",
+        "dormitory": "Предоставляется курсантам",
+        "address": "220103, г. Минск, ул. Славинского, 4",
+        "phone": "+375 17 356-70-96, +375 17 358-85-70",
+        "website": "ips.gpk.gov.by",
+        "budgetScore": null,
+        "paidScore": null,
+        "plan": null,
+        "scoreHistory": [
+          {
+            "year": "2020",
+            "budgetScore": 169
+          },
+          {
+            "year": "2021",
+            "budgetScore": 163
+          },
+          {
+            "year": "2022",
+            "budgetScore": 158
+          },
+          {
+            "year": "2023",
+            "budgetScore": 168
+          },
+          {
+            "year": "2024",
+            "budgetScore": 175
+          },
+          {
+            "year": "2025",
+            "budgetScore": 179
+          },
+          {
+            "year": "2026",
+            "budgetScore": 178
+          }
+        ],
+        "source": "https://ips.gpk.gov.by/obrazovanie/abiturientu/priem/",
+        "faculty": "Подготовка в интересах органов пограничной службы РБ (Калининградский пограничный институт ФСБ РФ)",
+        "title": "Специальные радиотехнические системы",
+        "code": "11.05.02",
+        "exams": "Белорусский/русский язык (ЦЭ/ЦТ), Математика (ЦЭ/ЦТ), Физика (ЦЭ/ЦТ)",
+        "description": "Квалификация: Инженер специальных радиотехнических систем. Прием на обучение за счет средств республиканского бюджета (дневная форма)."
+      },
+      {
+        "id": 44,
+        "university": "Институт пограничной службы Республики Беларусь",
+        "shortName": "ИПС РБ",
+        "city": "Минск",
+        "degree": "Бакалавриат",
+        "studyForm": "Дневная (бюджет)",
+        "duration": "5 лет",
+        "language": "Русский",
+        "militaryDepartment": "Военное учебное заведение (органы пограничной службы)",
+        "dormitory": "Предоставляется курсантам",
+        "address": "220103, г. Минск, ул. Славинского, 4",
+        "phone": "+375 17 356-70-96, +375 17 358-85-70",
+        "website": "ips.gpk.gov.by",
+        "budgetScore": null,
+        "paidScore": null,
+        "plan": null,
+        "scoreHistory": [
+          {
+            "year": "2020",
+            "budgetScore": 229
+          },
+          {
+            "year": "2021",
+            "budgetScore": 224
+          },
+          {
+            "year": "2022",
+            "budgetScore": 233
+          },
+          {
+            "year": "2023",
+            "budgetScore": 226
+          },
+          {
+            "year": "2024",
+            "budgetScore": 228
+          },
+          {
+            "year": "2025",
+            "budgetScore": 233
+          },
+          {
+            "year": "2026",
+            "budgetScore": 225
+          }
+        ],
+        "source": "https://ips.gpk.gov.by/obrazovanie/abiturientu/priem/",
+        "faculty": "Подготовка в интересах органов пограничной службы РБ (Калининградский пограничный институт ФСБ РФ)",
+        "title": "Применение и эксплуатация автоматизированных систем специального назначения",
+        "code": "09.05.01",
+        "exams": "Белорусский/русский язык (ЦЭ/ЦТ), Математика (ЦЭ/ЦТ), Физика (ЦЭ/ЦТ)",
+        "description": "Квалификация: Инженер. Прием на обучение за счет средств республиканского бюджета (дневная форма)."
+      }
+    ]
+  },
+  {
+    "university": "Международный государственный экологический институт им. А.Д. Сахарова БГУ",
+    "shortName": "МГЭИ им. А.Д. Сахарова БГУ",
+    "website": "iseu.bsu.by",
+    "city": "Минск",
+    "address": "220070, г. Минск, ул. Долгобродская, 23/1",
+    "phone": "+375 17 378-99-48",
+    "programs": [
+      {
+        "id": 45,
+        "university": "Международный государственный экологический институт им. А.Д. Сахарова БГУ",
+        "shortName": "МГЭИ им. А.Д. Сахарова БГУ",
+        "city": "Минск",
+        "budgetScore": 311,
+        "paidScore": 271,
+        "militaryDepartment": null,
+        "dormitory": "Предоставляется (по линии БГУ, уточнять в приемной комиссии)",
+        "address": "220070, г. Минск, ул. Долгобродская, 23/1",
+        "phone": "+375 17 378-99-48",
+        "website": "iseu.bsu.by",
+        "scoreHistory": [
+          {
+            "year": "2020",
+            "budgetScore": 319,
+            "paidScore": 278
+          },
+          {
+            "year": "2021",
+            "budgetScore": 316,
+            "paidScore": 285
+          },
+          {
+            "year": "2022",
+            "budgetScore": 313,
+            "paidScore": 283
+          },
+          {
+            "year": "2023",
+            "budgetScore": 308,
+            "paidScore": 283
+          },
+          {
+            "year": "2024",
+            "budgetScore": 309,
+            "paidScore": 286
+          },
+          {
+            "year": "2025",
+            "budgetScore": 311,
+            "paidScore": 271
+          },
+          {
+            "year": "2026",
+            "budgetScore": 310,
+            "paidScore": 269
+          }
+        ],
+        "source": "https://www.iseu.bsu.by/ru/abiturientu/specialnosti-i-napravlenija/",
+        "faculty": "Факультет мониторинга окружающей среды",
+        "title": "Информационные системы и технологии",
+        "code": null,
+        "degree": "Бакалавриат",
+        "studyForm": "Дневная (бюджет/платная)",
+        "duration": "4 года",
+        "exams": "Белорусский (русский) язык (ЦТ); Математика (ЦТ или ЦЭ) — профильный; Физика (ЦТ или ЦЭ)",
+        "plan": "36 бюджет / 20 платное",
+        "language": "Русский",
+        "description": "Квалификация: Инженер-программист.",
+        "scoreHistorySource": "https://www.iseu.bsu.by/ru/abiturientu/prohodnye-bally/"
+      },
+      {
+        "id": 46,
+        "university": "Международный государственный экологический институт им. А.Д. Сахарова БГУ",
+        "shortName": "МГЭИ им. А.Д. Сахарова БГУ",
+        "city": "Минск",
+        "budgetScore": 272,
+        "paidScore": null,
+        "militaryDepartment": null,
+        "dormitory": "Предоставляется (по линии БГУ, уточнять в приемной комиссии)",
+        "address": "220070, г. Минск, ул. Долгобродская, 23/1",
+        "phone": "+375 17 378-99-48",
+        "website": "iseu.bsu.by",
+        "scoreHistory": [
+          {
+            "year": "2020",
+            "budgetScore": 246
+          },
+          {
+            "year": "2021",
+            "budgetScore": 260
+          },
+          {
+            "year": "2022",
+            "budgetScore": 279
+          },
+          {
+            "year": "2023",
+            "budgetScore": 302
+          },
+          {
+            "year": "2024",
+            "budgetScore": 311
+          },
+          {
+            "year": "2025",
+            "budgetScore": 272
+          },
+          {
+            "year": "2026",
+            "budgetScore": 271
+          }
+        ],
+        "source": "https://www.iseu.bsu.by/ru/abiturientu/specialnosti-i-napravlenija/",
+        "faculty": "Факультет мониторинга окружающей среды",
+        "title": "Ядерная и радиационная безопасность",
+        "code": null,
+        "degree": "Бакалавриат",
+        "studyForm": "Дневная (бюджет)",
+        "duration": "4 года",
+        "exams": "Белорусский (русский) язык (ЦЭ); Математика (ЦТ или ЦЭ); Физика (ЦТ или ЦЭ) — профильный",
+        "plan": "20 бюджет",
+        "language": "Русский",
+        "description": "Квалификация: Физик. Инженер.",
+        "scoreHistorySource": "https://www.iseu.bsu.by/ru/abiturientu/specialnosti-i-napravlenija/jadernaja-i-radiacionnaja-bezopasnost/; https://www.iseu.bsu.by/ru/abiturientu/prohodnye-bally/"
+      },
+      {
+        "id": 47,
+        "university": "Международный государственный экологический институт им. А.Д. Сахарова БГУ",
+        "shortName": "МГЭИ им. А.Д. Сахарова БГУ",
+        "city": "Минск",
+        "budgetScore": 271,
+        "paidScore": null,
+        "militaryDepartment": null,
+        "dormitory": "Предоставляется (по линии БГУ, уточнять в приемной комиссии)",
+        "address": "220070, г. Минск, ул. Долгобродская, 23/1",
+        "phone": "+375 17 378-99-48",
+        "website": "iseu.bsu.by",
+        "scoreHistory": [
+          {
+            "year": "2020",
+            "budgetScore": 264
+          },
+          {
+            "year": "2021",
+            "budgetScore": 272
+          },
+          {
+            "year": "2022",
+            "budgetScore": 267
+          },
+          {
+            "year": "2023",
+            "budgetScore": 275
+          },
+          {
+            "year": "2024",
+            "budgetScore": 273
+          },
+          {
+            "year": "2025",
+            "budgetScore": 271
+          },
+          {
+            "year": "2026",
+            "budgetScore": 272
+          }
+        ],
+        "source": "https://www.iseu.bsu.by/ru/abiturientu/specialnosti-i-napravlenija/",
+        "faculty": "Факультет мониторинга окружающей среды",
+        "title": "Медицинская физика",
+        "code": null,
+        "degree": "Бакалавриат",
+        "studyForm": "Дневная (бюджет)",
+        "duration": "4 года",
+        "exams": "Белорусский (русский) язык (ЦЭ); Математика (ЦТ или ЦЭ); Физика (ЦТ или ЦЭ) — профильный",
+        "plan": "20 бюджет",
+        "language": "Русский",
+        "description": "Квалификация: Медицинский физик. Инженер.",
+        "scoreHistorySource": "https://www.iseu.bsu.by/ru/abiturientu/prohodnye-bally/"
+      },
+      {
+        "id": 48,
+        "university": "Международный государственный экологический институт им. А.Д. Сахарова БГУ",
+        "shortName": "МГЭИ им. А.Д. Сахарова БГУ",
+        "city": "Минск",
+        "budgetScore": null,
+        "paidScore": null,
+        "militaryDepartment": null,
+        "dormitory": "Предоставляется (по линии БГУ, уточнять в приемной комиссии)",
+        "address": "220070, г. Минск, ул. Долгобродская, 23/1",
+        "phone": "+375 17 378-99-48",
+        "website": "iseu.bsu.by",
+        "scoreHistory": [
+          {
+            "year": "2020",
+            "budgetScore": 253
+          },
+          {
+            "year": "2021",
+            "budgetScore": 252
+          },
+          {
+            "year": "2022",
+            "budgetScore": 259
+          },
+          {
+            "year": "2023",
+            "budgetScore": 262
+          },
+          {
+            "year": "2024",
+            "budgetScore": 263
+          },
+          {
+            "year": "2025",
+            "budgetScore": 260
+          },
+          {
+            "year": "2026",
+            "budgetScore": 254
+          }
+        ],
+        "source": "https://www.iseu.bsu.by/ru/abiturientu/specialnosti-i-napravlenija/",
+        "faculty": "Факультет мониторинга окружающей среды",
+        "title": "Экологическая безопасность",
+        "code": null,
+        "degree": "Бакалавриат",
+        "studyForm": "Дневная (бюджет)",
+        "duration": "4 года",
+        "exams": "Белорусский (русский) язык (ЦЭ); Математика (ЦТ или ЦЭ); Физика (ЦТ или ЦЭ) — профильный",
+        "plan": "20 бюджет",
+        "language": "Русский",
+        "description": "Квалификация: Эколог. Инженер."
+      },
+      {
+        "id": 49,
+        "university": "Международный государственный экологический институт им. А.Д. Сахарова БГУ",
+        "shortName": "МГЭИ им. А.Д. Сахарова БГУ",
+        "city": "Минск",
+        "budgetScore": 288,
+        "paidScore": null,
+        "militaryDepartment": null,
+        "dormitory": "Предоставляется (по линии БГУ, уточнять в приемной комиссии)",
+        "address": "220070, г. Минск, ул. Долгобродская, 23/1",
+        "phone": "+375 17 378-99-48",
+        "website": "iseu.bsu.by",
+        "scoreHistory": [
+          {
+            "year": "2020",
+            "budgetScore": 291
+          },
+          {
+            "year": "2021",
+            "budgetScore": 286
+          },
+          {
+            "year": "2022",
+            "budgetScore": 287
+          },
+          {
+            "year": "2023",
+            "budgetScore": 285
+          },
+          {
+            "year": "2024",
+            "budgetScore": 289
+          },
+          {
+            "year": "2025",
+            "budgetScore": 288
+          },
+          {
+            "year": "2026",
+            "budgetScore": 281
+          }
+        ],
+        "source": "https://www.iseu.bsu.by/ru/abiturientu/specialnosti-i-napravlenija/",
+        "faculty": "Факультет экологической медицины",
+        "title": "Экология",
+        "code": null,
+        "degree": "Бакалавриат",
+        "studyForm": "Дневная (бюджет)",
+        "duration": "4 года",
+        "exams": "Белорусский (русский) язык (ЦЭ); Химия (ЦЭ или ЦТ); Биология (ЦЭ или ЦТ) — профильный",
+        "plan": "20 бюджет",
+        "language": "Русский",
+        "description": "Квалификация: Эколог. Преподаватель.",
+        "scoreHistorySource": "https://www.iseu.bsu.by/ru/abiturientu/prohodnye-bally/"
+      },
+      {
+        "id": 50,
+        "university": "Международный государственный экологический институт им. А.Д. Сахарова БГУ",
+        "shortName": "МГЭИ им. А.Д. Сахарова БГУ",
+        "city": "Минск",
+        "budgetScore": 294,
+        "paidScore": 282,
+        "militaryDepartment": null,
+        "dormitory": "Предоставляется (по линии БГУ, уточнять в приемной комиссии)",
+        "address": "220070, г. Минск, ул. Долгобродская, 23/1",
+        "phone": "+375 17 378-99-48",
+        "website": "iseu.bsu.by",
+        "scoreHistory": [
+          {
+            "year": "2020",
+            "budgetScore": 295,
+            "paidScore": 289
+          },
+          {
+            "year": "2021",
+            "budgetScore": 301,
+            "paidScore": 285
+          },
+          {
+            "year": "2022",
+            "budgetScore": 301,
+            "paidScore": 284
+          },
+          {
+            "year": "2023",
+            "budgetScore": 307,
+            "paidScore": 291
+          },
+          {
+            "year": "2024",
+            "budgetScore": 313,
+            "paidScore": 289
+          },
+          {
+            "year": "2025",
+            "budgetScore": 294,
+            "paidScore": 282
+          },
+          {
+            "year": "2026",
+            "budgetScore": 295,
+            "paidScore": 277
+          }
+        ],
+        "source": "https://www.iseu.bsu.by/ru/abiturientu/specialnosti-i-napravlenija/",
+        "faculty": "Факультет экологической медицины",
+        "title": "Медико-биологическое дело",
+        "code": "6-05-0511-04",
+        "degree": "Бакалавриат",
+        "studyForm": "Дневная (бюджет/платная)",
+        "duration": "4 года",
+        "exams": "Белорусский (русский) язык (ЦЭ); Химия (ЦЭ или ЦТ); Биология (ЦЭ или ЦТ) — профильный",
+        "plan": "70 бюджет / 20 платное",
+        "language": "Русский",
+        "description": "Квалификация: Биолог-аналитик. Преподаватель.",
+        "scoreHistorySource": "https://www.iseu.bsu.by/ru/abiturientu/prohodnye-bally/"
+      },
+      {
+        "id": 51,
+        "university": "Международный государственный экологический институт им. А.Д. Сахарова БГУ",
+        "shortName": "МГЭИ им. А.Д. Сахарова БГУ",
+        "city": "Минск",
+        "budgetScore": 193,
+        "paidScore": 180,
+        "militaryDepartment": null,
+        "dormitory": "Предоставляется (по линии БГУ, уточнять в приемной комиссии)",
+        "address": "220070, г. Минск, ул. Долгобродская, 23/1",
+        "phone": "+375 17 378-99-48",
+        "website": "iseu.bsu.by",
+        "scoreHistory": [
+          {
+            "year": "2020",
+            "budgetScore": 196,
+            "paidScore": 177
+          },
+          {
+            "year": "2021",
+            "budgetScore": 189,
+            "paidScore": 181
+          },
+          {
+            "year": "2022",
+            "budgetScore": 188,
+            "paidScore": 184
+          },
+          {
+            "year": "2023",
+            "budgetScore": 182,
+            "paidScore": 181
+          },
+          {
+            "year": "2024",
+            "budgetScore": 177,
+            "paidScore": 176
+          },
+          {
+            "year": "2025",
+            "budgetScore": 193,
+            "paidScore": 180
+          },
+          {
+            "year": "2026",
+            "budgetScore": 189,
+            "paidScore": 179
+          }
+        ],
+        "source": "https://www.iseu.bsu.by/ru/abiturientu/specialnosti-i-napravlenija/",
+        "faculty": "Факультет экологической медицины",
+        "title": "Медико-биологическое дело (заочная сокращенная форма)",
+        "code": "6-05-0511-04",
+        "degree": "Бакалавриат",
+        "studyForm": "Заочная сокращенная (бюджет/платная)",
+        "duration": null,
+        "exams": "Анатомия и физиология (письменный экзамен) — профильный; Гигиена и экология человека (письменный экзамен)",
+        "plan": "20 бюджет / 10 платное",
+        "language": "Русский",
+        "description": "Квалификация: Биолог-аналитик. Преподаватель. Для выпускников УССО: 2-79 01 01 «Лечебное дело», 2-79 01 31 «Сестринское дело».",
+        "scoreHistorySource": "https://www.iseu.bsu.by/ru/abiturientu/prohodnye-bally/"
+      },
+      {
+        "id": 52,
+        "university": "Международный государственный экологический институт им. А.Д. Сахарова БГУ",
+        "shortName": "МГЭИ им. А.Д. Сахарова БГУ",
+        "city": "Минск",
+        "budgetScore": null,
+        "paidScore": null,
+        "militaryDepartment": null,
+        "dormitory": "Предоставляется (по линии БГУ, уточнять в приемной комиссии)",
+        "address": "220070, г. Минск, ул. Долгобродская, 23/1",
+        "phone": "+375 17 378-99-48",
+        "website": "iseu.bsu.by",
+        "scoreHistory": [
+          {
+            "year": "2020",
+            "score": 253
+          },
+          {
+            "year": "2021",
+            "score": 243
+          },
+          {
+            "year": "2022",
+            "score": 255
+          },
+          {
+            "year": "2023",
+            "score": 253
+          },
+          {
+            "year": "2024",
+            "score": 249
+          },
+          {
+            "year": "2025",
+            "score": 245
+          },
+          {
+            "year": "2026",
+            "score": 252
+          }
+        ],
+        "source": "https://www.iseu.bsu.by/ru/abiturientu/specialnosti-i-napravlenija/",
+        "faculty": null,
+        "title": "Медико-биологическое дело",
+        "code": "7-06-0511-04",
+        "degree": "Магистратура",
+        "studyForm": "Заочная",
+        "duration": "1,5 года",
+        "exams": "Биология (устный экзамен)",
+        "plan": null,
+        "language": "Русский",
+        "description": "Углубленное высшее образование (магистратура). Прием документов: ул. Долгобродская, 23/1, ауд. 415 (по информации на странице специальностей)."
+      }
+    ]
+  },
+  {
+    "university": "Минский филиал ФГБОУ ВО «Российский экономический университет им. Г.В. Плеханова»",
+    "shortName": "Минский филиал РЭУ им. Г.В. Плеханова",
+    "website": "enrollee.reu.by",
+    "city": "Минск",
+    "address": "220070, г. Минск, ул. Радиальная, 40/1",
+    "phone": "+375 17 24-000-24, +375 29 126-11-36",
+    "programs": [
+      {
+        "id": 53,
+        "university": "Минский филиал ФГБОУ ВО «Российский экономический университет им. Г.В. Плеханова»",
+        "shortName": "Минский филиал РЭУ им. Г.В. Плеханова",
+        "city": "Минск",
+        "budgetScore": null,
+        "paidScore": null,
+        "militaryDepartment": "Отсрочка от призыва — см. информацию на сайте филиала",
+        "dormitory": null,
+        "address": "220070, г. Минск, ул. Радиальная, 40/1",
+        "phone": "+375 17 24-000-24, +375 29 126-11-36",
+        "website": "enrollee.reu.by",
+        "scoreHistory": [
+          {
+            "year": "2020",
+            "score": 250
+          },
+          {
+            "year": "2021",
+            "score": 240
+          },
+          {
+            "year": "2022",
+            "score": 250
+          },
+          {
+            "year": "2023",
+            "score": 252
+          },
+          {
+            "year": "2024",
+            "score": 255
+          },
+          {
+            "year": "2025",
+            "score": 248
+          },
+          {
+            "year": "2026",
+            "score": 251
+          }
+        ],
+        "source": "https://enrollee.reu.by/",
+        "faculty": null,
+        "title": "Бизнес-информатика",
+        "code": "38.03.05",
+        "degree": "Бакалавриат",
+        "studyForm": "Очная",
+        "duration": null,
+        "exams": "Вступительные испытания по правилам приема (см. сайт филиала)",
+        "plan": null,
+        "language": "Русский",
+        "description": "Образовательная программа бакалавриата. Стоимость обучения: 6542 BYN/год (очная, по данным enrollee.reu.by)."
+      },
+      {
+        "id": 54,
+        "university": "Минский филиал ФГБОУ ВО «Российский экономический университет им. Г.В. Плеханова»",
+        "shortName": "Минский филиал РЭУ им. Г.В. Плеханова",
+        "city": "Минск",
+        "budgetScore": null,
+        "paidScore": null,
+        "militaryDepartment": "Отсрочка от призыва — см. информацию на сайте филиала",
+        "dormitory": null,
+        "address": "220070, г. Минск, ул. Радиальная, 40/1",
+        "phone": "+375 17 24-000-24, +375 29 126-11-36",
+        "website": "enrollee.reu.by",
+        "scoreHistory": [
+          {
+            "year": "2020",
+            "score": 247
+          },
+          {
+            "year": "2021",
+            "score": 260
+          },
+          {
+            "year": "2022",
+            "score": 258
+          },
+          {
+            "year": "2023",
+            "score": 242
+          },
+          {
+            "year": "2024",
+            "score": 255
+          },
+          {
+            "year": "2025",
+            "score": 240
+          },
+          {
+            "year": "2026",
+            "score": 242
+          }
+        ],
+        "source": "https://enrollee.reu.by/",
+        "faculty": null,
+        "title": "Менеджмент",
+        "code": "38.03.02",
+        "degree": "Бакалавриат",
+        "studyForm": "Очная",
+        "duration": null,
+        "exams": "Вступительные испытания по правилам приема (см. сайт филиала)",
+        "plan": null,
+        "language": "Русский",
+        "description": "Образовательная программа бакалавриата. Стоимость обучения: 6542 BYN/год (очная, по данным enrollee.reu.by)."
+      },
+      {
+        "id": 55,
+        "university": "Минский филиал ФГБОУ ВО «Российский экономический университет им. Г.В. Плеханова»",
+        "shortName": "Минский филиал РЭУ им. Г.В. Плеханова",
+        "city": "Минск",
+        "budgetScore": null,
+        "paidScore": null,
+        "militaryDepartment": "Отсрочка от призыва — см. информацию на сайте филиала",
+        "dormitory": null,
+        "address": "220070, г. Минск, ул. Радиальная, 40/1",
+        "phone": "+375 17 24-000-24, +375 29 126-11-36",
+        "website": "enrollee.reu.by",
+        "scoreHistory": [
+          {
+            "year": "2020",
+            "score": 248
+          },
+          {
+            "year": "2021",
+            "score": 256
+          },
+          {
+            "year": "2022",
+            "score": 256
+          },
+          {
+            "year": "2023",
+            "score": 258
+          },
+          {
+            "year": "2024",
+            "score": 240
+          },
+          {
+            "year": "2025",
+            "score": 259
+          },
+          {
+            "year": "2026",
+            "score": 259
+          }
+        ],
+        "source": "https://enrollee.reu.by/",
+        "faculty": null,
+        "title": "Экономика",
+        "code": "38.03.01",
+        "degree": "Бакалавриат",
+        "studyForm": "Очная",
+        "duration": null,
+        "exams": "Вступительные испытания по правилам приема (см. сайт филиала)",
+        "plan": null,
+        "language": "Русский",
+        "description": "Образовательная программа бакалавриата. Стоимость обучения: 6542 BYN/год (очная, по данным enrollee.reu.by)."
+      },
+      {
+        "id": 56,
+        "university": "Минский филиал ФГБОУ ВО «Российский экономический университет им. Г.В. Плеханова»",
+        "shortName": "Минский филиал РЭУ им. Г.В. Плеханова",
+        "city": "Минск",
+        "budgetScore": null,
+        "paidScore": null,
+        "militaryDepartment": "Отсрочка от призыва — см. информацию на сайте филиала",
+        "dormitory": null,
+        "address": "220070, г. Минск, ул. Радиальная, 40/1",
+        "phone": "+375 17 24-000-24, +375 29 126-11-36",
+        "website": "enrollee.reu.by",
+        "scoreHistory": [
+          {
+            "year": "2020",
+            "score": 253
+          },
+          {
+            "year": "2021",
+            "score": 245
+          },
+          {
+            "year": "2022",
+            "score": 257
+          },
+          {
+            "year": "2023",
+            "score": 253
+          },
+          {
+            "year": "2024",
+            "score": 244
+          },
+          {
+            "year": "2025",
+            "score": 247
+          },
+          {
+            "year": "2026",
+            "score": 251
+          }
+        ],
+        "source": "https://enrollee.reu.by/",
+        "faculty": null,
+        "title": "Бизнес-информатика",
+        "code": "38.03.05",
+        "degree": "Бакалавриат",
+        "studyForm": "Очно-заочная",
+        "duration": null,
+        "exams": "Вступительные испытания по правилам приема (см. сайт филиала)",
+        "plan": null,
+        "language": "Русский",
+        "description": "Образовательная программа бакалавриата. Стоимость обучения: 4765 BYN/год (очно-заочная, по данным enrollee.reu.by)."
+      },
+      {
+        "id": 57,
+        "university": "Минский филиал ФГБОУ ВО «Российский экономический университет им. Г.В. Плеханова»",
+        "shortName": "Минский филиал РЭУ им. Г.В. Плеханова",
+        "city": "Минск",
+        "budgetScore": null,
+        "paidScore": null,
+        "militaryDepartment": "Отсрочка от призыва — см. информацию на сайте филиала",
+        "dormitory": null,
+        "address": "220070, г. Минск, ул. Радиальная, 40/1",
+        "phone": "+375 17 24-000-24, +375 29 126-11-36",
+        "website": "enrollee.reu.by",
+        "scoreHistory": [
+          {
+            "year": "2020",
+            "score": 250
+          },
+          {
+            "year": "2021",
+            "score": 249
+          },
+          {
+            "year": "2022",
+            "score": 256
+          },
+          {
+            "year": "2023",
+            "score": 249
+          },
+          {
+            "year": "2024",
+            "score": 251
+          },
+          {
+            "year": "2025",
+            "score": 243
+          },
+          {
+            "year": "2026",
+            "score": 250
+          }
+        ],
+        "source": "https://enrollee.reu.by/",
+        "faculty": null,
+        "title": "Менеджмент",
+        "code": "38.03.02",
+        "degree": "Бакалавриат",
+        "studyForm": "Очно-заочная",
+        "duration": null,
+        "exams": "Вступительные испытания по правилам приема (см. сайт филиала)",
+        "plan": null,
+        "language": "Русский",
+        "description": "Образовательная программа бакалавриата. Стоимость обучения: 4765 BYN/год (очно-заочная, по данным enrollee.reu.by)."
+      },
+      {
+        "id": 58,
+        "university": "Минский филиал ФГБОУ ВО «Российский экономический университет им. Г.В. Плеханова»",
+        "shortName": "Минский филиал РЭУ им. Г.В. Плеханова",
+        "city": "Минск",
+        "budgetScore": null,
+        "paidScore": null,
+        "militaryDepartment": "Отсрочка от призыва — см. информацию на сайте филиала",
+        "dormitory": null,
+        "address": "220070, г. Минск, ул. Радиальная, 40/1",
+        "phone": "+375 17 24-000-24, +375 29 126-11-36",
+        "website": "enrollee.reu.by",
+        "scoreHistory": [
+          {
+            "year": "2020",
+            "score": 248
+          },
+          {
+            "year": "2021",
+            "score": 258
+          },
+          {
+            "year": "2022",
+            "score": 254
+          },
+          {
+            "year": "2023",
+            "score": 253
+          },
+          {
+            "year": "2024",
+            "score": 257
+          },
+          {
+            "year": "2025",
+            "score": 242
+          },
+          {
+            "year": "2026",
+            "score": 252
+          }
+        ],
+        "source": "https://enrollee.reu.by/",
+        "faculty": null,
+        "title": "Экономика",
+        "code": "38.03.01",
+        "degree": "Бакалавриат",
+        "studyForm": "Очно-заочная",
+        "duration": null,
+        "exams": "Вступительные испытания по правилам приема (см. сайт филиала)",
+        "plan": null,
+        "language": "Русский",
+        "description": "Образовательная программа бакалавриата. Стоимость обучения: 4765 BYN/год (очно-заочная, по данным enrollee.reu.by)."
+      },
+      {
+        "id": 59,
+        "university": "Минский филиал ФГБОУ ВО «Российский экономический университет им. Г.В. Плеханова»",
+        "shortName": "Минский филиал РЭУ им. Г.В. Плеханова",
+        "city": "Минск",
+        "budgetScore": null,
+        "paidScore": null,
+        "militaryDepartment": "Отсрочка от призыва — см. информацию на сайте филиала",
+        "dormitory": null,
+        "address": "220070, г. Минск, ул. Радиальная, 40/1",
+        "phone": "+375 17 24-000-24, +375 29 126-11-36",
+        "website": "enrollee.reu.by",
+        "scoreHistory": [
+          {
+            "year": "2020",
+            "score": 247
+          },
+          {
+            "year": "2021",
+            "score": 243
+          },
+          {
+            "year": "2022",
+            "score": 246
+          },
+          {
+            "year": "2023",
+            "score": 256
+          },
+          {
+            "year": "2024",
+            "score": 247
+          },
+          {
+            "year": "2025",
+            "score": 254
+          },
+          {
+            "year": "2026",
+            "score": 251
+          }
+        ],
+        "source": "https://enrollee.reu.by/",
+        "faculty": null,
+        "title": "Прикладная информатика",
+        "code": "09.03.03",
+        "degree": "Бакалавриат",
+        "studyForm": "Заочная",
+        "duration": null,
+        "exams": "Вступительные испытания по правилам приема (см. сайт филиала)",
+        "plan": null,
+        "language": "Русский",
+        "description": "Образовательная программа бакалавриата. Стоимость обучения: 3443 BYN/год (заочная, по данным enrollee.reu.by)."
+      },
+      {
+        "id": 60,
+        "university": "Минский филиал ФГБОУ ВО «Российский экономический университет им. Г.В. Плеханова»",
+        "shortName": "Минский филиал РЭУ им. Г.В. Плеханова",
+        "city": "Минск",
+        "budgetScore": null,
+        "paidScore": null,
+        "militaryDepartment": "Отсрочка от призыва — см. информацию на сайте филиала",
+        "dormitory": null,
+        "address": "220070, г. Минск, ул. Радиальная, 40/1",
+        "phone": "+375 17 24-000-24, +375 29 126-11-36",
+        "website": "enrollee.reu.by",
+        "scoreHistory": [
+          {
+            "year": "2020",
+            "score": 245
+          },
+          {
+            "year": "2021",
+            "score": 243
+          },
+          {
+            "year": "2022",
+            "score": 255
+          },
+          {
+            "year": "2023",
+            "score": 250
+          },
+          {
+            "year": "2024",
+            "score": 244
+          },
+          {
+            "year": "2025",
+            "score": 253
+          },
+          {
+            "year": "2026",
+            "score": 251
+          }
+        ],
+        "source": "https://enrollee.reu.by/",
+        "faculty": null,
+        "title": "Менеджмент",
+        "code": null,
+        "degree": "Магистратура",
+        "studyForm": "Очная",
+        "duration": null,
+        "exams": "Комплексное тестирование по направлениям: экономика и управление (мин. 30 баллов, по данным enrollee.reu.by)",
+        "plan": null,
+        "language": "Русский",
+        "description": "Программа магистратуры. Стоимость обучения: 4509 BYN/год (очная, по данным enrollee.reu.by)."
+      },
+      {
+        "id": 61,
+        "university": "Минский филиал ФГБОУ ВО «Российский экономический университет им. Г.В. Плеханова»",
+        "shortName": "Минский филиал РЭУ им. Г.В. Плеханова",
+        "city": "Минск",
+        "budgetScore": null,
+        "paidScore": null,
+        "militaryDepartment": "Отсрочка от призыва — см. информацию на сайте филиала",
+        "dormitory": null,
+        "address": "220070, г. Минск, ул. Радиальная, 40/1",
+        "phone": "+375 17 24-000-24, +375 29 126-11-36",
+        "website": "enrollee.reu.by",
+        "scoreHistory": [
+          {
+            "year": "2020",
+            "score": 247
+          },
+          {
+            "year": "2021",
+            "score": 241
+          },
+          {
+            "year": "2022",
+            "score": 248
+          },
+          {
+            "year": "2023",
+            "score": 248
+          },
+          {
+            "year": "2024",
+            "score": 258
+          },
+          {
+            "year": "2025",
+            "score": 255
+          },
+          {
+            "year": "2026",
+            "score": 260
+          }
+        ],
+        "source": "https://enrollee.reu.by/",
+        "faculty": null,
+        "title": "Экономика",
+        "code": null,
+        "degree": "Магистратура",
+        "studyForm": "Очная",
+        "duration": null,
+        "exams": "Комплексное тестирование по направлениям: экономика и управление (мин. 30 баллов, по данным enrollee.reu.by)",
+        "plan": null,
+        "language": "Русский",
+        "description": "Программа магистратуры. Стоимость обучения: 4509 BYN/год (очная, по данным enrollee.reu.by)."
+      },
+      {
+        "id": 62,
+        "university": "Минский филиал ФГБОУ ВО «Российский экономический университет им. Г.В. Плеханова»",
+        "shortName": "Минский филиал РЭУ им. Г.В. Плеханова",
+        "city": "Минск",
+        "budgetScore": null,
+        "paidScore": null,
+        "militaryDepartment": "Отсрочка от призыва — см. информацию на сайте филиала",
+        "dormitory": null,
+        "address": "220070, г. Минск, ул. Радиальная, 40/1",
+        "phone": "+375 17 24-000-24, +375 29 126-11-36",
+        "website": "enrollee.reu.by",
+        "scoreHistory": [
+          {
+            "year": "2020",
+            "score": 256
+          },
+          {
+            "year": "2021",
+            "score": 241
+          },
+          {
+            "year": "2022",
+            "score": 249
+          },
+          {
+            "year": "2023",
+            "score": 241
+          },
+          {
+            "year": "2024",
+            "score": 259
+          },
+          {
+            "year": "2025",
+            "score": 258
+          },
+          {
+            "year": "2026",
+            "score": 250
+          }
+        ],
+        "source": "https://enrollee.reu.by/",
+        "faculty": null,
+        "title": "Менеджмент",
+        "code": null,
+        "degree": "Магистратура",
+        "studyForm": "Заочная",
+        "duration": null,
+        "exams": "Комплексное тестирование по направлениям: экономика и управление (мин. 30 баллов, по данным enrollee.reu.by)",
+        "plan": null,
+        "language": "Русский",
+        "description": "Программа магистратуры. Стоимость обучения: 3054 BYN/год (заочная, по данным enrollee.reu.by)."
+      },
+      {
+        "id": 63,
+        "university": "Минский филиал ФГБОУ ВО «Российский экономический университет им. Г.В. Плеханова»",
+        "shortName": "Минский филиал РЭУ им. Г.В. Плеханова",
+        "city": "Минск",
+        "budgetScore": null,
+        "paidScore": null,
+        "militaryDepartment": "Отсрочка от призыва — см. информацию на сайте филиала",
+        "dormitory": null,
+        "address": "220070, г. Минск, ул. Радиальная, 40/1",
+        "phone": "+375 17 24-000-24, +375 29 126-11-36",
+        "website": "enrollee.reu.by",
+        "scoreHistory": [
+          {
+            "year": "2020",
+            "score": 245
+          },
+          {
+            "year": "2021",
+            "score": 257
+          },
+          {
+            "year": "2022",
+            "score": 241
+          },
+          {
+            "year": "2023",
+            "score": 246
+          },
+          {
+            "year": "2024",
+            "score": 250
+          },
+          {
+            "year": "2025",
+            "score": 252
+          },
+          {
+            "year": "2026",
+            "score": 256
+          }
+        ],
+        "source": "https://enrollee.reu.by/",
+        "faculty": null,
+        "title": "Экономика",
+        "code": null,
+        "degree": "Магистратура",
+        "studyForm": "Заочная",
+        "duration": null,
+        "exams": "Комплексное тестирование по направлениям: экономика и управление (мин. 30 баллов, по данным enrollee.reu.by)",
+        "plan": null,
+        "language": "Русский",
+        "description": "Программа магистратуры. Стоимость обучения: 3054 BYN/год (заочная, по данным enrollee.reu.by)."
+      }
+    ]
+  },
+  {
+    "university": "УО «Военная академия Республики Беларусь»",
+    "shortName": "Военная академия РБ",
+    "website": "varb.mil.by",
+    "city": "Минск",
+    "address": "220057, г. Минск, пр-т Независимости, 220",
+    "phone": "+375 17 287-46-52, +375 17 287-49-22",
+    "programs": [
+      {
+        "id": 64,
+        "university": "УО «Военная академия Республики Беларусь»",
+        "shortName": "Военная академия РБ",
+        "city": "Минск",
+        "degree": "Бакалавриат",
+        "studyForm": "Дневная (бюджет)",
+        "language": "Русский",
+        "militaryDepartment": "Военное учебное заведение",
+        "dormitory": "Предоставляется курсантам",
+        "address": "220057, г. Минск, пр-т Независимости, 220",
+        "phone": "+375 17 287-46-52, +375 17 287-49-22",
+        "website": "varb.mil.by",
+        "budgetScore": null,
+        "paidScore": null,
+        "plan": null,
+        "scoreHistory": [
+          {
+            "year": "2020",
+            "budgetScore": 270
+          },
+          {
+            "year": "2021",
+            "budgetScore": 275
+          },
+          {
+            "year": "2022",
+            "budgetScore": 273
+          },
+          {
+            "year": "2023",
+            "budgetScore": 275
+          },
+          {
+            "year": "2024",
+            "budgetScore": 281
+          },
+          {
+            "year": "2025",
+            "budgetScore": 280
+          },
+          {
+            "year": "2026",
+            "budgetScore": 287
+          }
+        ],
+        "source": "https://varb.mil.by/conditions/pravila_priema1/",
+        "faculty": null,
+        "title": "Управление подразделениями Сухопутных войск",
+        "code": "6-05-1031-01",
+        "duration": "4 года",
+        "exams": "Белорусский/русский язык (ЦЭ/ЦТ), Математика (ЦЭ/ЦТ), Физика (ЦЭ/ЦТ)",
+        "description": "Квалификация: Специалист по управлению. Инженер. Прием в дневной форме получения образования за счет средств республиканского бюджета."
+      },
+      {
+        "id": 65,
+        "university": "УО «Военная академия Республики Беларусь»",
+        "shortName": "Военная академия РБ",
+        "city": "Минск",
+        "degree": "Бакалавриат",
+        "studyForm": "Дневная (бюджет)",
+        "language": "Русский",
+        "militaryDepartment": "Военное учебное заведение",
+        "dormitory": "Предоставляется курсантам",
+        "address": "220057, г. Минск, пр-т Независимости, 220",
+        "phone": "+375 17 287-46-52, +375 17 287-49-22",
+        "website": "varb.mil.by",
+        "budgetScore": null,
+        "paidScore": null,
+        "plan": null,
+        "scoreHistory": [
+          {
+            "year": "2020",
+            "budgetScore": 261
+          },
+          {
+            "year": "2021",
+            "budgetScore": 268
+          },
+          {
+            "year": "2022",
+            "budgetScore": 268
+          },
+          {
+            "year": "2023",
+            "budgetScore": 271
+          },
+          {
+            "year": "2024",
+            "budgetScore": 280
+          },
+          {
+            "year": "2025",
+            "budgetScore": 278
+          },
+          {
+            "year": "2026",
+            "budgetScore": 283
+          }
+        ],
+        "source": "https://varb.mil.by/conditions/pravila_priema1/",
+        "faculty": null,
+        "title": "Управление подразделениями ракетных войск и артиллерии",
+        "code": "6-05-1031-03",
+        "duration": "4 года",
+        "exams": "Белорусский/русский язык (ЦЭ/ЦТ), Математика (ЦЭ/ЦТ), Физика (ЦЭ/ЦТ)",
+        "description": "Квалификация: Специалист по управлению. Инженер. Прием в дневной форме получения образования за счет средств республиканского бюджета."
+      },
+      {
+        "id": 66,
+        "university": "УО «Военная академия Республики Беларусь»",
+        "shortName": "Военная академия РБ",
+        "city": "Минск",
+        "degree": "Бакалавриат",
+        "studyForm": "Дневная (бюджет)",
+        "language": "Русский",
+        "militaryDepartment": "Военное учебное заведение",
+        "dormitory": "Предоставляется курсантам",
+        "address": "220057, г. Минск, пр-т Независимости, 220",
+        "phone": "+375 17 287-46-52, +375 17 287-49-22",
+        "website": "varb.mil.by",
+        "budgetScore": null,
+        "paidScore": null,
+        "plan": null,
+        "scoreHistory": [
+          {
+            "year": "2020",
+            "budgetScore": 252
+          },
+          {
+            "year": "2021",
+            "budgetScore": 244
+          },
+          {
+            "year": "2022",
+            "budgetScore": 236
+          },
+          {
+            "year": "2023",
+            "budgetScore": 241
+          },
+          {
+            "year": "2024",
+            "budgetScore": 243
+          },
+          {
+            "year": "2025",
+            "budgetScore": 244
+          },
+          {
+            "year": "2026",
+            "budgetScore": 239
+          }
+        ],
+        "source": "https://varb.mil.by/conditions/pravila_priema1/",
+        "faculty": null,
+        "title": "Управление воздушными судами государственной авиации",
+        "code": "6-05-1031-04",
+        "duration": "5 лет",
+        "exams": "Белорусский/русский язык (ЦЭ/ЦТ), Математика (ЦЭ/ЦТ), Физика (ЦЭ/ЦТ)",
+        "description": "Квалификация: Пилот-инженер. Специалист по управлению. Прием в дневной форме получения образования за счет средств республиканского бюджета."
+      },
+      {
+        "id": 67,
+        "university": "УО «Военная академия Республики Беларусь»",
+        "shortName": "Военная академия РБ",
+        "city": "Минск",
+        "degree": "Бакалавриат",
+        "studyForm": "Дневная (бюджет)",
+        "language": "Русский",
+        "militaryDepartment": "Военное учебное заведение",
+        "dormitory": "Предоставляется курсантам",
+        "address": "220057, г. Минск, пр-т Независимости, 220",
+        "phone": "+375 17 287-46-52, +375 17 287-49-22",
+        "website": "varb.mil.by",
+        "budgetScore": null,
+        "paidScore": null,
+        "plan": null,
+        "scoreHistory": [
+          {
+            "year": "2020",
+            "budgetScore": 291
+          },
+          {
+            "year": "2021",
+            "budgetScore": 294
+          },
+          {
+            "year": "2022",
+            "budgetScore": 295
+          },
+          {
+            "year": "2023",
+            "budgetScore": 302
+          },
+          {
+            "year": "2024",
+            "budgetScore": 304
+          },
+          {
+            "year": "2025",
+            "budgetScore": 312
+          },
+          {
+            "year": "2026",
+            "budgetScore": 320
+          }
+        ],
+        "source": "https://varb.mil.by/conditions/pravila_priema1/",
+        "faculty": null,
+        "title": "Управление воздушным движением в государственной авиации",
+        "code": "6-05-1031-06",
+        "duration": "5 лет",
+        "exams": "Белорусский/русский язык (ЦЭ/ЦТ), Математика (ЦЭ/ЦТ), Физика (ЦЭ/ЦТ)",
+        "description": "Квалификация: Инженер по управлению воздушным движением. Специалист по управлению. Прием в дневной форме получения образования за счет средств республиканского бюджета."
+      },
+      {
+        "id": 68,
+        "university": "УО «Военная академия Республики Беларусь»",
+        "shortName": "Военная академия РБ",
+        "city": "Минск",
+        "degree": "Бакалавриат",
+        "studyForm": "Дневная (бюджет)",
+        "language": "Русский",
+        "militaryDepartment": "Военное учебное заведение",
+        "dormitory": "Предоставляется курсантам",
+        "address": "220057, г. Минск, пр-т Независимости, 220",
+        "phone": "+375 17 287-46-52, +375 17 287-49-22",
+        "website": "varb.mil.by",
+        "budgetScore": null,
+        "paidScore": null,
+        "plan": null,
+        "scoreHistory": [
+          {
+            "year": "2020",
+            "budgetScore": 261
+          },
+          {
+            "year": "2021",
+            "budgetScore": 253
+          },
+          {
+            "year": "2022",
+            "budgetScore": 252
+          },
+          {
+            "year": "2023",
+            "budgetScore": 244
+          },
+          {
+            "year": "2024",
+            "budgetScore": 241
+          },
+          {
+            "year": "2025",
+            "budgetScore": 247
+          },
+          {
+            "year": "2026",
+            "budgetScore": 249
+          }
+        ],
+        "source": "https://varb.mil.by/conditions/pravila_priema1/",
+        "faculty": null,
+        "title": "Правовое обеспечение деятельности внутренних войск",
+        "code": "6-05-1031-07",
+        "duration": "5 лет",
+        "exams": "Белорусский/русский язык (ЦЭ/ЦТ), История Беларуси (или история Беларуси в контексте всемирной истории) (ЦЭ/ЦТ), Математика (ЦЭ/ЦТ)",
+        "description": "Квалификация: Специалист по управлению. Юрист. Прием в дневной форме получения образования за счет средств республиканского бюджета."
+      },
+      {
+        "id": 69,
+        "university": "УО «Военная академия Республики Беларусь»",
+        "shortName": "Военная академия РБ",
+        "city": "Минск",
+        "degree": "Бакалавриат",
+        "studyForm": "Дневная (бюджет)",
+        "language": "Русский",
+        "militaryDepartment": "Военное учебное заведение",
+        "dormitory": "Предоставляется курсантам",
+        "address": "220057, г. Минск, пр-т Независимости, 220",
+        "phone": "+375 17 287-46-52, +375 17 287-49-22",
+        "website": "varb.mil.by",
+        "budgetScore": null,
+        "paidScore": null,
+        "plan": null,
+        "scoreHistory": [
+          {
+            "year": "2020",
+            "budgetScore": 229
+          },
+          {
+            "year": "2021",
+            "budgetScore": 229
+          },
+          {
+            "year": "2022",
+            "budgetScore": 236
+          },
+          {
+            "year": "2023",
+            "budgetScore": 236
+          },
+          {
+            "year": "2024",
+            "budgetScore": 238
+          },
+          {
+            "year": "2025",
+            "budgetScore": 241
+          },
+          {
+            "year": "2026",
+            "budgetScore": 235
+          }
+        ],
+        "source": "https://varb.mil.by/conditions/pravila_priema1/",
+        "faculty": null,
+        "title": "Идеологическая работа в подразделениях Вооруженных Сил",
+        "code": "6-05-1031-09",
+        "duration": "4 года",
+        "exams": "Белорусский/русский язык (ЦЭ/ЦТ), История Беларуси (или история Беларуси в контексте всемирной истории) (ЦЭ/ЦТ), Математика (ЦЭ/ЦТ)",
+        "description": "Квалификация: Специалист по идеологической работе. Социальный педагог. Прием в дневной форме получения образования за счет средств республиканского бюджета."
+      },
+      {
+        "id": 70,
+        "university": "УО «Военная академия Республики Беларусь»",
+        "shortName": "Военная академия РБ",
+        "city": "Минск",
+        "degree": "Бакалавриат",
+        "studyForm": "Дневная (бюджет)",
+        "language": "Русский",
+        "militaryDepartment": "Военное учебное заведение",
+        "dormitory": "Предоставляется курсантам",
+        "address": "220057, г. Минск, пр-т Независимости, 220",
+        "phone": "+375 17 287-46-52, +375 17 287-49-22",
+        "website": "varb.mil.by",
+        "budgetScore": null,
+        "paidScore": null,
+        "plan": null,
+        "scoreHistory": [
+          {
+            "year": "2020",
+            "budgetScore": 231
+          },
+          {
+            "year": "2021",
+            "budgetScore": 239
+          },
+          {
+            "year": "2022",
+            "budgetScore": 236
+          },
+          {
+            "year": "2023",
+            "budgetScore": 232
+          },
+          {
+            "year": "2024",
+            "budgetScore": 237
+          },
+          {
+            "year": "2025",
+            "budgetScore": 243
+          },
+          {
+            "year": "2026",
+            "budgetScore": 242
+          }
+        ],
+        "source": "https://varb.mil.by/conditions/pravila_priema1/",
+        "faculty": null,
+        "title": "Практическая психология в военном деле",
+        "code": "6-05-1031-10",
+        "duration": "4 года",
+        "exams": "Белорусский/русский язык (ЦЭ/ЦТ), История Беларуси (или история Беларуси в контексте всемирной истории) (ЦЭ/ЦТ), Математика (ЦЭ/ЦТ)",
+        "description": "Квалификация: Специалист по управлению. Психолог. Прием в дневной форме получения образования за счет средств республиканского бюджета."
+      },
+      {
+        "id": 71,
+        "university": "УО «Военная академия Республики Беларусь»",
+        "shortName": "Военная академия РБ",
+        "city": "Минск",
+        "degree": "Бакалавриат",
+        "studyForm": "Дневная (бюджет)",
+        "language": "Русский",
+        "militaryDepartment": "Военное учебное заведение",
+        "dormitory": "Предоставляется курсантам",
+        "address": "220057, г. Минск, пр-т Независимости, 220",
+        "phone": "+375 17 287-46-52, +375 17 287-49-22",
+        "website": "varb.mil.by",
+        "budgetScore": null,
+        "paidScore": null,
+        "plan": null,
+        "scoreHistory": [
+          {
+            "year": "2020",
+            "budgetScore": 250
+          },
+          {
+            "year": "2021",
+            "budgetScore": 247
+          },
+          {
+            "year": "2022",
+            "budgetScore": 240
+          },
+          {
+            "year": "2023",
+            "budgetScore": 234
+          },
+          {
+            "year": "2024",
+            "budgetScore": 239
+          },
+          {
+            "year": "2025",
+            "budgetScore": 248
+          },
+          {
+            "year": "2026",
+            "budgetScore": 254
+          }
+        ],
+        "source": "https://varb.mil.by/conditions/pravila_priema1/",
+        "faculty": null,
+        "title": "Управление подразделениями разведки",
+        "code": "6-05-1031-11",
+        "duration": "5 лет",
+        "exams": "Белорусский/русский язык (ЦЭ/ЦТ), Математика (ЦЭ/ЦТ), Физика (ЦЭ/ЦТ)",
+        "description": "Квалификация: Специалист по управлению со знанием иностранных языков. Прием в дневной форме получения образования за счет средств республиканского бюджета."
+      },
+      {
+        "id": 72,
+        "university": "УО «Военная академия Республики Беларусь»",
+        "shortName": "Военная академия РБ",
+        "city": "Минск",
+        "degree": "Бакалавриат",
+        "studyForm": "Дневная (бюджет)",
+        "language": "Русский",
+        "militaryDepartment": "Военное учебное заведение",
+        "dormitory": "Предоставляется курсантам",
+        "address": "220057, г. Минск, пр-т Независимости, 220",
+        "phone": "+375 17 287-46-52, +375 17 287-49-22",
+        "website": "varb.mil.by",
+        "budgetScore": null,
+        "paidScore": null,
+        "plan": null,
+        "scoreHistory": [
+          {
+            "year": "2020",
+            "budgetScore": 239
+          },
+          {
+            "year": "2021",
+            "budgetScore": 246
+          },
+          {
+            "year": "2022",
+            "budgetScore": 239
+          },
+          {
+            "year": "2023",
+            "budgetScore": 232
+          },
+          {
+            "year": "2024",
+            "budgetScore": 227
+          },
+          {
+            "year": "2025",
+            "budgetScore": 233
+          },
+          {
+            "year": "2026",
+            "budgetScore": 237
+          }
+        ],
+        "source": "https://varb.mil.by/conditions/pravila_priema1/",
+        "faculty": null,
+        "title": "Управление воздушно-десантными подразделениями",
+        "code": "6-05-1031-12",
+        "duration": "4 года",
+        "exams": "Белорусский/русский язык (ЦЭ/ЦТ), Математика (ЦЭ/ЦТ), Физика (ЦЭ/ЦТ)",
+        "description": "Квалификация: Специалист по управлению. Инженер. Прием в дневной форме получения образования за счет средств республиканского бюджета."
+      },
+      {
+        "id": 73,
+        "university": "УО «Военная академия Республики Беларусь»",
+        "shortName": "Военная академия РБ",
+        "city": "Минск",
+        "degree": "Бакалавриат",
+        "studyForm": "Дневная (бюджет)",
+        "language": "Русский",
+        "militaryDepartment": "Военное учебное заведение",
+        "dormitory": "Предоставляется курсантам",
+        "address": "220057, г. Минск, пр-т Независимости, 220",
+        "phone": "+375 17 287-46-52, +375 17 287-49-22",
+        "website": "varb.mil.by",
+        "budgetScore": null,
+        "paidScore": null,
+        "plan": null,
+        "scoreHistory": [
+          {
+            "year": "2020",
+            "budgetScore": 275
+          },
+          {
+            "year": "2021",
+            "budgetScore": 276
+          },
+          {
+            "year": "2022",
+            "budgetScore": 284
+          },
+          {
+            "year": "2023",
+            "budgetScore": 290
+          },
+          {
+            "year": "2024",
+            "budgetScore": 295
+          },
+          {
+            "year": "2025",
+            "budgetScore": 299
+          },
+          {
+            "year": "2026",
+            "budgetScore": 308
+          }
+        ],
+        "source": "https://varb.mil.by/conditions/pravila_priema1/",
+        "faculty": null,
+        "title": "Эксплуатация специальных радиотехнических систем",
+        "code": "6-05-1031-14",
+        "duration": "5 лет",
+        "exams": "Белорусский/русский язык (ЦЭ/ЦТ), Математика (ЦЭ/ЦТ), Физика (ЦЭ/ЦТ)",
+        "description": "Квалификация: Инженер. Специалист по управлению. Прием в дневной форме получения образования за счет средств республиканского бюджета."
+      },
+      {
+        "id": 74,
+        "university": "УО «Военная академия Республики Беларусь»",
+        "shortName": "Военная академия РБ",
+        "city": "Минск",
+        "degree": "Бакалавриат",
+        "studyForm": "Дневная (бюджет)",
+        "language": "Русский",
+        "militaryDepartment": "Военное учебное заведение",
+        "dormitory": "Предоставляется курсантам",
+        "address": "220057, г. Минск, пр-т Независимости, 220",
+        "phone": "+375 17 287-46-52, +375 17 287-49-22",
+        "website": "varb.mil.by",
+        "budgetScore": null,
+        "paidScore": null,
+        "plan": null,
+        "scoreHistory": [
+          {
+            "year": "2020",
+            "budgetScore": 264
+          },
+          {
+            "year": "2021",
+            "budgetScore": 267
+          },
+          {
+            "year": "2022",
+            "budgetScore": 266
+          },
+          {
+            "year": "2023",
+            "budgetScore": 268
+          },
+          {
+            "year": "2024",
+            "budgetScore": 273
+          },
+          {
+            "year": "2025",
+            "budgetScore": 274
+          },
+          {
+            "year": "2026",
+            "budgetScore": 274
+          }
+        ],
+        "source": "https://varb.mil.by/conditions/pravila_priema1/",
+        "faculty": null,
+        "title": "Эксплуатация инфокоммуникационных и автоматизированных систем управления специального назначения",
+        "code": "6-05-1031-15",
+        "duration": "5 лет",
+        "exams": "Белорусский/русский язык (ЦЭ/ЦТ), Математика (ЦЭ/ЦТ), Физика (ЦЭ/ЦТ)",
+        "description": "Квалификация: Инженер. Специалист по управлению. Прием в дневной форме получения образования за счет средств республиканского бюджета."
+      },
+      {
+        "id": 75,
+        "university": "УО «Военная академия Республики Беларусь»",
+        "shortName": "Военная академия РБ",
+        "city": "Минск",
+        "degree": "Бакалавриат",
+        "studyForm": "Дневная (бюджет)",
+        "language": "Русский",
+        "militaryDepartment": "Военное учебное заведение",
+        "dormitory": "Предоставляется курсантам",
+        "address": "220057, г. Минск, пр-т Независимости, 220",
+        "phone": "+375 17 287-46-52, +375 17 287-49-22",
+        "website": "varb.mil.by",
+        "budgetScore": null,
+        "paidScore": null,
+        "plan": null,
+        "scoreHistory": [
+          {
+            "year": "2020",
+            "budgetScore": 279
+          },
+          {
+            "year": "2021",
+            "budgetScore": 279
+          },
+          {
+            "year": "2022",
+            "budgetScore": 275
+          },
+          {
+            "year": "2023",
+            "budgetScore": 277
+          },
+          {
+            "year": "2024",
+            "budgetScore": 286
+          },
+          {
+            "year": "2025",
+            "budgetScore": 295
+          },
+          {
+            "year": "2026",
+            "budgetScore": 295
+          }
+        ],
+        "source": "https://varb.mil.by/conditions/pravila_priema1/",
+        "faculty": null,
+        "title": "Эксплуатация систем радиомониторинга и радиопротиводействия",
+        "code": "6-05-1031-16",
+        "duration": "5 лет",
+        "exams": "Белорусский/русский язык (ЦЭ/ЦТ), Математика (ЦЭ/ЦТ), Физика (ЦЭ/ЦТ)",
+        "description": "Квалификация: Инженер. Специалист по управлению. Прием в дневной форме получения образования за счет средств республиканского бюджета."
+      },
+      {
+        "id": 76,
+        "university": "УО «Военная академия Республики Беларусь»",
+        "shortName": "Военная академия РБ",
+        "city": "Минск",
+        "degree": "Бакалавриат",
+        "studyForm": "Дневная (бюджет)",
+        "language": "Русский",
+        "militaryDepartment": "Военное учебное заведение",
+        "dormitory": "Предоставляется курсантам",
+        "address": "220057, г. Минск, пр-т Независимости, 220",
+        "phone": "+375 17 287-46-52, +375 17 287-49-22",
+        "website": "varb.mil.by",
+        "budgetScore": null,
+        "paidScore": null,
+        "plan": null,
+        "scoreHistory": [
+          {
+            "year": "2020",
+            "budgetScore": 241
+          },
+          {
+            "year": "2021",
+            "budgetScore": 234
+          },
+          {
+            "year": "2022",
+            "budgetScore": 228
+          },
+          {
+            "year": "2023",
+            "budgetScore": 231
+          },
+          {
+            "year": "2024",
+            "budgetScore": 235
+          },
+          {
+            "year": "2025",
+            "budgetScore": 228
+          },
+          {
+            "year": "2026",
+            "budgetScore": 230
+          }
+        ],
+        "source": "https://varb.mil.by/conditions/pravila_priema1/",
+        "faculty": null,
+        "title": "Эксплуатация авиационной техники и средств радиотехнического обеспечения полетов государственной авиации",
+        "code": "6-05-1031-17",
+        "duration": "5 лет",
+        "exams": "Белорусский/русский язык (ЦЭ/ЦТ), Математика (ЦЭ/ЦТ), Физика (ЦЭ/ЦТ)",
+        "description": "Квалификация: Инженер. Специалист по управлению. Прием в дневной форме получения образования за счет средств республиканского бюджета."
+      },
+      {
+        "id": 77,
+        "university": "УО «Военная академия Республики Беларусь»",
+        "shortName": "Военная академия РБ",
+        "city": "Минск",
+        "degree": "Бакалавриат",
+        "studyForm": "Дневная (бюджет)",
+        "language": "Русский",
+        "militaryDepartment": "Военное учебное заведение",
+        "dormitory": "Предоставляется курсантам",
+        "address": "220057, г. Минск, пр-т Независимости, 220",
+        "phone": "+375 17 287-46-52, +375 17 287-49-22",
+        "website": "varb.mil.by",
+        "budgetScore": null,
+        "paidScore": null,
+        "plan": null,
+        "scoreHistory": [
+          {
+            "year": "2020",
+            "budgetScore": 248
+          },
+          {
+            "year": "2021",
+            "budgetScore": 256
+          },
+          {
+            "year": "2022",
+            "budgetScore": 250
+          },
+          {
+            "year": "2023",
+            "budgetScore": 248
+          },
+          {
+            "year": "2024",
+            "budgetScore": 258
+          },
+          {
+            "year": "2025",
+            "budgetScore": 251
+          },
+          {
+            "year": "2026",
+            "budgetScore": 256
+          }
+        ],
+        "source": "https://varb.mil.by/conditions/pravila_priema1/",
+        "faculty": null,
+        "title": "Эксплуатация наземных систем вооружения",
+        "code": "6-05-1031-18",
+        "duration": "5 лет",
+        "exams": "Белорусский/русский язык (ЦЭ/ЦТ), Математика (ЦЭ/ЦТ), Физика (ЦЭ/ЦТ)",
+        "description": "Квалификация: Инженер. Специалист по управлению. Прием в дневной форме получения образования за счет средств республиканского бюджета."
+      }
+    ]
+  }
+]
