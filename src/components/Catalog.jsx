@@ -51,7 +51,7 @@ export default function Catalog({ programs, onSelectProgram, onResetFilters }) {
                         БЮДЖЕТ
                       </div>
                       <div className="text-xl font-extrabold text-[#025a94] leading-tight">
-                        {prog.budgetScore ?? 400}
+                        {prog.budgetScore ?? '—'}
                       </div>
                     </div>
                     <div className="w-[1px] h-8 bg-slate-200"></div>
@@ -60,7 +60,7 @@ export default function Catalog({ programs, onSelectProgram, onResetFilters }) {
                         ПЛАТНОЕ
                       </div>
                       <div className="text-xl font-extrabold text-[#025a94] leading-tight">
-                        {prog.paidScore ?? 399}
+                        {prog.paidScore ?? '—'}
                       </div>
                     </div>
                   </div>

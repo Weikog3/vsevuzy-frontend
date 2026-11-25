@@ -86,22 +86,27 @@ export default function App() {
 
   // Фильтрация массива программ на основе выбранных параметров
   const filteredPrograms = useMemo(() => {
+    const contains = (value, needle) =>
+      typeof value === 'string' && value.toLowerCase().includes(needle);
+
     return programs.filter(prog => {
       // 1. Поиск по названию вуза
-      if (filters.university.trim() && 
-          !prog.university.toLowerCase().includes(filters.university.toLowerCase()) &&
-          !prog.shortName.toLowerCase().includes(filters.university.toLowerCase())) {
+      if (filters.university.trim() &&
+          !contains(prog.university, filters.university.toLowerCase()) &&
+          !contains(prog.shortName, filters.university.toLowerCase())) {
         return false;
       }
 
-      // 2. Минимальный балл (бюджет или платное)
+      // 2. Минимальный балл (программа подходит, если хотя бы один балл не ниже порога)
       if (filters.minScore && !isNaN(Number(filters.minScore))) {
         const min = Number(filters.minScore);
-        if (prog.budgetScore < min && prog.paidScore < min) return false;
+        const budgetOk = prog.budgetScore != null && prog.budgetScore >= min;
+        const paidOk = prog.paidScore != null && prog.paidScore >= min;
+        if (!budgetOk && !paidOk) return false;
       }
 
       // 3. Город
-      if (filters.city.trim() && !prog.city.toLowerCase().includes(filters.city.toLowerCase())) {
+      if (filters.city.trim() && !contains(prog.city, filters.city.toLowerCase())) {
         return false;
       }
 
@@ -110,27 +115,36 @@ export default function App() {
         return false;
       }
 
-      // 5. Экзамены
-      if (filters.exams.trim() && !prog.exams.toLowerCase().includes(filters.exams.toLowerCase())) {
+      // 5. Форма оплаты: скрываем программы без соответствующих мест
+      if (!filters.budget && prog.budgetScore == null) return false;
+      if (!filters.paid && prog.paidScore == null) return false;
+
+      // 6. Экзамены
+      if (filters.exams.trim() && !contains(prog.exams, filters.exams.toLowerCase())) {
         return false;
       }
 
-      // 6. Название специальности
-      if (filters.specialty.trim() && !prog.title.toLowerCase().includes(filters.specialty.toLowerCase())) {
+      // 7. Название специальности
+      if (filters.specialty.trim() && !contains(prog.title, filters.specialty.toLowerCase())) {
         return false;
       }
 
-      // 7. Язык
+      // 8. Язык
       if (filters.language !== 'all' && prog.language !== filters.language) {
         return false;
       }
 
-      // 8. Военная кафедра
+      // 9. Срок обучения
+      if (filters.duration.trim() && !contains(prog.duration, filters.duration.toLowerCase())) {
+        return false;
+      }
+
+      // 10. Военная кафедра
       if (filters.military !== 'any' && prog.militaryDepartment !== filters.military) {
         return false;
       }
 
-      // 9. Ступень образования
+      // 11. Ступень образования
       if (filters.degrees.length > 0 && !filters.degrees.includes(prog.degree)) {
         return false;
       }

@@ -13,37 +13,81 @@ import {
   Building2 
 } from 'lucide-react';
 
+function formatDelta(delta) {
+  if (delta == null) return 'Нет данных';
+  if (delta === 0) return '0 баллов';
+  const abs = Math.abs(delta);
+  const mod10 = abs % 10;
+  const mod100 = abs % 100;
+  const word =
+    mod10 === 1 && mod100 !== 11
+      ? 'балл'
+      : [2, 3, 4].includes(mod10) && ![12, 13, 14].includes(mod100)
+        ? 'балла'
+        : 'баллов';
+  return `${delta > 0 ? '+' : '−'} ${abs} ${word}`;
+}
+
 export default function ProgramDetail({ program, onBack }) {
   const [scoreType, setScoreType] = useState('budget'); // 'budget' | 'paid'
   const [, setHoveredPoint] = useState(null);
 
-  // Данные для графика
-  const chartData = [
-    { year: "2020", score: 228 },
-    { year: "2021", score: 232 },
-    { year: "2022", score: 238 },
-    { year: "2023", score: 242 },
-    { year: "2024", score: 246 },
-    { year: "2025", score: 250 },
-    { year: "2026", score: 254 },
-  ];
+  // История баллов приходит из GET /programs/{id}
+  const chartData = (program.scoreHistory ?? [])
+    .filter((item) => item && item.year != null && Number.isFinite(Number(item.score)))
+    .map((item) => ({ year: String(item.year), score: Number(item.score) }));
+
+  const hasHistory = chartData.length > 0;
+  const values = chartData.map((item) => item.score);
+  const rawMin = hasHistory ? Math.min(...values) : 0;
+  const rawMax = hasHistory ? Math.max(...values) : 100;
+  const span = rawMax - rawMin;
+  const axisPadding = span === 0 ? 10 : Math.max(4, Math.round(span * 0.15));
+  const minScore = Math.max(0, Math.floor((rawMin - axisPadding) / 5) * 5);
+  const maxScore = Math.max(minScore + 5, Math.ceil((rawMax + axisPadding) / 5) * 5);
 
   // Математика для точного SVG графика
-  const minScore = 200;
-  const maxScore = 265;
   const chartWidth = 650;
   const chartHeight = 180;
   const paddingX = 40;
   const paddingY = 20;
 
   const points = chartData.map((d, index) => {
-    const x = paddingX + (index / (chartData.length - 1)) * (chartWidth - paddingX * 2);
+    const x =
+      chartData.length === 1
+        ? chartWidth / 2
+        : paddingX + (index / (chartData.length - 1)) * (chartWidth - paddingX * 2);
     const y = chartHeight - paddingY - ((d.score - minScore) / (maxScore - minScore)) * (chartHeight - paddingY * 2);
     return { ...d, x, y };
   });
 
   const linePath = points.map((p, i) => `${i === 0 ? 'M' : 'L'} ${p.x} ${p.y}`).join(' ');
-  const areaPath = `${linePath} L ${points[points.length - 1].x} ${chartHeight - paddingY} L ${points[0].x} ${chartHeight - paddingY} Z`;
+  const areaPath =
+    points.length > 0
+      ? `${linePath} L ${points[points.length - 1].x} ${chartHeight - paddingY} L ${points[0].x} ${chartHeight - paddingY} Z`
+      : '';
+
+  const yTicks = [
+    ...new Set(Array.from({ length: 4 }, (_, i) => Math.round(minScore + (i * (maxScore - minScore)) / 3))),
+  ];
+
+  const lastDelta =
+    chartData.length >= 2 ? chartData[chartData.length - 1].score - chartData[chartData.length - 2].score : null;
+  const lastDeltaLabel = formatDelta(lastDelta);
+
+  const yearsLabel = hasHistory
+    ? chartData.length === 1
+      ? chartData[0].year
+      : `${chartData[0].year}–${chartData[chartData.length - 1].year}`
+    : '';
+
+  const description = typeof program.description === 'string' ? program.description.trim() : '';
+
+  const websiteHref = program.website
+    ? /^https?:\/\//i.test(program.website)
+      ? program.website
+      : `https://${program.website}`
+    : null;
 
   return (
     <div className="flex-1 p-6 lg:p-10 max-w-5xl mx-auto overflow-y-auto">
@@ -81,15 +125,17 @@ export default function ProgramDetail({ program, onBack }) {
         </div>
 
         <div className="text-left md:text-right text-xs text-slate-500 space-y-1">
-          <a
-            href={`https://${program.website}`}
-            target="_blank"
-            rel="noreferrer"
-            className="inline-flex items-center gap-1.5 text-[#025a94] font-semibold hover:underline"
-          >
-            <span>{program.website}</span>
-            <ExternalLink size={14} />
-          </a>
+          {websiteHref && (
+            <a
+              href={websiteHref}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-1.5 text-[#025a94] font-semibold hover:underline"
+            >
+              <span>{program.website}</span>
+              <ExternalLink size={14} />
+            </a>
+          )}
           <div className="text-slate-400">{program.address}</div>
           <div className="text-slate-400 font-medium">{program.phone}</div>
         </div>
@@ -166,7 +212,7 @@ export default function ProgramDetail({ program, onBack }) {
             <span className="text-[11px] font-medium">Факультет</span>
             <Building2 size={16} className="text-[#025a94]" />
           </div>
-          <div className="text-base font-bold text-slate-800">ФМИТ</div>
+          <div className="text-base font-bold text-slate-800">{program.faculty}</div>
         </div>
       </div>
 
@@ -176,9 +222,13 @@ export default function ProgramDetail({ program, onBack }) {
           Подробное описание специальности
         </h2>
         <div className="bg-[#f0f6fa] rounded-2xl p-6 text-xs sm:text-sm text-slate-600 leading-relaxed space-y-4">
-          {program.description.split('\n\n').map((paragraph, idx) => (
-            <p key={idx}>{paragraph}</p>
-          ))}
+          {description ? (
+            description.split(/\n{2,}/).map((paragraph, idx) => (
+              <p key={idx}>{paragraph}</p>
+            ))
+          ) : (
+            <p className="text-slate-400">Описание пока не добавлено.</p>
+          )}
         </div>
       </div>
 
@@ -212,15 +262,29 @@ export default function ProgramDetail({ program, onBack }) {
         <div className="bg-[#f0f6fa] rounded-2xl p-6">
           <div className="flex items-center justify-between mb-6">
             <span className="text-[11px] font-bold text-slate-500 uppercase tracking-wider">
-              ПОРОГОВЫЕ БАЛЛЫ (ПРОГНОЗ НА 2020–2026 ГГ.)
+              ПОРОГОВЫЕ БАЛЛЫ{yearsLabel ? ` (${yearsLabel})` : ''}
             </span>
             <span className="text-xs font-semibold text-[#025a94] bg-white px-3 py-1 rounded-full shadow-sm">
-              За последний год: + 4 балла
+              За последний год: {lastDeltaLabel}
             </span>
           </div>
 
-          {/* SVG График */}
-          <div className="w-full overflow-x-auto">
+          {scoreType === 'paid' ? (
+            <div className="text-center py-10 text-xs text-slate-500">
+              <p>История проходных баллов по платной форме пока не загружена.</p>
+              {program.paidScore != null && (
+                <p className="mt-2 text-slate-600">
+                  Текущий проходной балл на платное:{' '}
+                  <span className="font-bold text-[#025a94]">{program.paidScore}</span>
+                </p>
+              )}
+            </div>
+          ) : !hasHistory ? (
+            <div className="text-center py-10 text-xs text-slate-500">
+              История проходных баллов пока не загружена.
+            </div>
+          ) : (
+            <div className="w-full overflow-x-auto">
             <svg viewBox={`0 0 ${chartWidth} ${chartHeight + 40}`} className="w-full h-auto min-w-[500px]">
               <defs>
                 <linearGradient id="scoreAreaGradient" x1="0" y1="0" x2="0" y2="1">
@@ -230,7 +294,7 @@ export default function ProgramDetail({ program, onBack }) {
               </defs>
 
               {/* Горизонтальные сетки и подписи Y */}
-              {[200, 220, 240, 260].map((val) => {
+              {yTicks.map((val) => {
                 const y = chartHeight - paddingY - ((val - minScore) / (maxScore - minScore)) * (chartHeight - paddingY * 2);
                 return (
                   <g key={val}>
@@ -251,7 +315,7 @@ export default function ProgramDetail({ program, onBack }) {
               {/* Точки значений с подписями */}
               {points.map((p, idx) => (
                 <g 
-                  key={p.year}
+                  key={`${p.year}-${idx}`}
                   onMouseEnter={() => setHoveredPoint(p)}
                   onMouseLeave={() => setHoveredPoint(null)}
                   className="cursor-pointer"
@@ -285,7 +349,8 @@ export default function ProgramDetail({ program, onBack }) {
                 </g>
               ))}
             </svg>
-          </div>
+            </div>
+          )}
         </div>
       </div>
     </div>
