@@ -1,6 +1,45 @@
 import { MapPin, ChevronLeft, ChevronRight, SearchX } from 'lucide-react';
 
-export default function Catalog({ programs, onSelectProgram, onResetFilters }) {
+function buildPageItems(currentPage, totalPages) {
+  if (totalPages <= 7) {
+    return Array.from({ length: totalPages }, (_, index) => index + 1);
+  }
+
+  const pages = [...new Set([1, totalPages, currentPage - 1, currentPage, currentPage + 1])]
+    .filter((page) => page >= 1 && page <= totalPages)
+    .sort((a, b) => a - b);
+
+  const items = [];
+  pages.forEach((page, index) => {
+    if (index > 0 && page - pages[index - 1] > 1) items.push('ellipsis');
+    items.push(page);
+  });
+  return items;
+}
+
+export default function Catalog({
+  programs,
+  page = 1,
+  pageSize = 10,
+  onPageChange,
+  onSelectProgram,
+  onResetFilters,
+}) {
+  const totalPages = Math.max(1, Math.ceil(programs.length / pageSize));
+  const currentPage = Math.min(Math.max(page, 1), totalPages);
+  const startIndex = (currentPage - 1) * pageSize;
+  const visiblePrograms = programs.slice(startIndex, startIndex + pageSize);
+  const from = programs.length === 0 ? 0 : startIndex + 1;
+  const to = Math.min(startIndex + pageSize, programs.length);
+  const pageItems = buildPageItems(currentPage, totalPages);
+
+  const goToPage = (nextPage) => {
+    const clamped = Math.min(Math.max(nextPage, 1), totalPages);
+    if (clamped === currentPage) return;
+    onPageChange?.(clamped);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <div className="flex-1 p-6 lg:p-8 max-w-5xl w-full mx-auto flex flex-col min-h-screen">
       <div>
@@ -28,7 +67,7 @@ export default function Catalog({ programs, onSelectProgram, onResetFilters }) {
         ) : (
           /* Сетка карточек */
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-            {programs.map((prog) => (
+            {visiblePrograms.map((prog) => (
               <div
                 key={prog.id}
                 className="bg-white rounded-3xl p-6 border border-slate-100 shadow-[0_2px_12px_rgba(0,0,0,0.03)] hover:shadow-md transition flex flex-col justify-between"
@@ -87,29 +126,57 @@ export default function Catalog({ programs, onSelectProgram, onResetFilters }) {
       </div>
 
       {/* Пагинация */}
-      <div className="mt-auto pt-10 pb-6 flex items-center justify-center gap-2 text-xs font-semibold text-slate-600">
-        <button className="p-2 hover:bg-white rounded-lg text-slate-400 transition cursor-pointer">
-          <ChevronLeft size={16} />
-        </button>
+      {totalPages > 1 && (
+        <div className="mt-auto pt-10 pb-6 flex flex-col items-center gap-2.5">
+          <div className="flex items-center justify-center gap-2 text-xs font-semibold text-slate-600">
+            <button
+              type="button"
+              onClick={() => goToPage(currentPage - 1)}
+              disabled={currentPage === 1}
+              aria-label="Предыдущая страница"
+              className="p-2 rounded-lg text-slate-400 transition cursor-pointer hover:bg-white disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:bg-transparent"
+            >
+              <ChevronLeft size={16} />
+            </button>
 
-        <button className="w-8 h-8 rounded-full bg-[#025a94] text-white flex items-center justify-center shadow-sm">
-          1
-        </button>
-        <button className="w-8 h-8 rounded-full hover:bg-white text-slate-600 flex items-center justify-center transition cursor-pointer">
-          2
-        </button>
-        <button className="w-8 h-8 rounded-full hover:bg-white text-slate-600 flex items-center justify-center transition cursor-pointer">
-          3
-        </button>
-        <span className="px-1 text-slate-400">...</span>
-        <button className="w-8 h-8 rounded-full hover:bg-white text-slate-600 flex items-center justify-center transition cursor-pointer">
-          36
-        </button>
+            {pageItems.map((item, index) =>
+              item === 'ellipsis' ? (
+                <span key={`ellipsis-${index}`} className="px-1 text-slate-400">
+                  …
+                </span>
+              ) : (
+                <button
+                  key={item}
+                  type="button"
+                  onClick={() => goToPage(item)}
+                  aria-current={item === currentPage ? 'page' : undefined}
+                  className={`w-8 h-8 rounded-full flex items-center justify-center transition cursor-pointer ${
+                    item === currentPage
+                      ? 'bg-[#025a94] text-white shadow-sm'
+                      : 'hover:bg-white text-slate-600'
+                  }`}
+                >
+                  {item}
+                </button>
+              ),
+            )}
 
-        <button className="p-2 hover:bg-white rounded-lg text-slate-400 transition cursor-pointer">
-          <ChevronRight size={16} />
-        </button>
-      </div>
+            <button
+              type="button"
+              onClick={() => goToPage(currentPage + 1)}
+              disabled={currentPage === totalPages}
+              aria-label="Следующая страница"
+              className="p-2 rounded-lg text-slate-400 transition cursor-pointer hover:bg-white disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:bg-transparent"
+            >
+              <ChevronRight size={16} />
+            </button>
+          </div>
+
+          <span className="text-[11px] font-medium text-slate-400">
+            Показано {from}–{to} из {programs.length}
+          </span>
+        </div>
+      )}
     </div>
   );
 }

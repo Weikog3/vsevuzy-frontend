@@ -3,7 +3,9 @@ import FilterSidebar from './components/FilterSidebar';
 import Catalog from './components/Catalog';
 import ProgramDetail from './components/ProgramDetail';
 import ChatSidebar from './components/ChatSidebar';
-import { listPrograms, getProgram } from './api';
+import { listAllPrograms, getProgram } from './api';
+
+const PAGE_SIZE = 10;
 
 const defaultFilters = {
   university: '',
@@ -29,11 +31,12 @@ export default function App() {
   const [error, setError] = useState(null);
   const [isChatOpen, setIsChatOpen] = useState(true);
   const [filters, setFilters] = useState(defaultFilters);
+  const [page, setPage] = useState(1);
 
   const loadPrograms = () => {
     setLoadingPrograms(true);
     setError(null);
-    listPrograms('?limit=100')
+    listAllPrograms()
       .then((data) => setPrograms(data))
       .catch((e) => setError(e.message || 'Неизвестная ошибка'))
       .finally(() => setLoadingPrograms(false));
@@ -41,7 +44,7 @@ export default function App() {
 
   useEffect(() => {
     let cancelled = false;
-    listPrograms('?limit=100')
+    listAllPrograms()
       .then((data) => {
         if (cancelled) return;
         setPrograms(data);
@@ -61,10 +64,12 @@ export default function App() {
   // Обработчик изменения любого фильтра
   const handleFilterChange = (field, value) => {
     setFilters(prev => ({ ...prev, [field]: value }));
+    setPage(1);
   };
 
   const handleResetFilters = () => {
     setFilters(defaultFilters);
+    setPage(1);
   };
 
   // Открытие программы: подгружаем полные данные (с историей баллов) по id
@@ -153,6 +158,9 @@ export default function App() {
     });
   }, [filters, programs]);
 
+  const totalPages = Math.max(1, Math.ceil(filteredPrograms.length / PAGE_SIZE));
+  const currentPage = Math.min(page, totalPages);
+
   const renderMain = () => {
     if (selectedProgram) {
       if (selectedDetail) {
@@ -209,6 +217,9 @@ export default function App() {
     return (
       <Catalog
         programs={filteredPrograms}
+        page={currentPage}
+        pageSize={PAGE_SIZE}
+        onPageChange={setPage}
         onSelectProgram={handleSelectProgram}
         onResetFilters={handleResetFilters}
       />
@@ -236,7 +247,10 @@ export default function App() {
       <ChatSidebar 
         isOpen={isChatOpen} 
         onToggle={() => setIsChatOpen(!isChatOpen)}
-        onSetFilters={(updates) => setFilters((prev) => ({ ...prev, ...updates }))}
+        onSetFilters={(updates) => {
+          setFilters((prev) => ({ ...prev, ...updates }));
+          setPage(1);
+        }}
         onOpenProgram={handleSelectProgram}
         onGoBack={handleBack}
         onResetFilters={handleResetFilters}
