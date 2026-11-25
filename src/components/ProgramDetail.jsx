@@ -90,20 +90,20 @@ export default function ProgramDetail({ program, onBack }) {
     : null;
 
   return (
-    <div className="flex-1 p-6 lg:p-10 max-w-5xl mx-auto overflow-y-auto">
-      {/* 1. Кнопка возврата назад */}
+    <div className="flex-1 w-full p-4 sm:p-6 lg:p-10 max-w-5xl mx-auto overflow-y-auto">
+      {/* 1. Кнопка возврата назад (на мобильных дублируется в верхней шапке) */}
       <button
         onClick={onBack}
-        className="flex items-center gap-2 text-xs font-semibold text-[#025a94] hover:text-[#024a7b] mb-6 transition group cursor-pointer"
+        className="hidden lg:flex items-center gap-2 text-xs font-semibold text-[#025a94] hover:text-[#024a7b] mb-6 transition group cursor-pointer"
       >
         <ArrowLeft size={16} className="group-hover:-translate-x-1 transition-transform" />
         Вернуться к результатам поиска
       </button>
 
       {/* 2. Главная плашка вуза и специальности */}
-      <div className="bg-white rounded-3xl p-6 lg:p-8 border border-slate-100 shadow-[0_2px_12px_rgba(0,0,0,0.03)] mb-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
-        <div className="flex items-center gap-5">
-          <div className="w-20 h-20 md:w-24 md:h-24 rounded-full border-2 border-slate-100 bg-[#f8fafc] flex items-center justify-center p-3 text-[#025a94] shadow-inner flex-shrink-0">
+      <div className="bg-white rounded-2xl sm:rounded-3xl p-5 sm:p-6 lg:p-8 border border-slate-100 shadow-[0_2px_12px_rgba(0,0,0,0.03)] mb-5 sm:mb-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 sm:gap-6">
+        <div className="flex items-start sm:items-center gap-3.5 sm:gap-5 min-w-0">
+          <div className="w-14 h-14 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-full border-2 border-slate-100 bg-[#f8fafc] flex items-center justify-center p-2.5 sm:p-3 text-[#025a94] shadow-inner flex-shrink-0">
             <svg viewBox="0 0 100 100" className="w-full h-full fill-current">
               <circle cx="50" cy="50" r="46" fill="none" stroke="currentColor" strokeWidth="2.5" />
               <circle cx="50" cy="50" r="41" fill="none" stroke="currentColor" strokeWidth="1" strokeDasharray="3 3" />
@@ -111,11 +111,11 @@ export default function ProgramDetail({ program, onBack }) {
             </svg>
           </div>
 
-          <div>
-            <div className="text-[11px] font-bold text-[#025a94] tracking-wider uppercase mb-1">
+          <div className="min-w-0">
+            <div className="text-[10px] sm:text-[11px] font-bold text-[#025a94] tracking-wider uppercase mb-1">
               {program.university}
             </div>
-            <h1 className="text-2xl md:text-3xl font-extrabold text-slate-800 leading-tight mb-1.5">
+            <h1 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-slate-800 leading-tight mb-1.5 break-words">
               {program.title}
             </h1>
             <div className="text-xs text-slate-400 font-medium">
@@ -124,7 +124,7 @@ export default function ProgramDetail({ program, onBack }) {
           </div>
         </div>
 
-        <div className="text-left md:text-right text-xs text-slate-500 space-y-1">
+        <div className="w-full md:w-auto pt-3 md:pt-0 border-t md:border-t-0 border-slate-100 text-left md:text-right text-xs text-slate-500 space-y-1 flex-shrink-0">
           {websiteHref && (
             <a
               href={websiteHref}
@@ -142,13 +142,13 @@ export default function ProgramDetail({ program, onBack }) {
       </div>
 
       {/* 3. Сетка характеристик */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4 mb-5 sm:mb-6">
         <div className="bg-[#f0f6fa] rounded-2xl p-4 flex flex-col justify-between">
           <div className="flex items-center justify-between text-slate-400 mb-2">
             <span className="text-[11px] font-medium">Ступень образования</span>
             <GraduationCap size={16} className="text-[#025a94]" />
           </div>
-          <div className="text-base font-bold text-slate-800">{program.degree}</div>
+          <div className="text-sm sm:text-base font-bold text-slate-800">{program.degree}</div>
         </div>
 
         <div className="bg-[#f0f6fa] rounded-2xl p-4 flex flex-col justify-between">
@@ -156,7 +156,7 @@ export default function ProgramDetail({ program, onBack }) {
             <span className="text-[11px] font-medium">Форма обучения</span>
             <Calendar size={16} className="text-[#025a94]" />
           </div>
-          <div className="text-base font-bold text-slate-800">{program.studyForm}</div>
+          <div className="text-sm sm:text-base font-bold text-slate-800">{program.studyForm}</div>
         </div>
 
         <div className="bg-[#f0f6fa] rounded-2xl p-4 flex flex-col justify-between">
@@ -164,7 +164,7 @@ export default function ProgramDetail({ program, onBack }) {
             <span className="text-[11px] font-medium">Срок обучения</span>
             <Clock size={16} className="text-[#025a94]" />
           </div>
-          <div className="text-base font-bold text-slate-800">{program.duration}</div>
+          <div className="text-sm sm:text-base font-bold text-slate-800">{program.duration}</div>
         </div>
 
         <div className="bg-[#f0f6fa] rounded-2xl p-4 flex flex-col justify-between">
@@ -180,7 +180,7 @@ export default function ProgramDetail({ program, onBack }) {
             <span className="text-[11px] font-medium">План набора</span>
             <Users size={16} className="text-[#025a94]" />
           </div>
-          <div className="text-base font-bold text-slate-800">{program.plan}</div>
+          <div className="text-sm sm:text-base font-bold text-slate-800">{program.plan}</div>
         </div>
 
         <div className="bg-[#f0f6fa] rounded-2xl p-4 flex flex-col justify-between">
@@ -188,7 +188,7 @@ export default function ProgramDetail({ program, onBack }) {
             <span className="text-[11px] font-medium">Язык обучения</span>
             <Languages size={16} className="text-[#025a94]" />
           </div>
-          <div className="text-base font-bold text-slate-800">{program.language}</div>
+          <div className="text-sm sm:text-base font-bold text-slate-800">{program.language}</div>
         </div>
 
         <div className="bg-[#f0f6fa] rounded-2xl p-4 flex flex-col justify-between">
@@ -196,7 +196,7 @@ export default function ProgramDetail({ program, onBack }) {
             <span className="text-[11px] font-medium">Наличие Военной кафедры</span>
             <Shield size={16} className="text-[#025a94]" />
           </div>
-          <div className="text-base font-bold text-slate-800">{program.militaryDepartment}</div>
+          <div className="text-sm sm:text-base font-bold text-slate-800">{program.militaryDepartment}</div>
         </div>
 
         <div className="bg-[#f0f6fa] rounded-2xl p-4 flex flex-col justify-between">
@@ -204,24 +204,24 @@ export default function ProgramDetail({ program, onBack }) {
             <span className="text-[11px] font-medium">Наличие общежитий</span>
             <Home size={16} className="text-[#025a94]" />
           </div>
-          <div className="text-base font-bold text-slate-800">{program.dormitory}</div>
+          <div className="text-sm sm:text-base font-bold text-slate-800">{program.dormitory}</div>
         </div>
 
-        <div className="bg-[#f0f6fa] rounded-2xl p-4 flex flex-col justify-between">
+        <div className="bg-[#f0f6fa] rounded-2xl p-4 flex flex-col justify-between sm:col-span-2 md:col-span-1">
           <div className="flex items-center justify-between text-slate-400 mb-2">
             <span className="text-[11px] font-medium">Факультет</span>
             <Building2 size={16} className="text-[#025a94]" />
           </div>
-          <div className="text-base font-bold text-slate-800">{program.faculty}</div>
+          <div className="text-sm sm:text-base font-bold text-slate-800">{program.faculty}</div>
         </div>
       </div>
 
       {/* 4. Описание */}
-      <div className="bg-white rounded-3xl p-6 lg:p-8 border border-slate-100 shadow-[0_2px_12px_rgba(0,0,0,0.03)] mb-6">
-        <h2 className="text-xl font-bold text-slate-800 mb-4">
+      <div className="bg-white rounded-2xl sm:rounded-3xl p-5 sm:p-6 lg:p-8 border border-slate-100 shadow-[0_2px_12px_rgba(0,0,0,0.03)] mb-5 sm:mb-6">
+        <h2 className="text-lg sm:text-xl font-bold text-slate-800 mb-3 sm:mb-4">
           Подробное описание специальности
         </h2>
-        <div className="bg-[#f0f6fa] rounded-2xl p-6 text-xs sm:text-sm text-slate-600 leading-relaxed space-y-4">
+        <div className="bg-[#f0f6fa] rounded-2xl p-4 sm:p-6 text-xs sm:text-sm text-slate-600 leading-relaxed space-y-4">
           {description ? (
             description.split(/\n{2,}/).map((paragraph, idx) => (
               <p key={idx}>{paragraph}</p>
@@ -232,10 +232,10 @@ export default function ProgramDetail({ program, onBack }) {
         </div>
       </div>
 
-      {/* 5. Интерактивный график проходных баллов (SVG 1:1 по Figma) */}
-      <div className="bg-white rounded-3xl p-6 lg:p-8 border border-slate-100 shadow-[0_2px_12px_rgba(0,0,0,0.03)]">
-        <div className="flex items-center justify-between mb-5">
-          <h2 className="text-xl font-bold text-slate-800">Проходные баллы</h2>
+      {/* 5. Интерактивный график проходных баллов */}
+      <div className="bg-white rounded-2xl sm:rounded-3xl p-5 sm:p-6 lg:p-8 border border-slate-100 shadow-[0_2px_12px_rgba(0,0,0,0.03)]">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-5">
+          <h2 className="text-lg sm:text-xl font-bold text-slate-800">Проходные баллы</h2>
 
           <div className="flex items-center gap-4 text-xs font-semibold">
             <button
@@ -259,12 +259,12 @@ export default function ProgramDetail({ program, onBack }) {
           </div>
         </div>
 
-        <div className="bg-[#f0f6fa] rounded-2xl p-6">
-          <div className="flex items-center justify-between mb-6">
+        <div className="bg-[#f0f6fa] rounded-2xl p-4 sm:p-6">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-5 sm:mb-6">
             <span className="text-[11px] font-bold text-slate-500 uppercase tracking-wider">
               ПОРОГОВЫЕ БАЛЛЫ{yearsLabel ? ` (${yearsLabel})` : ''}
             </span>
-            <span className="text-xs font-semibold text-[#025a94] bg-white px-3 py-1 rounded-full shadow-sm">
+            <span className="self-start sm:self-auto text-xs font-semibold text-[#025a94] bg-white px-3 py-1 rounded-full shadow-sm">
               За последний год: {lastDeltaLabel}
             </span>
           </div>
@@ -285,70 +285,67 @@ export default function ProgramDetail({ program, onBack }) {
             </div>
           ) : (
             <div className="w-full overflow-x-auto">
-            <svg viewBox={`0 0 ${chartWidth} ${chartHeight + 40}`} className="w-full h-auto min-w-[500px]">
-              <defs>
-                <linearGradient id="scoreAreaGradient" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="0%" stopColor="#025a94" stopOpacity="0.22" />
-                  <stop offset="100%" stopColor="#025a94" stopOpacity="0.0" />
-                </linearGradient>
-              </defs>
+              <svg viewBox={`0 0 ${chartWidth} ${chartHeight + 40}`} className="w-full h-auto min-w-[460px]">
+                <defs>
+                  <linearGradient id="scoreAreaGradient" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stopColor="#025a94" stopOpacity="0.22" />
+                    <stop offset="100%" stopColor="#025a94" stopOpacity="0.0" />
+                  </linearGradient>
+                </defs>
 
-              {/* Горизонтальные сетки и подписи Y */}
-              {yTicks.map((val) => {
-                const y = chartHeight - paddingY - ((val - minScore) / (maxScore - minScore)) * (chartHeight - paddingY * 2);
-                return (
-                  <g key={val}>
-                    <line x1={paddingX - 10} y1={y} x2={chartWidth - paddingX + 10} y2={y} stroke="#e2e8f0" strokeDasharray="3 3" />
-                    <text x={paddingX - 25} y={y + 4} fill="#94a3b8" fontSize="11" textAnchor="end" fontWeight="500">
-                      {val}
+                {/* Горизонтальные сетки и подписи Y */}
+                {yTicks.map((val) => {
+                  const y = chartHeight - paddingY - ((val - minScore) / (maxScore - minScore)) * (chartHeight - paddingY * 2);
+                  return (
+                    <g key={val}>
+                      <line x1={paddingX - 10} y1={y} x2={chartWidth - paddingX + 10} y2={y} stroke="#e2e8f0" strokeDasharray="3 3" />
+                      <text x={paddingX - 25} y={y + 4} fill="#94a3b8" fontSize="11" textAnchor="end" fontWeight="500">
+                        {val}
+                      </text>
+                    </g>
+                  );
+                })}
+
+                {/* Заливка области */}
+                <path d={areaPath} fill="url(#scoreAreaGradient)" />
+
+                {/* Основная линия */}
+                <path d={linePath} fill="none" stroke="#025a94" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+
+                {/* Точки значений с подписями */}
+                {points.map((p, idx) => (
+                  <g 
+                    key={`${p.year}-${idx}`}
+                    onMouseEnter={() => setHoveredPoint(p)}
+                    onMouseLeave={() => setHoveredPoint(null)}
+                    className="cursor-pointer"
+                  >
+                    <text 
+                      x={p.x} 
+                      y={p.y - 10} 
+                      fill="#025a94" 
+                      fontSize="11" 
+                      fontWeight="bold" 
+                      textAnchor="middle"
+                    >
+                      {p.score}{idx === points.length - 1 ? '*' : ''}
+                    </text>
+
+                    <circle cx={p.x} cy={p.y} r="5.5" fill="#ffffff" stroke="#025a94" strokeWidth="2.5" />
+
+                    <text 
+                      x={p.x} 
+                      y={chartHeight + 15} 
+                      fill={idx >= points.length - 2 ? '#025a94' : '#64748b'} 
+                      fontSize="11" 
+                      fontWeight={idx >= points.length - 2 ? 'bold' : 'normal'}
+                      textAnchor="middle"
+                    >
+                      {p.year}
                     </text>
                   </g>
-                );
-              })}
-
-              {/* Заливка области */}
-              <path d={areaPath} fill="url(#scoreAreaGradient)" />
-
-              {/* Основная линия */}
-              <path d={linePath} fill="none" stroke="#025a94" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
-
-              {/* Точки значений с подписями */}
-              {points.map((p, idx) => (
-                <g 
-                  key={`${p.year}-${idx}`}
-                  onMouseEnter={() => setHoveredPoint(p)}
-                  onMouseLeave={() => setHoveredPoint(null)}
-                  className="cursor-pointer"
-                >
-                  {/* Подпись балла над точкой */}
-                  <text 
-                    x={p.x} 
-                    y={p.y - 10} 
-                    fill="#025a94" 
-                    fontSize="11" 
-                    fontWeight="bold" 
-                    textAnchor="middle"
-                  >
-                    {p.score}{idx === points.length - 1 ? '*' : ''}
-                  </text>
-
-                  {/* Белая точка с синей каймой */}
-                  <circle cx={p.x} cy={p.y} r="5.5" fill="#ffffff" stroke="#025a94" strokeWidth="2.5" />
-
-                  {/* Подпись года снизу */}
-                  <text 
-                    x={p.x} 
-                    y={chartHeight + 15} 
-                    fill={idx >= points.length - 2 ? '#025a94' : '#64748b'} 
-                    fontSize="11" 
-                    fontWeight={idx >= points.length - 2 ? 'bold' : 'normal'}
-                    textAnchor="middle"
-                  >
-                    {p.year}
-                  </text>
-                </g>
-              ))}
-            </svg>
+                ))}
+              </svg>
             </div>
           )}
         </div>

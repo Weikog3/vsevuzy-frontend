@@ -2,19 +2,19 @@ import { MapPin, ChevronLeft, ChevronRight, SearchX } from 'lucide-react';
 
 export default function Catalog({ programs, onSelectProgram, onResetFilters }) {
   return (
-    <div className="flex-1 p-6 lg:p-8 max-w-5xl w-full mx-auto flex flex-col min-h-screen">
+    <div className="flex-1 p-4 sm:p-6 lg:p-8 max-w-5xl w-full mx-auto flex flex-col min-h-[calc(100vh-3.5rem)] lg:min-h-screen">
       <div>
         {/* Шапка каталога */}
-        <div className="flex items-baseline justify-between mb-6">
-          <h1 className="text-2xl font-bold text-slate-800">Результаты Поиска</h1>
-          <span className="text-sm text-slate-400 font-medium">
+        <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 mb-5 sm:mb-6">
+          <h1 className="text-xl sm:text-2xl font-bold text-slate-800">Результаты Поиска</h1>
+          <span className="text-xs sm:text-sm text-slate-400 font-medium">
             {programs.length} {programs.length === 1 ? 'Подходящая программа' : 'Подходящих программ'}
           </span>
         </div>
 
         {/* Если ничего не найдено */}
         {programs.length === 0 ? (
-          <div className="bg-white rounded-3xl p-12 text-center border border-slate-100 shadow-sm my-8">
+          <div className="bg-white rounded-2xl sm:rounded-3xl p-8 sm:p-12 text-center border border-slate-100 shadow-sm my-6 sm:my-8">
             <SearchX size={48} className="mx-auto text-slate-300 mb-3" />
             <h3 className="text-lg font-bold text-slate-700 mb-1">Ничего не найдено</h3>
             <p className="text-xs text-slate-400 mb-6">Попробуйте изменить или смягчить критерии фильтрации</p>
@@ -27,17 +27,17 @@ export default function Catalog({ programs, onSelectProgram, onResetFilters }) {
           </div>
         ) : (
           /* Сетка карточек */
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5">
             {programs.map((prog) => (
               <div
                 key={prog.id}
-                className="bg-white rounded-3xl p-6 border border-slate-100 shadow-[0_2px_12px_rgba(0,0,0,0.03)] hover:shadow-md transition flex flex-col justify-between"
+                className="bg-white rounded-2xl sm:rounded-3xl p-5 sm:p-6 border border-slate-100 shadow-[0_2px_12px_rgba(0,0,0,0.03)] hover:shadow-md transition flex flex-col justify-between"
               >
                 <div>
-                  <h2 className="text-base font-bold text-slate-800 leading-snug mb-1">
+                  <h2 className="text-sm sm:text-base font-bold text-slate-800 leading-snug mb-1">
                     {prog.university}
                   </h2>
-                  <div className="text-[#025a94] font-medium text-sm mb-0.5">
+                  <div className="text-[#025a94] font-medium text-xs sm:text-sm mb-0.5">
                     {prog.title}
                   </div>
                   <div className="text-xs text-slate-400 mb-4">
@@ -50,7 +50,7 @@ export default function Catalog({ programs, onSelectProgram, onResetFilters }) {
                       <div className="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-0.5">
                         БЮДЖЕТ
                       </div>
-                      <div className="text-xl font-extrabold text-[#025a94] leading-tight">
+                      <div className="text-lg sm:text-xl font-extrabold text-[#025a94] leading-tight">
                         {prog.budgetScore ?? '—'}
                       </div>
                     </div>
@@ -59,7 +59,7 @@ export default function Catalog({ programs, onSelectProgram, onResetFilters }) {
                       <div className="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-0.5">
                         ПЛАТНОЕ
                       </div>
-                      <div className="text-xl font-extrabold text-[#025a94] leading-tight">
+                      <div className="text-lg sm:text-xl font-extrabold text-[#025a94] leading-tight">
                         {prog.paidScore ?? '—'}
                       </div>
                     </div>
@@ -87,7 +87,7 @@ export default function Catalog({ programs, onSelectProgram, onResetFilters }) {
       </div>
 
       {/* Пагинация */}
-      <div className="mt-auto pt-10 pb-6 flex items-center justify-center gap-2 text-xs font-semibold text-slate-600">
+      <div className="mt-auto pt-8 sm:pt-10 pb-4 sm:pb-6 flex items-center justify-center flex-wrap gap-1 sm:gap-2 text-xs font-semibold text-slate-600">
         <button className="p-2 hover:bg-white rounded-lg text-slate-400 transition cursor-pointer">
           <ChevronLeft size={16} />
         </button>

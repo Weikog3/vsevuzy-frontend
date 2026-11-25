@@ -1,5 +1,15 @@
-import { useState, useEffect, useRef } from "react";
-import { Send, Bot, Menu, Key, Copy, AlertCircle, Check } from "lucide-react";
+import { Fragment, useState, useEffect, useRef } from "react";
+import {
+  Send,
+  Bot,
+  ChevronLeft,
+  ChevronRight,
+  X,
+  Key,
+  Copy,
+  AlertCircle,
+  Check,
+} from "lucide-react";
 
 const OPENROUTER_URL = "https://openrouter.ai/api/v1/chat/completions";
 const MODEL = "openrouter/free";
@@ -14,6 +24,9 @@ export default function ChatSidebar({
   programs,
 }) {
   const [width, setWidth] = useState(340);
+  const [isDesktop, setIsDesktop] = useState(() =>
+    typeof window !== "undefined" ? window.innerWidth >= 1024 : true
+  );
   const [messages, setMessages] = useState([
     {
       id: 1,
@@ -33,6 +46,14 @@ export default function ChatSidebar({
 
   const messagesEndRef = useRef(null);
   const messagesContainerRef = useRef(null);
+
+  // Отслеживаем размер экрана (ПК или мобильное устройство)
+  useEffect(() => {
+    const mq = window.matchMedia("(min-width: 1024px)");
+    const handleResize = (e) => setIsDesktop(e.matches);
+    mq.addEventListener("change", handleResize);
+    return () => mq.removeEventListener("change", handleResize);
+  }, []);
 
   const validateKey = async (key) => {
     setIsValidating(true);
@@ -152,11 +173,12 @@ ${JSON.stringify(
     const startX = e.clientX;
     const startWidth = isOpen ? width : 0;
     let hasMoved = false;
+    const maxAllowed = Math.min(650, Math.max(320, window.innerWidth - 360));
     const onMouseMove = (moveEvent) => {
       const delta = startX - moveEvent.clientX;
       if (Math.abs(delta) > 3) hasMoved = true;
       if (hasMoved) {
-        const newWidth = Math.min(Math.max(startWidth + delta, 280), 650);
+        const newWidth = Math.min(Math.max(startWidth + delta, 280), maxAllowed);
         setWidth(newWidth);
         if (!isOpen) onToggle();
       }
@@ -352,10 +374,10 @@ ${JSON.stringify(
       return (
         <div key={pIdx} className="mb-2 last:mb-0">
           {lines.map((line, lIdx) => (
-            <>
+            <Fragment key={lIdx}>
               {parseBold(escapeHtml(line))}
               {lIdx < lines.length - 1 && <br />}
-            </>
+            </Fragment>
           ))}
         </div>
       );
@@ -363,190 +385,228 @@ ${JSON.stringify(
   };
 
   return (
-    <aside
-      style={{ width: isOpen ? `${width}px` : "0px" }}
-      className="relative bg-white border-l border-slate-200 flex flex-col h-screen sticky top-0 shadow-sm flex-shrink-0 z-40 transition-[width] duration-75"
-    >
-      <div
-        onMouseDown={handleHandleMouseDown}
-        className="absolute left-0 -translate-x-full top-1/2 -translate-y-1/2 z-50 bg-[#025a94] text-white p-2 rounded-l-xl shadow-md hover:bg-[#024a7b] flex items-center justify-center cursor-ew-resize select-none active:scale-95 transition-transform"
-        title="Потяните для изменения ширины или нажмите для открытия/закрытия"
+    <>
+      {/* Затемнение фона на мобильных при открытом чате */}
+      {!isDesktop && isOpen && (
+        <div
+          onClick={onToggle}
+          className="fixed inset-0 bg-slate-900/40 backdrop-blur-[1px] z-40 lg:hidden"
+        />
+      )}
+
+      <aside
+        style={isDesktop ? { width: isOpen ? `${width}px` : "0px" } : undefined}
+        className={
+          isDesktop
+            ? "relative bg-white border-l border-slate-200 flex flex-col h-screen sticky top-0 shadow-sm flex-shrink-0 z-40 transition-[width] duration-75"
+            : `fixed inset-y-0 right-0 z-50 w-full max-w-sm bg-white border-l border-slate-200 flex flex-col h-[100dvh] shadow-2xl transition-transform duration-200 ${
+                isOpen ? "translate-x-0" : "translate-x-full pointer-events-none"
+              }`
+        }
       >
-        <Menu size={18} />
-      </div>
-
-      {isOpen && (
-        <div className="flex flex-col h-full w-full overflow-hidden relative">
-          <div className="p-4 border-b border-slate-100 flex items-center justify-between select-none">
-            <div className="flex items-center gap-2">
-              <div className="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center text-[#025a94]">
-                <Bot size={20} />
-              </div>
-              <span className="font-semibold text-slate-800 text-sm">
-                VseVuzy ИИ
-              </span>
-            </div>
-            <div className="flex items-center gap-2">
-              {!isAuthenticated && (
-                <span className="w-2.5 h-2.5 rounded-full bg-amber-500 ring-4 ring-amber-100"></span>
-              )}
-              {isAuthenticated && (
-                <>
-                  <button
-                    onClick={handleKeyIconClick}
-                    className="text-slate-400 hover:text-[#025a94] transition cursor-pointer p-1"
-                    title="Сменить API ключ"
-                  >
-                    <Key size={16} />
-                  </button>
-                  <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 ring-4 ring-emerald-100"></span>
-                </>
-              )}
-            </div>
-          </div>
-
+        {/* Ярлычок со стрелочкой для ПК: › свернуть вправо, ‹ открыть влево */}
+        {isDesktop && (
           <div
-            ref={messagesContainerRef}
-            className="flex-1 overflow-y-auto p-4 space-y-4 relative"
+            onMouseDown={handleHandleMouseDown}
+            className="absolute left-0 -translate-x-full top-1/2 -translate-y-1/2 z-50 bg-[#025a94] text-white py-3 px-1.5 rounded-l-xl shadow-md hover:bg-[#024a7b] flex items-center justify-center cursor-ew-resize select-none active:scale-95 transition-all"
+            title={
+              isOpen
+                ? "Нажмите, чтобы свернуть чат, или потяните для изменения ширины"
+                : "Нажмите, чтобы открыть ИИ-ассистент"
+            }
           >
-            {messages.map((msg) => (
-              <div
-                key={msg.id}
-                className={`flex gap-2.5 ${msg.sender === "user" ? "justify-end" : "justify-start"}`}
-              >
-                {msg.sender === "bot" && (
-                  <div className="w-7 h-7 rounded-full bg-blue-50 text-[#025a94] flex items-center justify-center flex-shrink-0 mt-1">
-                    <Bot size={15} />
-                  </div>
-                )}
-                <div
-                  className={`max-w-[85%] p-3.5 rounded-2xl text-xs sm:text-sm leading-relaxed shadow-sm ${
-                    msg.sender === "user"
-                      ? "bg-[#025a94] text-white rounded-tr-none"
-                      : "bg-slate-50 text-slate-700 border border-slate-100 rounded-tl-none"
-                  }`}
-                >
-                  {msg.sender === "bot" ? renderAiText(msg.text) : msg.text}
-                </div>
-              </div>
-            ))}
-            {streaming && (
-              <div className="flex gap-2.5 justify-start">
-                <div className="bg-slate-50 text-slate-700 border border-slate-100 p-3.5 rounded-2xl rounded-tl-none max-w-[85%] text-xs sm:text-sm leading-relaxed shadow-sm flex items-center gap-2">
-                  <span className="flex gap-1">
-                    <span
-                      className="w-1 h-1 rounded-full bg-slate-400 animate-bounce"
-                      style={{ animationDelay: "0ms" }}
-                    ></span>
-                    <span
-                      className="w-1 h-1 rounded-full bg-slate-400 animate-bounce"
-                      style={{ animationDelay: "150ms" }}
-                    ></span>
-                    <span
-                      className="w-1 h-1 rounded-full bg-slate-400 animate-bounce"
-                      style={{ animationDelay: "300ms" }}
-                    ></span>
-                  </span>
-                  <span className="text-slate-400">думает...</span>
-                </div>
-              </div>
+            {isOpen ? (
+              <ChevronRight size={20} strokeWidth={2.5} />
+            ) : (
+              <ChevronLeft size={20} strokeWidth={2.5} />
             )}
-            <div ref={messagesEndRef} />
+          </div>
+        )}
 
-            {!isAuthenticated && (
-              <div className="absolute inset-0 z-30 bg-white/85 backdrop-blur-sm flex items-center justify-center p-4">
-                <div className="bg-white rounded-2xl border border-slate-200 shadow-xl p-6 w-full max-w-sm mx-4">
-                  <div className="flex items-center gap-2 mb-4">
-                    <div className="w-10 h-10 rounded-xl bg-blue-50 flex items-center justify-center text-[#025a94]">
-                      <Key size={22} />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-slate-800 text-sm">
-                        Вставьте API-ключ OpenRouter
-                      </h3>
-                    </div>
-                  </div>
-
-                  <div className="flex gap-2 mb-3">
-                    <div className="relative flex-1">
-                      <input
-                        type="password"
-                        placeholder="sk-or-v1-..."
-                        value={apiKey}
-                        onChange={(e) => {
-                          setApiKey(e.target.value);
-                          setError("");
-                        }}
-                        className="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5 text-xs focus:outline-none focus:border-[#025a94] focus:bg-white transition"
-                      />
-                    </div>
+        {(isOpen || !isDesktop) && (
+          <div className="flex flex-col h-full w-full overflow-hidden relative">
+            <div className="p-4 border-b border-slate-100 flex items-center justify-between select-none">
+              <div className="flex items-center gap-2">
+                <div className="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center text-[#025a94]">
+                  <Bot size={20} />
+                </div>
+                <span className="font-semibold text-slate-800 text-sm">
+                  VseVuzy ИИ
+                </span>
+              </div>
+              <div className="flex items-center gap-2">
+                {!isAuthenticated && (
+                  <span className="w-2.5 h-2.5 rounded-full bg-amber-500 ring-4 ring-amber-100"></span>
+                )}
+                {isAuthenticated && (
+                  <>
                     <button
-                      type="button"
-                      onClick={handlePaste}
-                      className="px-3 bg-slate-100 hover:bg-slate-200 rounded-xl transition cursor-pointer flex items-center gap-1.5"
-                      title="Вставить из буфера"
+                      onClick={handleKeyIconClick}
+                      className="text-slate-400 hover:text-[#025a94] transition cursor-pointer p-1"
+                      title="Сменить API ключ"
                     >
-                      <Copy size={16} className="text-slate-600" />
+                      <Key size={16} />
                     </button>
-                  </div>
+                    <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 ring-4 ring-emerald-100"></span>
+                  </>
+                )}
+                {/* Кнопка закрытия чата на мобильных */}
+                {!isDesktop && (
+                  <button
+                    type="button"
+                    onClick={onToggle}
+                    className="ml-1 p-1.5 rounded-lg text-slate-400 hover:text-slate-700 hover:bg-slate-100 transition cursor-pointer"
+                    aria-label="Закрыть чат"
+                  >
+                    <X size={18} />
+                  </button>
+                )}
+              </div>
+            </div>
 
-                  {error && (
-                    <div className="flex items-center gap-1.5 text-red-500 text-xs mb-3 bg-red-50 px-3 py-2 rounded-lg">
-                      <AlertCircle size={14} />
-                      <span>{error}</span>
+            <div
+              ref={messagesContainerRef}
+              className="flex-1 overflow-y-auto p-4 space-y-4 relative"
+            >
+              {messages.map((msg) => (
+                <div
+                  key={msg.id}
+                  className={`flex gap-2.5 ${msg.sender === "user" ? "justify-end" : "justify-start"}`}
+                >
+                  {msg.sender === "bot" && (
+                    <div className="w-7 h-7 rounded-full bg-blue-50 text-[#025a94] flex items-center justify-center flex-shrink-0 mt-1">
+                      <Bot size={15} />
                     </div>
                   )}
-
-                  <button
-                    onClick={handleContinue}
-                    disabled={!apiKey.trim() || isValidating}
-                    className="w-full bg-[#025a94] hover:bg-[#024a7b] text-white py-2.5 rounded-xl text-xs font-semibold transition disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer flex items-center justify-center gap-2"
+                  <div
+                    className={`max-w-[85%] p-3.5 rounded-2xl text-xs sm:text-sm leading-relaxed shadow-sm ${
+                      msg.sender === "user"
+                        ? "bg-[#025a94] text-white rounded-tr-none"
+                        : "bg-slate-50 text-slate-700 border border-slate-100 rounded-tl-none"
+                    }`}
                   >
-                    {isValidating ? (
-                      <>
-                        <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
-                        Проверка...
-                      </>
-                    ) : (
-                      <>
-                        <Check size={16} />
-                        Продолжить
-                      </>
-                    )}
-                  </button>
+                    {msg.sender === "bot" ? renderAiText(msg.text) : msg.text}
+                  </div>
                 </div>
-              </div>
-            )}
-          </div>
+              ))}
+              {streaming && (
+                <div className="flex gap-2.5 justify-start">
+                  <div className="bg-slate-50 text-slate-700 border border-slate-100 p-3.5 rounded-2xl rounded-tl-none max-w-[85%] text-xs sm:text-sm leading-relaxed shadow-sm flex items-center gap-2">
+                    <span className="flex gap-1">
+                      <span
+                        className="w-1 h-1 rounded-full bg-slate-400 animate-bounce"
+                        style={{ animationDelay: "0ms" }}
+                      ></span>
+                      <span
+                        className="w-1 h-1 rounded-full bg-slate-400 animate-bounce"
+                        style={{ animationDelay: "150ms" }}
+                      ></span>
+                      <span
+                        className="w-1 h-1 rounded-full bg-slate-400 animate-bounce"
+                        style={{ animationDelay: "300ms" }}
+                      ></span>
+                    </span>
+                    <span className="text-slate-400">думает...</span>
+                  </div>
+                </div>
+              )}
+              <div ref={messagesEndRef} />
 
-          <form
-            onSubmit={handleSend}
-            className="p-3 border-t border-slate-100 bg-white"
-          >
-            <div className="relative flex items-center">
-              <input
-                type="text"
-                placeholder={
-                  isAuthenticated
-                    ? "Ваш вопрос о поступлении..."
-                    : "Введите API ключ OpenRouter..."
-                }
-                value={input}
-                onChange={(e) => setInput(e.target.value)}
-                disabled={!isAuthenticated}
-                className="w-full bg-slate-50 border border-slate-200 rounded-xl py-2.5 pl-3.5 pr-10 text-xs sm:text-sm focus:outline-none focus:border-[#025a94] focus:bg-white transition disabled:opacity-50"
-              />
-              <button
-                type="submit"
-                disabled={!isAuthenticated || streaming}
-                className="absolute right-1.5 p-1.5 bg-[#025a94] text-white rounded-lg hover:bg-[#024a7b] transition cursor-pointer disabled:opacity-50"
-              >
-                <Send size={15} />
-              </button>
+              {!isAuthenticated && (
+                <div className="absolute inset-0 z-30 bg-white/85 backdrop-blur-sm flex items-center justify-center p-4">
+                  <div className="bg-white rounded-2xl border border-slate-200 shadow-xl p-6 w-full max-w-sm mx-2">
+                    <div className="flex items-center gap-2 mb-4">
+                      <div className="w-10 h-10 rounded-xl bg-blue-50 flex items-center justify-center text-[#025a94] flex-shrink-0">
+                        <Key size={22} />
+                      </div>
+                      <div>
+                        <h3 className="font-semibold text-slate-800 text-sm">
+                          Вставьте API-ключ OpenRouter
+                        </h3>
+                      </div>
+                    </div>
+
+                    <div className="flex gap-2 mb-3">
+                      <div className="relative flex-1">
+                        <input
+                          type="password"
+                          placeholder="sk-or-v1-..."
+                          value={apiKey}
+                          onChange={(e) => {
+                            setApiKey(e.target.value);
+                            setError("");
+                          }}
+                          className="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5 text-xs focus:outline-none focus:border-[#025a94] focus:bg-white transition"
+                        />
+                      </div>
+                      <button
+                        type="button"
+                        onClick={handlePaste}
+                        className="px-3 bg-slate-100 hover:bg-slate-200 rounded-xl transition cursor-pointer flex items-center gap-1.5"
+                        title="Вставить из буфера"
+                      >
+                        <Copy size={16} className="text-slate-600" />
+                      </button>
+                    </div>
+
+                    {error && (
+                      <div className="flex items-center gap-1.5 text-red-500 text-xs mb-3 bg-red-50 px-3 py-2 rounded-lg">
+                        <AlertCircle size={14} />
+                        <span>{error}</span>
+                      </div>
+                    )}
+
+                    <button
+                      onClick={handleContinue}
+                      disabled={!apiKey.trim() || isValidating}
+                      className="w-full bg-[#025a94] hover:bg-[#024a7b] text-white py-2.5 rounded-xl text-xs font-semibold transition disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer flex items-center justify-center gap-2"
+                    >
+                      {isValidating ? (
+                        <>
+                          <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                          Проверка...
+                        </>
+                      ) : (
+                        <>
+                          <Check size={16} />
+                          Продолжить
+                        </>
+                      )}
+                    </button>
+                  </div>
+                </div>
+              )}
             </div>
-          </form>
-        </div>
-      )}
-    </aside>
+
+            <form
+              onSubmit={handleSend}
+              className="p-3 border-t border-slate-100 bg-white"
+            >
+              <div className="relative flex items-center">
+                <input
+                  type="text"
+                  placeholder={
+                    isAuthenticated
+                      ? "Ваш вопрос о поступлении..."
+                      : "Введите API ключ OpenRouter..."
+                  }
+                  value={input}
+                  onChange={(e) => setInput(e.target.value)}
+                  disabled={!isAuthenticated}
+                  className="w-full bg-slate-50 border border-slate-200 rounded-xl py-2.5 pl-3.5 pr-10 text-xs sm:text-sm focus:outline-none focus:border-[#025a94] focus:bg-white transition disabled:opacity-50"
+                />
+                <button
+                  type="submit"
+                  disabled={!isAuthenticated || streaming}
+                  className="absolute right-1.5 p-1.5 bg-[#025a94] text-white rounded-lg hover:bg-[#024a7b] transition cursor-pointer disabled:opacity-50"
+                >
+                  <Send size={15} />
+                </button>
+              </div>
+            </form>
+          </div>
+        )}
+      </aside>
+    </>
   );
 }
