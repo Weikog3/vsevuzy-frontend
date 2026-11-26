@@ -7,19 +7,56 @@ import { listAllPrograms, getProgram } from './api';
 
 const PAGE_SIZE = 10;
 
+const toList = (value) => {
+  if (Array.isArray(value)) {
+    return value.map((item) => String(item).trim()).filter(Boolean);
+  }
+  return String(value || '')
+    .split(',')
+    .map((item) => item.trim())
+    .filter(Boolean);
+};
+
+// Split by commas, but keep commas inside parentheses (e.g. «Творчество (рисунок, композиция)»).
+const splitOutsideParentheses = (value) => {
+  const result = [];
+  let current = '';
+  let depth = 0;
+
+  for (const char of String(value || '')) {
+    if (char === '(') depth += 1;
+    if (char === ')') depth = Math.max(0, depth - 1);
+
+    if (char === ',' && depth === 0) {
+      result.push(current.trim());
+      current = '';
+    } else {
+      current += char;
+    }
+  }
+  result.push(current.trim());
+
+  return result.filter(Boolean);
+};
+
+const normalizeDuration = (value) => {
+  const match = String(value || '').match(/\d+(?:[.,]\d+)?/);
+  return match ? match[0].replace(',', '.') : '';
+};
+
 const defaultFilters = {
   university: '',
   minScore: '',
-  city: '',
+  city: [],
   studyForm: 'all', // 'all' | 'Очная' | 'Заочная'
   budget: true,
   paid: true,
-  exams: '',
-  specialty: '',
+  exams: [],
+  specialty: [],
   keywords: [],
   language: 'all',
-  duration: '',
-  military: 'any', // 'any' | 'Есть' | 'Нет'
+  duration: [],
+  military: 'any', // 'any' | 'Есть' | 'Не указано'
   degrees: ['Бакалавриат', 'Магистратура', 'Специальное'],
 };
 
@@ -90,6 +127,32 @@ export default function App() {
     setSelectedDetail(null);
   };
 
+  const filterOptions = useMemo(() => {
+    const uniqueSorted = (values) =>
+      [...new Set(values.filter(Boolean))].sort((a, b) =>
+        a.localeCompare(b, 'ru'),
+      );
+
+    const cities = uniqueSorted(programs.map((program) => program.city));
+    const exams = uniqueSorted(
+      programs.flatMap((program) =>
+        splitOutsideParentheses(program.exams),
+      ),
+    );
+    const specialties = uniqueSorted(
+      programs.map((program) => program.title),
+    );
+    const durations = [
+      ...new Set(
+        programs
+          .map((program) => normalizeDuration(program.duration))
+          .filter(Boolean),
+      ),
+    ].sort((a, b) => Number(a) - Number(b));
+
+    return { cities, exams, specialties, durations };
+  }, [programs]);
+
   // Фильтрация массива программ на основе выбранных параметров
   const filteredPrograms = useMemo(() => {
     const contains = (value, needle) =>
@@ -111,8 +174,12 @@ export default function App() {
         if (!budgetOk && !paidOk) return false;
       }
 
-      // 3. Город
-      if (filters.city.trim() && !contains(prog.city, filters.city.toLowerCase())) {
+      // 3. Город (несколько значений через запятую)
+      const cities = toList(filters.city);
+      if (
+        cities.length > 0 &&
+        !cities.some((city) => contains(prog.city, city.toLowerCase()))
+      ) {
         return false;
       }
 
@@ -125,13 +192,23 @@ export default function App() {
       if (!filters.budget && prog.budgetScore == null) return false;
       if (!filters.paid && prog.paidScore == null) return false;
 
-      // 6. Экзамены
-      if (filters.exams.trim() && !contains(prog.exams, filters.exams.toLowerCase())) {
+      // 6. Экзамены (любой из выбранных)
+      const exams = toList(filters.exams);
+      if (
+        exams.length > 0 &&
+        !exams.some((exam) => contains(prog.exams, exam.toLowerCase()))
+      ) {
         return false;
       }
 
-      // 7. Название специальности
-      if (filters.specialty.trim() && !contains(prog.title, filters.specialty.toLowerCase())) {
+      // 7. Название специальности (любая из выбранных)
+      const specialties = toList(filters.specialty);
+      if (
+        specialties.length > 0 &&
+        !specialties.some((specialty) =>
+          contains(prog.title, specialty.toLowerCase()),
+        )
+      ) {
         return false;
       }
 
@@ -148,8 +225,14 @@ export default function App() {
         return false;
       }
 
-      // 9. Срок обучения
-      if (filters.duration.trim() && !contains(prog.duration, filters.duration.toLowerCase())) {
+      // 9. Срок обучения (любой из выбранных, без слов «года»/«лет»)
+      const durations = toList(filters.duration)
+        .map(normalizeDuration)
+        .filter(Boolean);
+      if (
+        durations.length > 0 &&
+        !durations.includes(normalizeDuration(prog.duration))
+      ) {
         return false;
       }
 
@@ -244,6 +327,7 @@ export default function App() {
           onChange={handleFilterChange}
           onReset={handleResetFilters}
           onSearch={() => {}}
+          options={filterOptions}
         />
       )}
 

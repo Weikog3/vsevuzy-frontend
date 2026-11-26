@@ -13,8 +13,9 @@ import {
   Award,
   Search
 } from 'lucide-react';
+import MultiSelectFilter from './MultiSelectFilter';
 
-export default function FilterSidebar({ filters, onChange, onReset, onSearch }) {
+export default function FilterSidebar({ filters, onChange, onReset, onSearch, options = {} }) {
   const handleDegreeToggle = (deg) => {
     const current = filters.degrees || [];
     const updated = current.includes(deg)
@@ -81,19 +82,17 @@ export default function FilterSidebar({ filters, onChange, onReset, onSearch }) 
         </div>
 
         {/* 3. Город */}
-        <div>
-          <div className="flex items-center justify-between mb-1 text-slate-700 font-semibold">
-            <span>3. Город</span>
-            <MapPin size={14} className="text-slate-400" />
-          </div>
-          <input
-            type="text"
-            placeholder="Витебск, Минск, Брест..."
-            value={filters.city}
-            onChange={(e) => onChange('city', e.target.value)}
-            className="w-full bg-[#f1f5f9] border border-transparent rounded-xl px-3 py-2 text-xs focus:bg-white focus:border-[#025a94] outline-none transition"
-          />
-        </div>
+        <MultiSelectFilter
+          label="3. Город"
+          icon={MapPin}
+          options={options.cities || []}
+          value={filters.city}
+          onChange={(value) => onChange('city', value)}
+          placeholder="Начните вводить город..."
+          example="Минск, Брест"
+          sanitize={(text) => text.replace(/\d/g, '')}
+          validationMessage="Город не может содержать цифры"
+        />
 
         {/* 4. Форма обучения */}
         <div>
@@ -152,34 +151,30 @@ export default function FilterSidebar({ filters, onChange, onReset, onSearch }) 
         </div>
 
         {/* 6. Экзамены */}
-        <div>
-          <div className="flex items-center justify-between mb-1 text-slate-700 font-semibold">
-            <span>6. Экзамены</span>
-            <FileText size={14} className="text-slate-400" />
-          </div>
-          <input
-            type="text"
-            placeholder="Физика, Математика..."
-            value={filters.exams}
-            onChange={(e) => onChange('exams', e.target.value)}
-            className="w-full bg-[#f1f5f9] border border-transparent rounded-xl px-3 py-2 text-xs focus:bg-white focus:border-[#025a94] outline-none transition"
-          />
-        </div>
+        <MultiSelectFilter
+          label="6. Экзамены"
+          icon={FileText}
+          options={options.exams || []}
+          value={filters.exams}
+          onChange={(value) => onChange('exams', value)}
+          placeholder="Начните вводить экзамен..."
+          example="Математика, Физика"
+          sanitize={(text) => text.replace(/\d/g, '')}
+          validationMessage="Экзамены не могут содержать цифры"
+        />
 
         {/* 7. Специальности */}
-        <div>
-          <div className="flex items-center justify-between mb-1 text-slate-700 font-semibold">
-            <span>7. Специальности</span>
-            <Compass size={14} className="text-slate-400" />
-          </div>
-          <input
-            type="text"
-            placeholder="Программная инженерия, ИИ..."
-            value={filters.specialty}
-            onChange={(e) => onChange('specialty', e.target.value)}
-            className="w-full bg-[#f1f5f9] border border-transparent rounded-xl px-3 py-2 text-xs focus:bg-white focus:border-[#025a94] outline-none transition"
-          />
-        </div>
+        <MultiSelectFilter
+          label="7. Специальности"
+          icon={Compass}
+          options={options.specialties || []}
+          value={filters.specialty}
+          onChange={(value) => onChange('specialty', value)}
+          placeholder="Начните вводить специальность..."
+          example="Программная инженерия, Искусственный интеллект"
+          sanitize={(text) => text.replace(/\d/g, '')}
+          validationMessage="Специальность не может содержать цифры"
+        />
 
         {/* 8. Язык обучения */}
         <div>
@@ -210,20 +205,20 @@ export default function FilterSidebar({ filters, onChange, onReset, onSearch }) 
           </div>
         </div>
 
-        {/* 9. Срок образования */}
-        <div>
-          <div className="flex items-center justify-between mb-1 text-slate-700 font-semibold">
-            <span>9. Срок образования</span>
-            <Clock size={14} className="text-slate-400" />
-          </div>
-          <input
-            type="text"
-            placeholder="4 года, 5 лет..."
-            value={filters.duration}
-            onChange={(e) => onChange('duration', e.target.value)}
-            className="w-full bg-[#f1f5f9] border border-transparent rounded-xl px-3 py-2 text-xs focus:bg-white focus:border-[#025a94] outline-none transition"
-          />
-        </div>
+        {/* 9. Срок обучения */}
+        <MultiSelectFilter
+          label="9. Срок обучения"
+          icon={Clock}
+          options={options.durations || []}
+          value={filters.duration}
+          onChange={(value) => onChange('duration', value)}
+          placeholder="Например: 4, 5.5"
+          example="4, 5.5"
+          sanitize={(text) =>
+            text.replace(/[a-zа-яё]/gi, '').replace(/;/g, ',')
+          }
+          validationMessage="Буквы вводить нельзя — только цифры"
+        />
 
         {/* 10. Наличие военной кафедры */}
         <div>
