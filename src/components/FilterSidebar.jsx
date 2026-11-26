@@ -234,7 +234,7 @@ export default function FilterSidebar({ filters, onChange, onReset, onSearch }) 
           <div className="flex gap-3">
             {[
               { id: 'Есть', label: 'Да' },
-              { id: 'Нет', label: 'Нет' },
+              { id: 'Не указано', label: 'Нет' },
               { id: 'any', label: 'Неважно' },
             ].map(item => (
               <label key={item.id} className="flex items-center gap-1 cursor-pointer">

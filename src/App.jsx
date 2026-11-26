@@ -16,6 +16,7 @@ const defaultFilters = {
   paid: true,
   exams: '',
   specialty: '',
+  keywords: [],
   language: 'all',
   duration: '',
   military: 'any', // 'any' | 'Есть' | 'Нет'
@@ -132,6 +133,14 @@ export default function App() {
       // 7. Название специальности
       if (filters.specialty.trim() && !contains(prog.title, filters.specialty.toLowerCase())) {
         return false;
+      }
+
+      // 7a. Широкое направление (например IT): совпадение по названию или экзаменам
+      if ((filters.keywords || []).length > 0) {
+        const haystack = `${prog.title} ${prog.university} ${prog.exams}`.toLowerCase();
+        if (!filters.keywords.some((keyword) => haystack.includes(keyword.toLowerCase()))) {
+          return false;
+        }
       }
 
       // 8. Язык
